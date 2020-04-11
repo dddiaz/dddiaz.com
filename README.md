@@ -21,5 +21,4 @@ git submodule update --init --recursive
 - Update google analytics config in params.toml
 - update build to update submodules
 - update base url in config.toml
-- update web icon
 - add resume pdf to content/authors/admin/index
