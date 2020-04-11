@@ -26,8 +26,7 @@ interests:
 - Kubernetes
 - Bioinformatics
 - Microsevices
-- Continuous Integration
-- Continuous Deployment
+- CI/CD
 - Automation
 - High Performance Computing
 - Machine Learning
@@ -52,6 +51,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/dddiaz
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/dddiaz/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv

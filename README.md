@@ -22,3 +22,7 @@ git submodule update --init --recursive
 - update build to update submodules
 - update base url in config.toml
 - add resume pdf to content/authors/admin/index
+- Update font?
+- i think the color of the icons is too blue, make it match my old website (config/_default/params.toml)
+- update blog posts images
+- move more posts link up right under recent posts header
