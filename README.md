@@ -16,6 +16,10 @@ git submodule update --init --recursive
     - customize position with weight
 - update config.toml with website title
 
+## To update theme colors:
+- Copy themes/academic/data/themes/minimal.toml to data/themes/my_theme.toml
+- Tell Academic to use your new theme by setting theme = "my_theme" in config/_default/params.toml
+
 # To create a new blog post
 ```text
 cd <MY_WEBSITE_FOLDER>
@@ -48,6 +52,12 @@ hugo server -w
 - update all params in parms.toml
 - Fix saturation on photo
 - remove some of the share icons on blog posts
+- limit number of projects shown
+- missing my name under my picture
+- nav bar hover highlight color is dull
+
+# TODO: <DONE>:
+
 
 #### Dev Note:
 The main reason i went through the trouble of upgrading from the old academic theme, is that i had made some custom changes to the theme that made it hard to keep up to date with new releases, this avoids that.
