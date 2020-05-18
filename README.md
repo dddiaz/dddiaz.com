@@ -55,6 +55,8 @@ hugo server -w
 - limit number of projects shown
 - missing my name under my picture
 - nav bar hover highlight color is dull
+- verify analytics are working correctly, if not, production env var may not be set. 
+- blog post for aws image is misaligned
 
 # TODO: <DONE>:
 
