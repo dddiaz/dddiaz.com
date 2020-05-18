@@ -1,6 +1,8 @@
 # Web
-This is an attempt to update the Academic Theme. 
-It is non compatible with my version.
+This represents the frontend statis website of dddiaz.com
+
+Previously, this wesbite was based on a super old version of hugo/academic that was extremely hard to update.
+This is an attempt to change that.
 
 This is a submodule within the dddiaz.com repository.  
 Originally forked from the Academic repo.
@@ -46,15 +48,11 @@ hugo server -w
 - rename repo from academic to frontend on github
 - update all params in parms.toml
 - limit number of projects shown
-- nav bar hover highlight color is dull
 - verify analytics are working correctly, if not, production env var may not be set. 
-- blog post for aws image is misaligned
 - set up default blog post template
-- Need to figure out a way to get name under photo!
 - way to make bg icon smaller? scale down?
 - during build process, pull academic sub git repo only at specific revision!
-- document lcoal dev, how to pull the version of academic i need
-- migrate certain projects into blog posts (ex: finding hidden messages)
+    - document lcoal dev, how to pull the version of academic i need
 
 # TODO: <DONE>:
 - i think the color of the icons is too blue, make it match my old website (config/_default/params.toml)
@@ -62,14 +60,17 @@ hugo server -w
 - remove some of the share icons on blog posts
 - missing my name under my picture
 - Fix saturation on photo (custom css saturation filter)
+- migrate certain projects into blog posts (ex: finding hidden messages)
+
 
 # TODO: <Wont Do>:
 - Update font?
 - add resume pdf to content/authors/admin/index
 - move more posts link up right under recent posts header
-
-
-
+- nav bar hover highlight color is dull (made the site default with home highlighted)
+- blog post for aws image is misaligned (no longer featured on main page, so non issue) 
 
 #### Dev Note:
-The main reason i went through the trouble of upgrading from the old academic theme, is that i had made some custom changes to the theme that made it hard to keep up to date with new releases, this avoids that.
+The main reason i went through the trouble of upgrading from the old academic theme, 
+is that i had made some custom changes to the theme that made it hard to keep up to date with new releases, 
+this avoids that.
