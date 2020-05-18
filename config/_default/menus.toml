@@ -19,9 +19,14 @@
   weight = 30
 
 [[main]]
-  name = "Publications"
-  url = "#featured"
+  name = "Glucose Stats"
+  url = "#glucose"
   weight = 40
+
+[[main]]
+  name = "Accomplishments"
+  url = "#accomplishments"
+  weight = 50
 
 [[main]]
   name = "Contact"
