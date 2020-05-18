@@ -1,17 +1,24 @@
-+++
-title = "re:invent 2018"
+---
+title: "re:invent 2018"
+summary: "Major Take Aways From re:Invent"
 
-date = 2018-12-05
-lastmod = 2018-12-05
-draft = false
+date: 2018-12-05
+lastmod: 2018-12-05
+draft: false
 
-tags = ["AWS", "DEVOPS", "Cloud Migration", "Fintech"]
-summary = "Major Take Aways From re:Invent"
+tags: ["AWS", "DEVOPS", "Cloud Migration", "Fintech"]
 
-[header]
-image = "headers/reinvent2018.jpeg"
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+image:
+  placement: 2
+  caption: 'Image credit: Daniel Diaz'
+  focal_point: ""
+  preview_only: false
 
-+++
+---
 
 This year I was fortunate enough to go to re:Invent, the AWS Tech Conference. 
 I wanted to use this opportunity to document some of my major take aways.

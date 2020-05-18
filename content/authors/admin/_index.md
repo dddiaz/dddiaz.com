@@ -18,7 +18,7 @@ organizations:
   url: "https://www.illumina.com/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include python, kubernetes and machine learning.
+bio: My interests include Python, Kubernetes and Machine Learning.
 
 interests:
 - Python

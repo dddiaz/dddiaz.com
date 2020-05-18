@@ -1,15 +1,23 @@
-+++
-title = "How Blood Glucose Stats Works"
+---
+title: "How Blood Glucose Stats Works"
+summary: "A blog post describing how the real time blood glucose stats visual works."
+date: 2018-12-01
+lastmod: 2018-12-01
+draft: false
 
-#date = 2018-04-09
-date = 2018-12-01
-lastmod = 2018-12-01
-draft = false
+tags: ["how-it-works", "Diabetes", "Python"]
 
-tags = ["how-it-works", "Diabetes", "Python"]
-summary = "A blog post describing how the real time blood glucose stats visual works."
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+image:
+  placement: 2
+  caption: 'Image credit: Daniel Diaz'
+  focal_point: "Smart"
+  preview_only: false
 
-+++
+---
 
 Blood Glucose Stats works by leveraging an open source project called Nightscout. Nightscout is connected to a continuous glucose monitor (Dexcom) that I wear. The continous glucose monitor (also known as a CGM) takes a measurement every 5 minutes of the glucose levels of the interstitial fluid between cells. Those values are stored on dexcom servers and scraped by the open source Nightscout project. Night scout then tores those values in mongolab. I then use the exposed by nightscout to update the Blood Glucose graphic. While I do have access to the exact number, for privacy reasons I like to simply display a range I am in.
 

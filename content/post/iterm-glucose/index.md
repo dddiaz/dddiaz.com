@@ -1,15 +1,29 @@
-+++
-title = "iTerm2 Glucose"
-date = 2020-02-21T18:33:16-08:00
-draft = false
+---
+title: "iTerm2 Glucose"
+summary: "How I display my current Blood Glucose in iTerm"
+date: "2020-02-21T18:33:16-08:00"
+lastmod: "2020-02-21T18:33:16-08:00"
+draft: false
 
-tags = ["iTerm", "Diabetes", "Nightscout", "Oh-My-Zsh", "We Are Not Waiting"]
-summary = "How I display my current Blood Glucose in iTerm"
+tags: 
+- "iTerm"
+- "Diabetes"
+- "Nightscout"
+- "Oh-My-Zsh"
+- "We Are Not Waiting"
 
-[header]
-image = "headers/nightscout-cronjob.png"
 
-+++
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+image:
+  placement: 2
+  caption: 'Image credit: Daniel Diaz'
+  focal_point: "Smart"
+  preview_only: false
+
+---
 
 # Background
 iTerm2 with oh-my-zsh is my goto environment for doing anything on the command line.

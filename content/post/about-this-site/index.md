@@ -1,17 +1,23 @@
-+++
-title = "About This Website"
+---
+title: "About This Website"
+summary: "A blog post describing how this website was built and deployed (CI/CD AWS Microservice)"
+date: 2018-04-09
+lastmod: 2018-04-09
+draft: false
 
-date = 2018-04-09
-lastmod = 2018-04-09
-draft = false
+tags: ["about", "site", "how-it-works", "CI", "CD", "AWS", "Microservice", "Python"]
 
-tags = ["about", "site", "how-it-works", "CI", "CD", "AWS", "Microservice", "Python"]
-summary = "A blog post describing how this website was built and deployed (CI/CD AWS Microservice)"
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+image:
+  placement: 2
+  caption: 'Image credit: Daniel Diaz'
+  focal_point: "Smart"
+  preview_only: false
 
-[header]
-image = "post_images/aws.png"
-
-+++
+---
 
 This site uses aws code pipeline to continuously deploy changes commited to the github repo. 
 

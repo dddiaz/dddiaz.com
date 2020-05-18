@@ -15,7 +15,25 @@ git submodule update --init --recursive
 - content/home/ to turn off and on widgets
     - customize position with weight
 - update config.toml with website title
-    
+
+# To create a new blog post
+```text
+cd <MY_WEBSITE_FOLDER>
+hugo new  --kind post post/my-post
+cd <MY_WEBSITE_FOLDER>/content/post/my-post/
+```
+Note: if you create a page manually, make sure md page is called index.md
+
+# To create a new jupyter notebook blog post
+```text
+ jupyter nbconvert notebook.ipynb --to markdown --NbConvertApp.output_files_dir=.  
+# copy files over to blog post folder
+# append notebook.md to blog post
+```
+
+# TO Run:
+brew install hugo
+hugo server -w
     
 # TODO:
 - Update google analytics config in params.toml
@@ -26,3 +44,7 @@ git submodule update --init --recursive
 - i think the color of the icons is too blue, make it match my old website (config/_default/params.toml)
 - update blog posts images
 - move more posts link up right under recent posts header
+- rename repo from academin to frontend on github
+- update all params in parms.toml
+- Fix saturation on photo
+- remove some of the share icons on blog posts

@@ -1,15 +1,23 @@
-+++
-title = "Docker AWS Pipeline"
+---
+title: "Docker AWS Pipeline"
+summary: "A blog post describing how this website was built and deployed (CI/CD AWS Docker)"
 
-date = 2018-04-09
-lastmod = 2018-04-09
-draft = false
+date: 2018-04-09
+lastmod: 2018-04-09
+draft: false
 
-tags = ["how-it-works", "CI", "CD", "AWS", "Docker", "Python"]
-summary = "A blog post describing how this website was built and deployed (CI/CD AWS Docker)"
+tags: ["how-it-works", "CI", "CD", "AWS", "Docker", "Python"]
 
-
-+++
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+image:
+  placement: 2
+  caption: 'Image credit: Daniel Diaz'
+  focal_point: "Smart"
+  preview_only: false
+---
 
 The previous version of this website used docker and aws code pipeline to continuously deploy to elastic beanstalk.
 
