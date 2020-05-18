@@ -57,6 +57,8 @@ hugo server -w
 - nav bar hover highlight color is dull
 - verify analytics are working correctly, if not, production env var may not be set. 
 - blog post for aws image is misaligned
+- set up default blog post template
+- Need to figure out a way to get name under photo!
 
 # TODO: <DONE>:
 
