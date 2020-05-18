@@ -43,12 +43,7 @@ hugo server -w
 - Update google analytics config in params.toml
 - update build to update submodules
 - update base url in config.toml
-- add resume pdf to content/authors/admin/index
-- Update font?
-- i think the color of the icons is too blue, make it match my old website (config/_default/params.toml)
-- update blog posts images
-- move more posts link up right under recent posts header
-- rename repo from academin to frontend on github
+- rename repo from academic to frontend on github
 - update all params in parms.toml
 - Fix saturation on photo
 - remove some of the share icons on blog posts
@@ -59,8 +54,20 @@ hugo server -w
 - blog post for aws image is misaligned
 - set up default blog post template
 - Need to figure out a way to get name under photo!
+- way to make bg icon smaller? scale down?
+- during build process, pull academic sub git repo only at specific revision!
+- document lcoal dev, how to pull the version of academic i need
 
 # TODO: <DONE>:
+- i think the color of the icons is too blue, make it match my old website (config/_default/params.toml)
+- update blog posts images
+
+# TODO: <Wont Do>:
+- Update font?
+- add resume pdf to content/authors/admin/index
+- move more posts link up right under recent posts header
+
+
 
 
 #### Dev Note:
