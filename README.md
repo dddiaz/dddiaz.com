@@ -48,3 +48,6 @@ hugo server -w
 - update all params in parms.toml
 - Fix saturation on photo
 - remove some of the share icons on blog posts
+
+#### Dev Note:
+The main reason i went through the trouble of upgrading from the old academic theme, is that i had made some custom changes to the theme that made it hard to keep up to date with new releases, this avoids that.
