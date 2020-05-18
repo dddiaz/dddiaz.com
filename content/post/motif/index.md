@@ -1,20 +1,27 @@
-+++
-title = "Finding Hidden Messages In DNA"
+---
+title: "Finding Hidden Messages In DNA"
+summary: "Las Vegas Algorithms to the rescue!"
+date: "2018-12-05T15:53:10-08:00"
+lastmod: "2018-12-05T15:53:10-08:00"
+draft: false
 
-date = 2018-12-05T15:53:10-08:00
-lastmod = 2018-12-05T15:53:10-08:00
-draft = true
+tags: 
+- "python"
+- "bioinformatics"
+- "genomics"
 
-tags = ["python", "bioinformatics"]
-summary = "Las Vegas Algorithms to the rescue!"
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+image:
+  placement: 2
+  caption: 'Image credit: Daniel Diaz'
+  focal_point: "Smart"
+  preview_only: false
 
-# Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "motif.png"
+---
 
-[header]
-image = "motif.png"
-
-+++
 
 This past year I have been extremely interested in getting more hands on expierence with Bioinformatics.
 I decided to try the Bioinformatics specialization on Coursera presented by UCSD.
@@ -70,7 +77,5 @@ Using our motif finding algorithms, we can attempt to solve this biological ques
 # Cool
 
 And thats what I think is incredibly fascinating about this stuff. Using the huge advances we have had in computational technology, we can try to answer real biological questions that could lead to discoveries and cures!
-
-
 
 

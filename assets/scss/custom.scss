@@ -1,3 +1,10 @@
 /*********************************************************************************/
 /* Academic Theme Override                                                       */
 /*********************************************************************************/
+
+// Something is happening where the saturation is being reduced on my image.
+// This is a hack to push that back.
+
+img.avatar.avatar-circle {
+    filter: saturate(1.2);
+}

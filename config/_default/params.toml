@@ -87,11 +87,11 @@ phone = ""
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "1100 Coast Blvd", city = "La Jolla", region = "CA", postcode = "92307", country = "United States", country_code = "US"}
+address = {street = "", city = "San Diego", region = "CA", postcode = "92122", country = "United States", country_code = "US"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "32.8952067", longitude = "-117.244585"}
+coordinates = {latitude = "32.870338", longitude = "-117.200440"}
 
 # Directions for visitors to locate you.
 directions = ""
@@ -121,7 +121,7 @@ contact_links = [
 sharing_image = "portrait.jpg"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter = ""
+twitter = "dddiaz1"
 
 ############################
 ## Regional Settings

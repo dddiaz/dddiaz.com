@@ -45,10 +45,7 @@ hugo server -w
 - update base url in config.toml
 - rename repo from academic to frontend on github
 - update all params in parms.toml
-- Fix saturation on photo
-- remove some of the share icons on blog posts
 - limit number of projects shown
-- missing my name under my picture
 - nav bar hover highlight color is dull
 - verify analytics are working correctly, if not, production env var may not be set. 
 - blog post for aws image is misaligned
@@ -57,10 +54,14 @@ hugo server -w
 - way to make bg icon smaller? scale down?
 - during build process, pull academic sub git repo only at specific revision!
 - document lcoal dev, how to pull the version of academic i need
+- migrate certain projects into blog posts (ex: finding hidden messages)
 
 # TODO: <DONE>:
 - i think the color of the icons is too blue, make it match my old website (config/_default/params.toml)
 - update blog posts images
+- remove some of the share icons on blog posts
+- missing my name under my picture
+- Fix saturation on photo (custom css saturation filter)
 
 # TODO: <Wont Do>:
 - Update font?

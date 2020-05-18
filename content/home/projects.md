@@ -34,9 +34,6 @@ subtitle = ""
     name = "Docker"
     tag = "docker"
     
-  [[content.filter_button]]
-    name = "Bioinformatics"
-    tag = "bioinformatics"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -50,7 +47,7 @@ subtitle = ""
   view = 3
 
   # For Showcase view, flip alternate rows?
-  flip_alt_rows = false
+  flip_alt_rows = true
 
 [design.background]
   # Apply a background color, gradient, or image.
