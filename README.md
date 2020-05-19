@@ -21,7 +21,8 @@ git clone --recurse-submodules https://github.com/dddiaz/frontend.dddiaz.com
 ```
 Follow the link above on updating the submodule with new changes
 
-NoteL if you are having issues with the submodule, do git submodule init then git submodule update --remote
+Note: if you are having issues with the submodule saying " Direct fetching of that commit failed.", 
+do git submodule init then git submodule update --remote on the repo, then commit the change.
 
 # First Time Setup:
 - Update web/config/_default/params.toml to control top level config.
