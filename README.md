@@ -1,3 +1,5 @@
+![CD](https://github.com/dddiaz/frontend.dddiaz.com/workflows/CD/badge.svg)
+
 # Web
 This represents the frontend static website of dddiaz.com
 
@@ -68,6 +70,9 @@ Note I am using Hugo version v0.70.0
 - during build process, pull academic sub git repo only at specific revision!
     - update build to update submodules
 - Set up form spree
+- set up github workflow?
+    - limit aws account access for s3
+- add this https://github.com/marketplace/actions/bump-git-submodules to bump submodules on comment
 
 # TODO:
 ## Done
