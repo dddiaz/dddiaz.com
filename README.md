@@ -23,6 +23,7 @@ Follow the link above on updating the submodule with new changes
 
 Note: if you are having issues with the submodule saying " Direct fetching of that commit failed.", 
 do git submodule init then git submodule update --remote on the repo, then commit the change.
+Also note, my submodule is on commit d0552aefc03a9ea8efd22ea8ab54842fb32ccd02
 
 # First Time Setup:
 - Update web/config/_default/params.toml to control top level config.
@@ -65,9 +66,8 @@ Note I am using Hugo version v0.70.0
 - set up default blog post template
 - way to make bg icon smaller? scale down?
 - during build process, pull academic sub git repo only at specific revision!
-    - document lcoal dev, how to pull the version of academic i need
     - update build to update submodules
-    - document hugo and academic version
+- Set up form spree
 
 # TODO:
 ## Done
@@ -78,6 +78,9 @@ Note I am using Hugo version v0.70.0
 - Fix saturation on photo (custom css saturation filter)
 - migrate certain projects into blog posts (ex: finding hidden messages)
 - added covid project post
+- document lcoal dev, how to pull the version of academic i need
+- document hugo and academic version
+
 
 
 # TODO:
