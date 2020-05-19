@@ -1,8 +1,15 @@
 ![CD](https://github.com/dddiaz/frontend.dddiaz.com/workflows/CD/badge.svg)
 
 # Web
-This represents the frontend static website of dddiaz.com
+This represents the frontend static website of dddiaz.com. Deployed to s3/cloudfront with Github Actions :)
 
+## Suported URLS:
+[www.dddiaz.com](https://www.dddiaz.com)  
+[dddiaz.com](https://dddiaz.com)  
+[blog.dddiaz.com](https://blog.dddiaz.com)  
+[api.dddiaz.com](https://api.dddiaz.com) *Note: API must be accessed with https*  
+
+#### Other Info
 Previously, this wesbite was based on a super old version of hugo/academic that was extremely hard to update.
 This is an attempt to change that.
 
@@ -58,6 +65,9 @@ brew install hugo
 hugo server -w
 ```
 Note I am using Hugo version v0.70.0
+
+# How to make changes to prod
+Easy -> git commit and Github Actions handles the rest :)
     
 # TODO:
 - Update google analytics config in params.toml
@@ -73,6 +83,7 @@ Note I am using Hugo version v0.70.0
 - set up github workflow?
     - limit aws account access for s3
 - add this https://github.com/marketplace/actions/bump-git-submodules to bump submodules on comment
+- blogpost about github actions
 
 # TODO:
 ## Done
