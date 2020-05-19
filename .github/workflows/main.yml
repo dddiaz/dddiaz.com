@@ -21,13 +21,33 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
+    # This repo uses submodules
+    - name: Update git submodules
+      run: git submodule update --init --recursive
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    
+    - name: Hugo Setup
+      uses: peaceiris/actions-hugo@v2.4.11
+      with:
+        # The Hugo version to download (if necessary) and use. Example: 0.58.2
+        hugo-version: 0.70.0
+        # Download (if necessary) and use Hugo extended version. Example: true
+        extended: true
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: Hugo Build
+      run: hugo --minify
 
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Copy frontend files to S3 with the AWS CLI
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        aws s3 sync public s3://dddiaz.com --delete
+        
+    - name: Clear Cloudfront Cache
+      run: |
+        aws cloudfront create-invalidation --distribution-id E15F5SGXIT0KSW --paths '/*'
