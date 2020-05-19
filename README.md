@@ -8,7 +8,6 @@ This is a submodule within the dddiaz.com repository.
 Originally forked from the Academic repo.
 
 # How to checkout
-#### TODO: add this to build
 git submodule add https://github.com/dddiaz/academic-kickstart web
 git submodule update --init --recursive
 
@@ -37,22 +36,25 @@ Note: if you create a page manually, make sure md page is called index.md
 # append notebook.md to blog post
 ```
 
-# TO Run:
+# To Run:
+```bash
 brew install hugo
 hugo server -w
+```
+Note I am using Hugo version v0.70.0
     
 # TODO:
 - Update google analytics config in params.toml
-- update build to update submodules
-- update base url in config.toml
-- rename repo from academic to frontend on github
+    - verify analytics are working correctly, if not, production env var may not be set. 
 - update all params in parms.toml
-- limit number of projects shown
-- verify analytics are working correctly, if not, production env var may not be set. 
+    - update base url in config.toml
+- rename git repo from academic to frontend.dddiaz on github
 - set up default blog post template
 - way to make bg icon smaller? scale down?
 - during build process, pull academic sub git repo only at specific revision!
     - document lcoal dev, how to pull the version of academic i need
+    - update build to update submodules
+    - document hugo and academic version
 
 # TODO: <DONE>:
 - i think the color of the icons is too blue, make it match my old website (config/_default/params.toml)
@@ -61,6 +63,7 @@ hugo server -w
 - missing my name under my picture
 - Fix saturation on photo (custom css saturation filter)
 - migrate certain projects into blog posts (ex: finding hidden messages)
+- added covid project post
 
 
 # TODO: <Wont Do>:
@@ -69,6 +72,7 @@ hugo server -w
 - move more posts link up right under recent posts header
 - nav bar hover highlight color is dull (made the site default with home highlighted)
 - blog post for aws image is misaligned (no longer featured on main page, so non issue) 
+- limit number of projects shown
 
 #### Dev Note:
 The main reason i went through the trouble of upgrading from the old academic theme, 
