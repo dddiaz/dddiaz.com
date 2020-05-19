@@ -1,5 +1,5 @@
 # Web
-This represents the frontend statis website of dddiaz.com
+This represents the frontend static website of dddiaz.com
 
 Previously, this wesbite was based on a super old version of hugo/academic that was extremely hard to update.
 This is an attempt to change that.
@@ -8,8 +8,20 @@ This is a submodule within the dddiaz.com repository.
 Originally forked from the Academic repo.
 
 # How to checkout
-git submodule add https://github.com/dddiaz/academic-kickstart web
-git submodule update --init --recursive
+#### Note this proj uses git submodules for the academic theme: helpful doc [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+```bash
+git clone https://github.com/dddiaz/frontend.dddiaz.com
+git submodule init
+git submodule update
+```
+or 
+```bash
+git clone --recurse-submodules https://github.com/dddiaz/frontend.dddiaz.com
+
+```
+Follow the link above on updating the submodule with new changes
+
+NoteL if you are having issues with the submodule, do git submodule init then git submodule update --remote
 
 # First Time Setup:
 - Update web/config/_default/params.toml to control top level config.
@@ -22,7 +34,7 @@ git submodule update --init --recursive
 - Tell Academic to use your new theme by setting theme = "my_theme" in config/_default/params.toml
 
 # To create a new blog post
-```text
+```bash
 cd <MY_WEBSITE_FOLDER>
 hugo new  --kind post post/my-post
 cd <MY_WEBSITE_FOLDER>/content/post/my-post/
@@ -30,7 +42,7 @@ cd <MY_WEBSITE_FOLDER>/content/post/my-post/
 Note: if you create a page manually, make sure md page is called index.md
 
 # To create a new jupyter notebook blog post
-```text
+```bash
  jupyter nbconvert notebook.ipynb --to markdown --NbConvertApp.output_files_dir=.  
 # copy files over to blog post folder
 # append notebook.md to blog post
@@ -56,7 +68,8 @@ Note I am using Hugo version v0.70.0
     - update build to update submodules
     - document hugo and academic version
 
-# TODO: <DONE>:
+# TODO:
+## Done
 - i think the color of the icons is too blue, make it match my old website (config/_default/params.toml)
 - update blog posts images
 - remove some of the share icons on blog posts
@@ -66,7 +79,8 @@ Note I am using Hugo version v0.70.0
 - added covid project post
 
 
-# TODO: <Wont Do>:
+# TODO:
+## Wont Do
 - Update font?
 - add resume pdf to content/authors/admin/index
 - move more posts link up right under recent posts header
