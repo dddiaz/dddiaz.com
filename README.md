@@ -82,3 +82,14 @@ Easy -> git commit and Github Actions handles the rest :)
 - set up default blog post template
 - way to make bg icon smaller? scale down?
 
+
+#### Common Issues
+```text
+Error: Error building site: "/Users/ddiaz/src/dddiaz.com/content/home/demo.md:69:1": failed to extract shortcode: template for shortcode "alert" not found
+```
+You forgot to update the git submodule. Do That.
+```bash
+git submodule init
+git submodule update
+```
+
