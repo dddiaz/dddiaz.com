@@ -31,8 +31,8 @@ subtitle = ""
     tag = "python"
     
   [[content.filter_button]]
-    name = "Docker"
-    tag = "docker"
+    name = "AWS"
+    tag = "AWS"
     
 
 [design]

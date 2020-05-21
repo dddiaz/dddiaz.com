@@ -6,7 +6,7 @@ date: 2018-04-09
 lastmod: 2018-04-09
 draft: false
 
-tags: ["how-it-works", "CI", "CD", "AWS", "Docker", "Python"]
+tags: ["how-it-works", "CI", "CD", "AWS", "docker", "python"]
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

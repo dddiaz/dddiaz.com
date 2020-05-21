@@ -11,7 +11,7 @@ title = "API.DDDIAZ.COM"
 summary = "Programmatic acces to super critical information like if it is my birthday."
 
 # Tags: can be used for filtering projects.
-tags = ["python", "api", "flask"]
+tags = ["python", "api", "flask", "AWS"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://github.com/dddiaz/api.dddiaz.com"

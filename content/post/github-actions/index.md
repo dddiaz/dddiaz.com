@@ -141,7 +141,7 @@ Here are the links to the full workflows if you would like to take a peak:
 Pros:
 - Free!
 - Super Easy to work with and setup
-- You can import other people libraries
+- You can import other people's libraries
 - Surprisingly fast build
 
 Cons:

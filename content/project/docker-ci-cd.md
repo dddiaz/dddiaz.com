@@ -8,8 +8,10 @@ draft = true
 # Project title.
 title = "Python Docker Website with CI/CD"
 
-# Project summary to display on homepage.
+# Project summary to display on homepage. 
 summary = "The source code for my old website."
+ 
+featured = false
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "docker.png"
