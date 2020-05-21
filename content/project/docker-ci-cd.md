@@ -3,7 +3,7 @@
 date = "2016-04-27"
 
 # Dont show this page
-draft = false
+draft = true
 
 # Project title.
 title = "Python Docker Website with CI/CD"

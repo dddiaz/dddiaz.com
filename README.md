@@ -55,9 +55,9 @@ My submodule is on commit d0552aefc03a9ea8efd22ea8ab54842fb32ccd02
 
 # To create a new blog post
 ```bash
-cd <MY_WEBSITE_FOLDER>
+cd content
 hugo new  --kind post post/my-post
-cd <MY_WEBSITE_FOLDER>/content/post/my-post/
+cd post/my-post/
 ```
 Note: if you create a page manually, make sure md page is called index.md
 

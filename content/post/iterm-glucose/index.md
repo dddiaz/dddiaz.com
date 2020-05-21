@@ -4,6 +4,7 @@ summary: "How I display my current Blood Glucose in iTerm"
 date: "2020-02-21T18:33:16-08:00"
 lastmod: "2020-02-21T18:33:16-08:00"
 draft: false
+featured: true
 
 tags: 
 - "iTerm"
