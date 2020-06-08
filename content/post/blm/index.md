@@ -84,3 +84,5 @@ Note: as of this writing, current protests have resulted in:
 - LA Police Commission has announced up 100-150 million in cuts to the police department budget to be reinvested in communities of color.
 - San Diego PD has banned the use of the Cardiod Restraint. 
 - Several Confederate Statues have been removed.  
+
+![BLM](./blm1.jpg)
