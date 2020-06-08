@@ -55,7 +55,7 @@ My submodule is on commit d0552aefc03a9ea8efd22ea8ab54842fb32ccd02
 
 # To create a new blog post
 ```bash
-cd content
+# From root of project
 hugo new  --kind post post/my-post
 cd post/my-post/
 ```
