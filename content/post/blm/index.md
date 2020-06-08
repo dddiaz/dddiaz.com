@@ -31,10 +31,6 @@ image:
   preview_only: false
 ---
 
-{{< fragment >}}
-<meta property='og:image' content='//dddiaz.com/post/blm/blm1.jpg"/>
-{{< /fragment >}}
-
 At a time when every person has every excuse not to get out there, people came out in massive numbers.
 People weighed the risk of a global pandemic, against the cost of doing nothing, and they chose to do something.
 This is democracy in action, this is an America at its best, this is people realizing their power.
@@ -90,3 +86,4 @@ Note: as of this writing, current protests have resulted in:
 - Several Confederate Statues have been removed.  
 
 ![BLM](./blm1.jpg)
+
