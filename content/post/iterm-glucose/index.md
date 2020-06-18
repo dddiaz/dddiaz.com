@@ -60,7 +60,7 @@ This added about half a second of latency to my terminal. On the command line, t
 And there is! I decided that what I could do instead is just have a cron job that runs on my mac, curls that endpoint every 3 mintues, and writes the result to a file.
 Then from there, I could just output the text of that file in my terminal prompt! Now that is super fast! 
 
-## What does it look like
+# What does it look like
 ![iterm image](./featured.png)
 On the right hand side, you will see the right prompt. 
 > BG: "Glucose Number" "Trend" "Timestamp of Reading"
