@@ -77,8 +77,8 @@ There you will find all the instructions you need to get setup.
 
 Happy Hacking
 
-#### Shout Outs 
-Huge shout out to the opensource [Nightscout Project](http://www.nightscout.info/). They are leading the way on making our own data more accesible. THey have a saying, "We are not waiting", and that urgency has changed the conversation around whats possible around diabetes management.
+# Shout Outs 
+Huge shout out to the opensource [Nightscout Project](http://www.nightscout.info/). They are leading the way on making our own data more accessible. They have a saying, "We are not waiting", and that urgency has changed the conversation around what's possible around diabetes management.
 
 
 
