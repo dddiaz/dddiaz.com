@@ -40,6 +40,9 @@ education:
   - course: BA in Political Science
     institution: University of California, Irvine
     year: 2014
+  - course: Machine Learning Methods Certificate
+    institution: University of California, San Diego Extension
+    year: 2020
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons

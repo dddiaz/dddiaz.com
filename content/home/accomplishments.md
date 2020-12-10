@@ -19,6 +19,16 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
+  organization = "University of California, San Diego Extension"
+  organization_url = "https://extension.ucsd.edu/"
+  title = "Machine Learning Methods"
+  url = "https://extension.ucsd.edu/courses-and-programs/machine-learning-methods"
+  # certificate_url = "https://extension.ucsd.edu/courses-and-programs/machine-learning-fundamentals"
+  date_start = "2020-12-09"
+  date_end = ""
+  description = ""
+
+[[item]]
   organization = "Amazon Web Services"
   organization_url = ""
   title = "AWS Certified Solutions Architect - Professional"
