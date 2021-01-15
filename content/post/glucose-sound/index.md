@@ -35,7 +35,7 @@ The first step was actually getting my blood glucose data. I did this using an o
 Nightscout scrapes my continuous glucose monitor that I wear on my body, and gives me an easy-to-use API for my data.
 Once I have a day's worth of glucose data, the challenge becomes how do I turn that into sound.
 Initially I directly wrote glucose values to a wav file, but it sounded like complete junk. I eventually learned I needed
-some sort of sinusodial wave to hear anything like a tone that I was hoping for. I attempted to generate this sinwave
+some sort of sinusoidal wave to hear anything like a tone that I was hoping for. I attempted to generate this sine wave
 on my own and match it to the glucose value, but it just didn't sound right. I also tried messing with the data to
 upsample it but this turned out to be more tricky than I originally expected. Eventually though, I found a python library that could
 generate tones, and used the glucose data as input for that. 
