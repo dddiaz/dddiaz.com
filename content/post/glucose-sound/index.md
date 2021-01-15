@@ -50,7 +50,7 @@ Also, you are probably wondering how the sound actually came out like... well he
 Your browser does not support the audio element.
 </audio>
 
-It honestly might sound a little crazy, but the truth is, that's how Type 1 Diabetes can be! Anyways, hope you had fun
+It honestly might sound a little crazy (the higher the pitch the higher my blood sugar is, the lower the pitch the lower my blood sugar is), but the truth is, that's how Type 1 Diabetes can be! Anyways, hope you had fun
 checking out this random project!
 
 <script src="https://gist.github.com/dddiaz/3a3d384748937b1b0bce1404314a225f.js"></script>
