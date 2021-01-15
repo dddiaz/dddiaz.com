@@ -36,8 +36,8 @@ Nightscout scrapes my continuous glucose monitor that I wear on my body, and giv
 Once I have a day's worth of glucose data, the challenge becomes how do I turn that into sound.
 Initially I directly wrote glucose values to a wav file, but it sounded like complete junk. I eventually learned I needed
 some sort of sinusodial wave to hear anything like a tone that I was hoping for. I attempted to generate this sinwave
-on my own and match it to the glucose value but it just didnt sound right. I also tried messing with the data to
-upsample it but this turned out more tricky than I originally expected. Eventually though, I found a python library that could
+on my own and match it to the glucose value, but it just didn't sound right. I also tried messing with the data to
+upsample it but this turned out to be more tricky than I originally expected. Eventually though, I found a python library that could
 generate tones, and used the glucose data as input for that. 
 
 You can see my whole adventure with this project in the gist I have attached below.
@@ -50,7 +50,7 @@ Also, you are probably wondering how the sound actually came out like... well he
 Your browser does not support the audio element.
 </audio>
 
-It honestly might sound a little crazy, but the truth is, thats how Type 1 Diabetes can be! Anyways, hope you had fun
+It honestly might sound a little crazy, but the truth is, that's how Type 1 Diabetes can be! Anyways, hope you had fun
 checking out this random project!
 
 <script src="https://gist.github.com/dddiaz/3a3d384748937b1b0bce1404314a225f.js"></script>
