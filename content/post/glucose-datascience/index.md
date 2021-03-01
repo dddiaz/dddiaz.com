@@ -614,7 +614,7 @@ My initial response is that this a surprisingly high number! Going forward I wan
 the model isn't over fitting for features I don't intend, but for a first pass, this seems like a great start. I also
 want to explore techniques for improving my model as it is pretty rudimentary and how might I possibly predict workout type!
 
-Also, a quick not on lessons learned, wow data wrangling takes a lot more time than I expected. Also, domain knowledge seems
+Also, a quick note on lessons learned, wow data wrangling takes a lot more time than I expected. Also, domain knowledge seems
 pretty critical to do the above data wrangling.
 
 Anyways, this is my first attempt at using machine learning on a real world problem; I am sure it is not perfect,
