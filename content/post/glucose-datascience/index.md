@@ -51,9 +51,9 @@ __TL;DR__: Able to predict with 79.26 percent accuracy.
  I have __Type 1 Diabetes__ which is an auto-immune disease that causes my body to attack the insulin
  producing cells in my pancreas. Insulin is what helps your body use the energy (glucose) in the food you eat. To manage
  this disease I use some extremely cool pieces of technology. One is a continuous glucose monitor called a __Dexcom__
- CGM. I wear this cgm on my body, and it measures the amount of glucose in my interstitial fluid ( also known as the
- fluid between cells) every 5 minutes. That data is then sent to my phone ( even allowing me to view my real time
- glucose on my Apple Watch! ) as well as my insulin pump. This data, as well as other information is used to help manage
+ CGM. I wear this CGM on my body, and it measures the amount of glucose in my interstitial fluid (also known as the
+ fluid between cells) every 5 minutes. That data is then sent to my phone (even allowing me to view my real time
+ glucose on my Apple Watch!) as well as my insulin pump. This data, as well as other information is used to help manage
  my Diabetes.
 
  It has been my personal experience, that when I exercise, I tend to have higher insulin sensitivity, usually meaning
@@ -259,10 +259,10 @@ glucose_df['@sourceName'].unique()
 
 
 
-Keep in mind, workouts are stored in a different dataset that the main activity dataset.
-I handle this in the above code by outputting them to seperate CSVs.
+Keep in mind, workouts are stored in a different dataset than the main activity dataset.
+I handle this in the above code by outputting them to separate CSVs.
 
-Also note if you want to see all data available in healthkit, take a peak at the apple docs.
+Also note if you want to see all data available in HealthKit, take a peak at the apple docs.
 [Apple Docs](https://developer.apple.com/documentation/healthkit/hkobjecttype)
 
 
