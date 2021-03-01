@@ -33,7 +33,7 @@ blood glucose readings.
 Stretch Goal: Predict the type of exercise.
 
 __TL;DR__: Able to predict with 79.26 percent accuracy.
-[Github Notebook Link](https://github.com/dddiaz/glucose-datascience)
+[Github Notebook Link](https://github.com/dddiaz/glucose-datascience/blob/main/notebook.ipynb)
 
 ### Technology:
 - Apple HealthKit
