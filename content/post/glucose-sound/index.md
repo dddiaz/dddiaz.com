@@ -5,7 +5,7 @@ title: "Glucose Sound"
 subtitle: "I wonder what a days worth of glucose readings sound like?"
 summary: "I wonder what a days worth of glucose readings sound like?"
 authors: []
-tags: []
+tags: ["dexcom", "diabetes", "glucose", "python"]
 categories: []
 date: 2021-01-14T23:34:47-08:00
 lastmod: 2021-01-14T23:34:47-08:00
