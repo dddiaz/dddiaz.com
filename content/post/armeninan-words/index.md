@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Armeninan Words"
+title: "Armenian Words"
 subtitle: "Generating Armenian word translations for upload to quizlet"
 summary: "Generating Armenian word translations for upload to quizlet"
 authors: []
