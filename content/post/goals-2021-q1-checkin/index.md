@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Goals Check-In"
+title: "Goals Check-In ⛳️"
 subtitle: "Checking in with myself on how my 2021 goals are going."
 summary: ""
 authors: []
@@ -9,7 +9,7 @@ tags: ["goals"]
 categories: []
 date: 2021-04-07T18:05:34-07:00
 lastmod: 2021-04-07T18:05:34-07:00
-featured: false
+featured: true
 draft: false
 
 # Featured image
@@ -54,6 +54,7 @@ This post will be slightly different from some of my other more technical posts,
     - ML Project
 5. Adventure Ocean
     - Do a bunch of ocean activities including but not limited to: surfing, sailing, snorkeling, kayaking, kitesurfing
+
 ```
 
 ## So how is it going 🏄‍
@@ -108,7 +109,7 @@ I got a surfboard and have been surfing a couple of times (I am not very good, b
 
 ## Conclusion
 Well these are my goals for 2021. I feel like I am making good progress, and I am looking forward to making more headway on them as the year goes on. 
-The purpose is not to check off every goal, but when I am wondering what I should be doing, I like to look at this board as a reminder for what I should be prioritizing.
+The purpose is not to check off every goal, but when I am wondering what I should be doing, I like to look at this board as a reminder for what I want to be prioritizing.
 
 
 
