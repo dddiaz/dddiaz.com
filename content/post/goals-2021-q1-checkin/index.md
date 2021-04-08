@@ -110,6 +110,9 @@ I got a surfboard and have been surfing a couple of times (I am not very good, b
 ## Conclusion
 Well these are my goals for 2021. I feel like I am making good progress, and I am looking forward to making more headway on them as the year goes on. 
 The purpose is not to check off every goal, but when I am wondering what I should be doing, I like to look at this board as a reminder for what I want to be prioritizing.
+I also think it goes without saying, but I will reiterate it here, this year has been incredibly difficult for others, so I count myself fortunate to be able to focus on these parts of my life when so many have not had the luxury.   
+
+If you made it this far, let me know what you think! Do you have goals like mine? Are you working on closing your activivy rings, maybe we should share our apple watch activity!
 
 
 
