@@ -6,7 +6,7 @@ subtitle: "Predicting with 79% accuracy which days I exercised based on Blood Gl
 summary: "Predicting with 79% accuracy which days I exercised based on Blood Glucose Data with Neural Networks"
 authors: []
 tags: ["dexcom","glucose", "diabetes", "machine learning", "data science", "python", "healthkit", "apple watch"]
-categories: []
+categories: ["python"]
 date: 2021-02-27T15:19:53-08:00
 lastmod: 2021-02-27T15:19:53-08:00
 featured: true

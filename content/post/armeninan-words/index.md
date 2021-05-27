@@ -6,7 +6,7 @@ subtitle: "Generating Armenian word translations for upload to quizlet"
 summary: "Generating Armenian word translations for upload to quizlet"
 authors: []
 tags: ["python", "language", "learning"]
-categories: []
+categories: ["python"]
 date: 2021-03-14T00:13:48-08:00
 lastmod: 2021-03-14T00:13:48-08:00
 featured: false
