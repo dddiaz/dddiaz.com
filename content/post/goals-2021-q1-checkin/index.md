@@ -9,7 +9,7 @@ tags: ["goals"]
 categories: []
 date: 2021-04-07T18:05:34-07:00
 lastmod: 2021-04-07T18:05:34-07:00
-featured: true
+featured: false
 draft: false
 
 # Featured image
