@@ -11,7 +11,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Sr. DevOps Engineer
+role: Sr. Bioinformatics Software Engineer
 
 # Organizations/Affiliations
 organizations:
