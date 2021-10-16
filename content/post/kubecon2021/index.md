@@ -2,11 +2,11 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Kubecon2021"
-subtitle: ""
-summary: ""
+subtitle: "The Cloud Native Computing Foundation’s flagship conference gathers adopters and technologists from leading open source and cloud native communities."
+summary: "The Cloud Native Computing Foundation’s flagship conference gathers adopters and technologists from leading open source and cloud native communities."
 authors: []
 tags: ["conferences"]
-categories: ["Conferences","KubeCon"]
+categories: ["Conferences"]
 date: 2021-10-16T11:31:56-07:00
 lastmod: 2021-10-16T11:31:56-07:00
 featured: false
