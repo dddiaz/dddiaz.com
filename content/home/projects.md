@@ -28,11 +28,19 @@ subtitle = ""
     
   [[content.filter_button]]
     name = "Python"
-    tag = "python"
+    tag = "Python"
     
   [[content.filter_button]]
     name = "AWS"
     tag = "AWS"
+
+  [[content.filter_button]]
+    name = "Machine Learning"
+    tag = "Machine Learning"
+
+  [[content.filter_button]]
+    name = "Bioinformatics"
+    tag = "Bioinformatics"
     
 
 [design]

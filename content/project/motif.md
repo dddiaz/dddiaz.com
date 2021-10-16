@@ -5,7 +5,7 @@ date = 2018-12-05T15:53:10-08:00
 lastmod = 2018-12-05T15:53:10-08:00
 draft = true
 
-tags = ["python", "bioinformatics"]
+tags = ["Python", "Bioinformatics"]
 summary = "Las Vegas Algorithms to the rescue!"
 
 # Optional image to display on homepage (relative to `static/img/` folder).

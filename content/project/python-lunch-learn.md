@@ -13,7 +13,7 @@ image_preview = "python.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["teaching", "python"]
+tags = ["teaching", "Python"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://github.com/dddiaz/cg-python-demo"

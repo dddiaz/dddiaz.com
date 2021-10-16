@@ -1,22 +1,20 @@
 +++
 # Date this page was created.
-date = "2020-05-18"
-
+date = "2021-09-15"
 # Dont show this page
 draft = false
 
 # Project title.
-title = "Covid-19 Jupyter Notebook"
+title = "Glucose Sound"
 
 # Project summary to display on homepage.
-summary = "Jupyter notebook inspecting the coronavirus genome."
+summary = "Creating Sound From My Glucose Numbers"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["Python", "Genomics", "Bioinformatics"]
+tags = ["Python", "Diabetes"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://github.com/dddiaz/corona"
+external_link = "https://github.com/dddiaz/glucose-sound"
 
 # Does the project detail page use math formatting?
 math = false
