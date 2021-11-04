@@ -5,8 +5,8 @@ title: "My experience as a Lab Rat 🧀🐀"
 subtitle: "My experience doing a clinical trial for a new Type 1 Diabetes Drug"
 summary: "My experience doing a clinical trial for a new Type 1 Diabetes Drug"
 authors: []
-tags: ["diabetes"]
-categories: ["diabetes"]
+tags: ["Diabetes"]
+categories: ["Diabetes"]
 date: 2021-05-26T19:24:33-07:00
 lastmod: 2021-05-26T19:24:33-07:00
 featured: true
