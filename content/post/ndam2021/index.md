@@ -10,7 +10,7 @@ categories: ["Diabetes"]
 date: 2021-11-01T18:46:46-07:00
 lastmod: 2021-11-01T18:46:46-07:00
 featured: false
-draft: false
+draft: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
