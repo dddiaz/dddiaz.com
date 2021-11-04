@@ -2,15 +2,15 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "National Diabetes Awareness Month 2021"
-subtitle: "I decided to take a moment to talk about Type 1 Diabetes."
-summary: "I decided to take a moment to talk about Type 1 Diabetes."
+subtitle: "My adventure with Type 1 Diabetes."
+summary: "My adventure with Type 1 Diabetes."
 authors: []
 tags: ["diabetes"]
 categories: ["Diabetes"]
 date: 2021-11-01T18:46:46-07:00
 lastmod: 2021-11-01T18:46:46-07:00
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -164,8 +164,6 @@ It is sometimes said that the type one community
 And I have to admit, it is totally correct.
 The people I have met with Type 1 are all absolutely incredible.
 They are also role models for me to look up, because each one brings a unique drive and perspective that reminds me that my goals, my dreams, my aspirations are all still possible.
-
-I have included a picture at the top of this post of some of my friends with T1D all showing off our devices!
 They inspire me!
 
 # Conclusion 🚀
