@@ -70,7 +70,7 @@ I have to change it ever 10 days, and it has a filament that sticks into my body
 It makes a reading every 5 minutes and wirelessly sends that data to my iphone / Apple Watch ⌚ and my Insulin Pump (which I will describe later).
 
 #### Why is this so important?
-Just like in life, its important to not only know where you are, but where you are going.
+Just like in life, it's important to not only know where you are, but where you are going.
 
 Before continuous glucose monitoring, I would have to base all my treatment decisions on a single number. 
 That number couple be going up dramatically or down, and I would have no idea.
@@ -83,14 +83,15 @@ I can look at this graph (on my iPhone or Apple Watch) and extrapolate that whil
 That information is vital to informing me how I should adjust my treatments. 
 In this case I may want to have a snack, or lower the amount of insulin I may have for a meal, or avoid exercise without eating.
 
-There also gives a huge peace of mind when sleeping, because now if I am starting to go "low" while I am sleeping, and can have my phone alert me.
-Hopefully waking me and averting a disaster.
+This also gives me a huge peace of mind when sleeping, because now if I am starting to go "low" while I am sleeping, and can have my phone alert me.
+(Hopefully waking me and averting a disaster.)
 That can be a huge relief for people who live alone, or parents of kids of type 1.
 
 >Needless to say, the single biggest improvement to my diabetes management has been the continuous glucose monitor.
 
 ## Insulin
 Insulin is the hormone my body does not produce.
+Insulin is produced in the pancrease by Beta Cells.
 Insulin is what allows glucose to traverse the cell membrane and be used by your cells.
 Insulin is what brings down blood sugars.
 
@@ -154,7 +155,7 @@ Insulin is the bare minimum needed to manage Diabetes, and yet in the United Sta
 The Continuous Glucose Monitor which I mentioned as being one of the single greatest resources for my management is available to even fewer.
 Less that 10% percent of Diabetics are using a continuous glucose monitor to manage their diabetes. 
 
-*I will leave it as an exercise for the reader to ask themselves what systems and incentives exist to allow the above injustice to persist.*
+*I will leave it as an exercise for the reader to ask themselves what systems and incentives exist to allow the above injustices to persist.*
 
 # Community 🙌
 There is some good news though.
@@ -163,7 +164,7 @@ It is sometimes said that the type one community
 
 And I have to admit, it is totally correct.
 The people I have met with Type 1 are all absolutely incredible.
-They are also role models for me to look up, because each one brings a unique drive and perspective that reminds me that my goals, my dreams, my aspirations are all still possible.
+They are also role models for me to look up to, because each one brings a unique drive and perspective that reminds me that my goals, my dreams, my aspirations are all still possible.
 They inspire me!
 
 # Conclusion 🚀
