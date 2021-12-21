@@ -4,7 +4,7 @@ summary: "Using Python to Inspect the Covid-19 Genome"
 date: "2020-04-19T18:21:11-07:00"
 lastmod: "2020-04-19T18:21:11-07:00"
 draft: false
-featured: true
+featured: false
 
 tags: 
 - "Genome"

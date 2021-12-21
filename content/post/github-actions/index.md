@@ -9,7 +9,7 @@ tags: ['hugo', 'aws', 's3', 'cloudfront', 'static']
 categories: []
 date: 2020-05-20T19:57:02-07:00
 lastmod: 2020-05-20T19:57:02-07:00
-featured: true
+featured: false
 draft: false
 
 # Featured image

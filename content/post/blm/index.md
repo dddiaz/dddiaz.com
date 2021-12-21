@@ -9,7 +9,7 @@ tags: ["Politics"]
 categories: []
 date: 2020-06-07T21:51:19-07:0
 lastmod: 2020-06-07T21:51:19-07:00
-featured: true
+featured: false
 draft: false
 
 # Projects (optional).

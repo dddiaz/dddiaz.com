@@ -9,7 +9,7 @@ tags: ["Diabetes"]
 categories: ["Diabetes"]
 date: 2021-05-26T19:24:33-07:00
 lastmod: 2021-05-26T19:24:33-07:00
-featured: true
+featured: false
 draft: false
 
 # Featured image
