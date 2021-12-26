@@ -83,7 +83,7 @@ Easy -> git commit and Github Actions handles the rest :)
 - way to make bg icon smaller? scale down?
 
 # Done:
-- Scaled down deployment permissions (IN PROGRESS)
+- Scaled down deployment permissions
 
 
 #### Common Issues
