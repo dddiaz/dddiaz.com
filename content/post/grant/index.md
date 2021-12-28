@@ -47,7 +47,7 @@ He also vetoed the First Reconstruction Act which required southern states to gr
 - The KKK formed during the time of his administration, and they feared "black power at the polls"
 - Grant was elected after Johnson, and continued Lincoln's legacy by focusing on reconstruction
 - Grant created the Justice Department to help prosecute the KKK
-- There was intense backlash to reconstruction, with Sheraton saying "the new rebellion would be fought under the stars and stripes. The mistake made in 1861 was to have their own flag."
+- There was intense backlash to reconstruction, with one of Grant's advisors proclaiming "the new rebellion would be fought under the stars and stripes. The mistake made in 1861 was to have their own flag."
 
 # Main take away
 Unfortunately, against Grant's best efforts, it seems reconstruction was never truly completed, leaving lasting consequences for the country.
