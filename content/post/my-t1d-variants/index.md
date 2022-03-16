@@ -200,4 +200,8 @@ The hope is one day, once we understand all the variants associated with T1D, we
 > That is also what makes me so excited to work at Illumina. I know the technology I work on will help  people in my community with genetic diseases, and hopefully one day, people just like me.
 
 # 🚀 What's Next
-MOAR Genome Analysis! Stay Tuned.
+MOAR Genome Variant Analysis! Stay Tuned.
+
+
+#### P.S. Variant, but not like Loki Variants 🤣
+![Loki](loki.jpg)
