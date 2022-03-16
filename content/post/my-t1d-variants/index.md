@@ -187,8 +187,8 @@ It also might be because the variants I am using are new, and were not used by t
 Seems like I have more to do to understand when variants become significant and actionable.
 
 # 📖 What I Learned
-- I have some variants from the paper I found on NCBI!
-- VCF's are cool, and I need to learn more about some of the meta data fields to better understand them.  
+- I have some variants from the paper I found on NCBI! But to be clear, having a variant from that paper doesn't automatically mean you would get T1D.
+- VCF's are cool, and I need to learn more about some of the meta-data fields to better understand them.  
 - The reference genome is also still very weird to me. It is derived from 13 anonymous volunteers from Buffalo, New York, which doesn't seem like a very diverse dataset with over 7 billion people in the world. The good news is, there seems to be some work in this area with the 1000 genomes project to create a more diverse reference genome.
 
 # 🆒 Why this is cool
@@ -201,7 +201,6 @@ The hope is one day, once we understand all the variants associated with T1D, we
 
 # 🚀 What's Next
 MOAR Genome Variant Analysis! Stay Tuned.
-
 
 #### P.S. Variant, but not like Loki Variants 🤣
 ![Loki](loki.jpg)
