@@ -172,6 +172,8 @@ In the case above, on Chromosome 2 at position 24692809 I have a G when the refe
 
 The row also calls out the variant ID we were looking for earlier "rs2165738"
 
+We also have the "1/1" in the info column, which tells us this letter is present on both the maternal and paternal chromosome. That basically means, I got this letter from both my mom and my dad.  
+
 Now this is where there are some gaps in my knowledge. There is some metadata about this variant at the end of the row that I don't have a full understanding of, so I have some homework on my side.
 
 # 🔥 Results
