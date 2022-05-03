@@ -19,18 +19,20 @@ organizations:
   url: "https://www.illumina.com/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include Python, Kubernetes, Machine Learning and Bioinformatics.
+bio: My interests include Python, K8s, ML and Genomics.
 
 interests:
 - Python
 - Docker
 - Kubernetes
 - Bioinformatics
+- Genomics
 - Microsevices
 - CI/CD
 - Automation
 - High Performance Computing
 - Machine Learning
+- Cloud Infrastructure (AWS)
 
 education:
   courses:
@@ -79,7 +81,7 @@ email: ""
 
 I am a Computer Science(B.S.) and Political Science(B.A.) graduate from the University of California, Irvine. 
 
-I love to code - I specialize in Python applications, Infrastructure as Code, and DevSecOps. 
+I love to code - I specialize in Python applications, Cloud Infrastructure, and Genomics. 
 
 I am currently expanding my skill set in Bioinformatics with my new role as a Sr. Bioinformatics Software Engineer.
 
