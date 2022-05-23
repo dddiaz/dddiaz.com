@@ -51,4 +51,4 @@ title = "Hi There!"
 #  label = '<a class="js-github-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">Latest release<!-- V --></a>'
 +++
 
-My name is Daniel, and I am a Software Engineer living in SoCal.
+My name is Daniel, and I am a Bioinformatics Software Engineer living in SoCal.
