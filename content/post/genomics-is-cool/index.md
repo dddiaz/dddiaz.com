@@ -54,7 +54,7 @@ In order to translate the above data into actionable insights (commonly known as
 we need some fancy cutting edge computing.
 We use something in AWS called an F1 Instance.
 
-Check out this table from the aws docs:
+Check out this table from the AWS docs:
 ![f1.png](f1.png)
 
 F1 instances have a special piece of hardware called an FPGA (hence the F in F1), or field programmable gate array. This piece of hardware
@@ -87,7 +87,7 @@ To accomplish this goal, we have to use a huge amount of compute.
 Imagine spinning up thousands of nodes to do genomic analysis at scale, to accommodate thousands of samples, and then easily scaling down to zero.
 This is a real problem that is solved with the help of a scalable cloud, and is particularly useful when the infrastructure costs are non-trivial.
 
-And to give context on what non-trivial infrastructure costs means, a single aws f1 instance can range from 1-15 dollars an Hour. 
+And to give context on what non-trivial infrastructure costs means, a single AWS F1 instance can range from 1-15 dollars an hour. 
 Not an instance type you want to leave running when you aren't using it!
 
 # In pursuit of improving human health 🩻
