@@ -33,35 +33,25 @@ projects: []
 > The door opens, and you are invited to investigate everything to see what you can learn. 
 > The technology is clearly millions of years beyond what we can make.
 > This is biology.
-> -- <cite>@bert_hu_bert</cite>
+> -- [*@bert_hu_bert*](https://twitter.com/bert_hu_bert)
 
 This is one of my favorite quotes about biology, and it ties in surprisingly well with the Dr. Who Theme. 
 Genomics really is like looking 1 million years into the future. In the pursuit of understanding this advanced system, 
 we generate huge amounts of data, leverage some of the most cutting edge hardware you can imagine, 
-and utilize cloud hyper scaling at a level I haven't seen anywhere else.
+and utilize cloud hyper scaling at a level I haven't seen in any other industry.
 If that didn't sound cool enough as it is, that's all in pursuit of improving human health.
 
 # Truly "Big-Data" 💽
 Each time a persons’ 🧬 genome gets sequenced, over 200gb of data is generated! 
-Part of this data represents the actual letters ( aka bases A,G,C,T ) of the genome. 
-A human being has over 3 billion base pairs on 23 pairs of chromosomes. 
-
-The other data can be broken up into 4 major types.
-- BCL
-  - These are the raw files generated the by sequencers and can be extremely large (can be >225 GB)
-- FASTQ
-  - stores both raw sequence data and the quality scores for that data
-- BAM/SAM
-  - data after alignment to a reference sequence (~ 60 GB)
-- VCF
-  - file with all the genomic variants (.5 GB)
-
-That is a lot of data to say the least!
+Everything from the raw data from the sequencer, 
+to the actual letters of the genome (A,G,C,Ts), 
+to the actual ways in which the genome varies from the reference. a lot of data is generated.
 
 But as most engineers know, raw data is cool, but deriving insights from that data is even cooler.
 
 # High Performance Computing 💻
-In order to translate the above data (BCL, FASTQ, BAM/SAM) into actionable insights (VCF), we need some fancy high performance computing.
+In order to translate the above data into actionable insights (commonly known as the VCF file or Variant Call Format File), 
+we need some fancy high performance computing.
 We use something in AWS called an F1 Instance.
 
 Check out this table from the aws docs:
@@ -79,26 +69,31 @@ If you are curious on spinning up your own f1 instance, AWS has a very cool guid
 [Link](https://aws.amazon.com/quickstart/architecture/illumina-dragen/)
 ![guide.png](guide.png)
 
-But what king of insights is this infrastructure enabling. Well everything from identifying cancer early, 
+But what king of insights is this infrastructure enabling. 
+Well everything from identifying cancer early, 
 diagnosing rare diseases in children, 
 to analyzing how covid is mutating.
 
 # Cloud Hyper Scaling ☁️
 Sequencing one person is cool, but what about a million.
-There are large efforts to sequence thousands of people at the same time, and see if by overlapping the sequence 
-data of a large diverse cohort, we can derive insights into common overlapping mutations and how they contribute or prevent disease,
-insights that were previously hidden to us at smaller scales.
+There are recent efforts by the National Institute of Health to sequence a more diverse cohort of people at the same time, 
+and see if by overlapping the sequence data of this cohort, we can derive insights into common overlapping mutations and how they contribute to, or prevent disease.
+Insights that were previously hidden to us at smaller scales when we only looked at a single sequence in isolate.
 
 In California, we have something called the All of Us program in pursuit of this idea.
 {{< youtube 5mxkUuUfjqE >}}
 
 To accomplish this goal, we have to use a huge amount of compute.
-Imagine spinning up thousands of f1 nodes to do genomic analysis at scale, and then easily scaling down to zero.
-This is where the cloud's ability to scale becomes useful, especially when the infrastructure costs are non-trivial.
+Imagine spinning up thousands of nodes to do genomic analysis at scale, and then easily scaling down to zero.
+This is a real problem that is solved with the help of a scalable cloud, and is particularly useful when the infrastructure costs are non-trivial.
+
+And to give context on what non-trivial infrastructure costs means, a single aws f1 instance can range from 1-15 dollars an Hour. 
+Not an instance type you want to leave running when you aren't using it!
 
 # In pursuit of improving human health 🩻
 So why do all this?
 Why manage huge amounts of data, with massive amounts of compute.  
+
 Simple, to improve human health.
 
 A recent example of this from Rady's Children's Institute will help motivate this point: [Link](https://radygenomics.org/case-studies/fitzs-story/)
@@ -108,10 +103,10 @@ A recent example of this from Rady's Children's Institute will help motivate thi
 
 # My Connection 💉
 I also have a personal connection to Genomics. As someone with Type 1 Diabetes, 
-there is active research underway to understand the genetic component of this auto-immune disease.
+there is active research underway to understand the genetic component of Type 1 Diabetes (which is an auto-immune disease).
 It is extremely complex, but I am hoping one day the strides we make in genomics can have a positive impact on Diabetes.
 
-I tweet about an interesting article analyzing the connection between HLA variants and Auto-Immune diseases below.
+I recently tweeted about an interesting article analyzing the connection between HLA variants and Auto-Immune diseases below.
 
 {{< tweet 1516983927403008000 >}}
 
