@@ -43,6 +43,10 @@ on the repo, then commit the change.
 #### Dev Note
 My submodule is on commit d0552aefc03a9ea8efd22ea8ab54842fb32ccd02
 
+#### To revert a submodule change
+CD into submodule dir
+then do a git checkout
+
 # First Time Setup:
 - Update web/config/_default/params.toml to control top level config.
 - content/home/ to turn off and on widgets
