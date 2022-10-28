@@ -20,3 +20,7 @@ email_form = 0
 # Photo managed in contact.html
 # https://gohugo.io/content-management/image-processing/
 +++
+
+<div>
+  <img src="/home/contact.jpg">
+</div>

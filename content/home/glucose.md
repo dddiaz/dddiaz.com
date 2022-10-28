@@ -7,8 +7,8 @@ weight = 60 # Order that this section will appear in.
 title = "Blood Glucose Stats"
 subtitle = ""
 
-# Note I couldn't get the custom wiget to work, so for now im using the fragment shortcode :(
-# I also coudln't get the import css to work, so i had to inline everything. Don't look, its embarrassing!
+# Note I couldn't get the custom widget to work, so for now im using the fragment shortcode :(
+# I also couldn't get the import css to work, so i had to inline everything. Don't look, it's embarrassing!
 
 # JS is located here
 # config/_default/params.toml and set plugins_js = ["custom"]
