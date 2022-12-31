@@ -3,7 +3,7 @@
 
 title: "2022: Year In Review"
 subtitle: "Time Flies"
-summary: "2022: Year In Review"
+summary: "Time Flies"
 authors: []
 tags: ["goals"]
 categories: []
