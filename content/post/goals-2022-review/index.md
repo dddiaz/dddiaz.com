@@ -55,7 +55,7 @@ At a high level, it looks something like this:
 
 ### Love ♥️
 
-Sosse and I are still together 😊. She is a huge part of my life, and I am happy with how we continue to grow.
+Sosse is a huge part of my life, and I am happy with how we continue to grow.
 We have done a bit of traveling this past year together, with the highlight being Barcelona 🇪🇸
 ![Sosse](sosse.jpg)
 
@@ -90,7 +90,7 @@ more places on my body, which makes my life a lot easier.
 
 It's not perfect by any means, but it's a huge leg up on my old insulin pump, and definitely light years ahead of manual injections.
 I also still need to manually intervene whenever I eat, and tell it to give me a bolus of insulin, but other
-that it a lot more hands-off, which leads to a huge reduction in the mental burden that type 1 management can be.
+that it is a lot more hands-off, which leads to a huge reduction in the mental burden that type 1 management can be.
 
 I am most looking forward to when they release an iOS app, so I can control the pump from my iPhone!
 
@@ -107,14 +107,14 @@ doing it even more so next year! Isolation during the pandemic was hard for me, 
 outside and with friends.
 
 Some highlights with friends this past year include
-- Celebrating my Birthday with a birthday hike at Torrey Pines
+- Celebrating my birthday with a birthday hike at Torrey Pines
 - Sailing everyday in Club Med (Mexico)
-- Hoag Summer Nights with T1D Friends
+- Hoag Summer Nights with T1D friends
 - Barcelona with Sosse
 - Taking some Illumina Interns Kayaking in La Jolla to see the see caves and leopard sharks
 - Visiting James & Janice (College sailing buddies) in their new home in Nor-Cal. 
-- Second Place in Illumina Softball! Woot Woot!
-- Taking My Best Friend from High-school Antony with his Girlfriend Kathleen on a tour of the best of what San Diego has to offer.
+- Second place in Illumina Softball! Woot Woot!
+- Taking my best friend from high-school Antony with his Girlfriend Kathleen on a tour of the best of what San Diego has to offer.
 - Padres Game with Aida, Dennys, Katharine, Sosse, and Wade.
 - Vegas
 
@@ -140,10 +140,10 @@ It was a good reminder to myself that I can do a lot more than I think I can do,
 
 Something that wasn't on my goal board, but came up this past year, was an opportunity to mentor some Illumina Interns.
 They were all based in Madison, Wisconsin, so it was an interesting learning experience on mentoring people virtually, but
-I absolutely loved the opportunity. I was start struck by how smart, open, and optimistic they all were. It 
+I absolutely loved the opportunity. I was star struck by how smart, open, and optimistic they all were. It 
 was truly a privilege to be able to participate.
 They all got flown out to San Diego for a week and my co-mentor and I made sure to show them a great time. We went
-kayaking, and had an awesome dinner.
+kayaking and had an awesome dinner.
 
 ![Interns](interns.jpg)
 
