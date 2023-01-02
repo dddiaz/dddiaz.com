@@ -61,34 +61,33 @@ We have done a bit of traveling this past year together, with the highlight bein
 
 ### Health 💉
 I love to walk at least once a day. There is a great park by the apartment that I like to do a loop on. It's a great excuse
-to be outside for a second, and breath some fresh air. I absolutely love it. 
+to be outside for a second, and breath some fresh air. It is a highlight of my day. 
 
 I use my Apple Watch to track my walks, and this past year I walked an incredible __466.87 miles__ (that I tracked). 
-That is about 1.27 miles a day.
+That is about 1.27 miles a day!
 
 I was hoping this would increase my own VO2 Max, but it seems like it actually went down according to my Apple Watch.
 I will probably need to do more research on the best way to improve this metric, and if there is a way to do it with my
 daily walks.
 
-On a different note, I have been keeping up with my journaling, and I currently have a journal streak of 908 days!
+On a different note, I have been keeping up with my journaling, and I currently have a __journal streak of 908 days__!
 
 Lastly, I had a goal to increase my glucose time in range. This is a measure of how well I am staying in the right blood 
-glucose range which helps me understand how well I am doing with my Type 1 Diabetes.
+glucose range, which helps me understand how well I am doing with my Type 1 Diabetes.
 This year I decided to add some new tools to my tool kit. In particular, I decided to switch the insulin pump I use
 to a patch pump called Omnipod.
 
-The omnipod is an insilin pump that goes right on the skin. I have to change it every 3 days, but if you see me wearing
-it, it may look something like this:
+The omnipod is an insulin pump that goes right on the skin. I have to change it every 3 days. It looks something like this:
 ![Omnipod](omnipod.png)
-This isn't a picture of me wearing it 😂, it is from the omnipod website (https://www.omnipod.com/what-is-omnipod/omnipod-5) .
+This isn't a picture of me wearing it 😂of course, it is from the Omnipod website (https://www.omnipod.com/what-is-omnipod/omnipod-5) .
 It is usually hidden underneath my clothes, but it is good context for what it
 might look like if you see it poking out of my shirt.
 
-I absolutely love it. It wirelessly connects to my continuous glucose monitor, and can automatically adjust how much
+I absolutely love it. It wirelessly connects to my continuous glucose monitor (dexom), and can automatically adjust how much
 insulin I am getting based on my current blood sugar. The fact that it is a patch pump also means I can put it in a lot 
 more places on my body, which makes my life a lot easier. 
 
-It's not perfect by any means, but it's a huge leg up on my old insulin pump, and definitely light years ahead of manual injections.
+It's not perfect by any means, but it's a huge leap forward compared to my old insulin pump, and definitely light years ahead of manual injections.
 I also still need to manually intervene whenever I eat, and tell it to give me a bolus of insulin, but other
 that it is a lot more hands-off, which leads to a huge reduction in the mental burden that type 1 management can be.
 
@@ -97,12 +96,14 @@ I am most looking forward to when they release an iOS app, so I can control the 
 This new technology has definitely made my life a little easier, and improved my time in range, but I still think 
 there is more work to do.
 
+BTW if continuous glucose monitoring sounds interesting to you, I wrote a blog post about how I used it, apple watch health data, and machine learning
+to retroactively predict which days I exercised. You can check out the post here: https://dddiaz.com/post/glucose-datascience/ 
 
 ### Social 🕺
 Last Year I also wrote that I wanted to be a better listener. I think I have made some progress on it, but I still think
 there are always ways to improve.
 
-I also had a goal to connect with old and new friends. I think I definately did that this year, and I am looking forward to
+I also had a goal to connect with old and new friends. I think I definitely did that this year, and I am looking forward to
 doing it even more so next year! Isolation during the pandemic was hard for me, so I am doing what I can to cherish moments
 outside and with friends.
 
@@ -126,13 +127,15 @@ Some Pictures:
 ### Learning 📚
 For my learning goals, I wanted to create 2 YouTube videos, analyze my own genome, and learn to draw.
 
-I did not create any youtube videos this year. I wanted to create 2 videos around genomics. I figure the best
+I did not create any YouTube videos this year. I wanted to create 2 videos around genomics. I figure the best
 way to prove my mastery of a certain topic is to try teaching it. I think this still may be worth pursing next
-year, but there are also many people doing a great job of this on Youtube already. I was particularly impressed
+year, but there are also many people doing a great job of this on YouTube already. I was particularly impressed
 by https://www.youtube.com/@OMGenomics
 
-As for analyzing my own genome, I can happily say I did this, looking for my own Type 1 Diabetes variants with 
-my own VCF File in hand. It was so cool, and I wrote about it here: https://dddiaz.com/post/my-t1d-variants/
+As for analyzing my own genome, I can happily say I did this. I was able to inspect my own genome and look
+for Type 1 Diabetes specific variants, you can check out the post I did about it here: https://dddiaz.com/post/my-t1d-variants/
+
+Next year I would love to expand on this more by looking for more type 1 variants.
 
 I also took an intro to drawing class this past year as part of UCSD Extension. I was surprised by how many times 
 I felt super incapable of the assignment, then came out the other side with something that I wasn't completely embarrassed by.
