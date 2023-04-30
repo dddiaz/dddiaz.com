@@ -41,7 +41,16 @@ git submodule update --remote
 on the repo, then commit the change.
 
 #### Dev Note
-My submodule is on commit d0552aefc03a9ea8efd22ea8ab54842fb32ccd02
+My submodule is on commit d0552aefc03a9ea8efd22ea8ab54842fb32ccd02 (May 16, 2020)
+https://github.com/wowchemy/wowchemy-hugo-themes/commits/d0552aefc03a9ea8efd22ea8ab54842fb32ccd02
+
+Attempting to upgrade:
+- 1af6a8d46ee60ebcb5d6ecc5e8efe9cb68570b69
+- 437d478f69170126c7952bfed11053a6f6af2698 (Fail)
+  - header stopped working
+- 0ba00ee0c8d3769f90209aa0c746265a7bdfc622
+- 34dcc6f9d32286f6771de7c3632edceed8a270f1 (fixed breaking change)
+- 437d478f69170126c7952bfed11053a6f6af2698 (slight regression when clicking header icons but i think that is okay)
 
 #### To revert a submodule change
 CD into submodule dir
