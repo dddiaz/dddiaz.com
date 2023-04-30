@@ -48,6 +48,6 @@ jobs:
       run: |
         aws s3 sync public s3://dddiaz.com --delete
 
-    - name: Clear Cloudfront Cache
-      run: |
-        aws cloudfront create-invalidation --distribution-id E15F5SGXIT0KSW --paths '/*'
+    # - name: Clear Cloudfront Cache
+    #   run: |
+    #     aws cloudfront create-invalidation --distribution-id E15F5SGXIT0KSW --paths '/*'
