@@ -1,0 +1,4 @@
+👋 Welcome Daniel! You are using your Hugo image. 
+
+🔍 Remember the Command Palette (Cmd/Ctrl + Shift + P or F1).
+
