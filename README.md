@@ -34,7 +34,7 @@ cd post/my-post/
 
 hugo server -w # Build and run site.
 
-# To see your site, open the terminal and click the ports tab, and add 1313.
+# To see your site on github codespaces, open the terminal and click the ports tab and add 1313.
 ```
 
 # How to use (the hard way):
