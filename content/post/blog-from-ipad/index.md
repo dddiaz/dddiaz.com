@@ -91,9 +91,9 @@ RUN rm -rf /usr/local/hugo
 
 # Verdict
 Honestly, the dream has always been to have a one click development environment, for not just myself, but every team I have ever been on.
-This definitely gets us closer to that idea, although to be perfectly honest, Codespaces was not without its issues.
-I often had issues where the Codespace crashed, or I couldn't reconnect to it.
-So while it is possible to write blogs from my ipad, and even this post was partially done on an iPad, I think I will stick with my local dev environment for now.
+To be honest though Codespaces was not without its issues:
+I often had problems where Codespace crashed, or I couldn't reconnect to it.
+So while it is possible to write blogs from my iPad, and even this post was partially done on an iPad, I think I will stick with my local dev environment for now.
 
-So stay tuned, I have some other posts in the works that I am excited to post (from my laptop hahaha.)
+Regardless stay tuned! I have some other posts in the works that I am excited to publish (from my laptop hahaha.)
 
