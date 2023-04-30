@@ -51,7 +51,7 @@ This is perfect for my iPad usecase where I don't have a real terminal, but with
 
 
 {{< youtube Z6h4dGy0qzA >}}  
-BTW: the link for codespaces is here: https://github.com/features/codespaces
+BTW: The link for codespaces is here: https://github.com/features/codespaces
 
 In this next video: I show how you can even expose a port from your codespace, allowing you to see your code changes in real time in the browser.
 Super Nifty.
@@ -78,7 +78,7 @@ I had one main dependency I needed to worry about, which is Hugo, the static sit
 }
 ```
 
-You will notice, I am pulling from a local docker file, this is because the default microsoft dev image, which is great by the way, unfortunately has the latest version of hugo, and I need mine pinned to an older version.
+You will notice, I am pulling from a local docker file, this is because the default microsoft dev image, which is great by the way, unfortunately has the latest version of hugo. I need my version pinned..
 The docker image is a hack to remove the version of hugo installed, then use dev container features (https://code.visualstudio.com/blogs/2022/09/15/dev-container-features) to reinstall the hugo cli on my preferred version.
 
 ```dockerfile
@@ -89,11 +89,16 @@ FROM mcr.microsoft.com/devcontainers/universal:2-linux
 RUN rm -rf /usr/local/hugo
 ```
 
+So after I make my change on my iPad, I can simply do "git commit" and my Github Workflow takes care of the rest! 
+You can read about that here: https://dddiaz.com/post/github-actions/ 
+
 # Verdict
 Honestly, the dream has always been to have a one click development environment, for not just myself, but every team I have ever been on.
-To be honest though Codespaces was not without its issues:
-I often had problems where Codespace crashed, or I couldn't reconnect to it.
+While this gets us closer to that goal, I have to admit Codespaces was not without its issues.
+I often had problems where it crashed, or I couldn't reconnect to the development environment, or the port forwarding wouldn't work.
 So while it is possible to write blogs from my iPad, and even this post was partially done on an iPad, I think I will stick with my local dev environment for now.
 
 Regardless stay tuned! I have some other posts in the works that I am excited to publish (from my laptop hahaha.)
+
+Also feel free to check out some other blogs I have, like where I convert a day's worth of Blood Sugar readings into music! https://dddiaz.com/post/glucose-sound/
 
