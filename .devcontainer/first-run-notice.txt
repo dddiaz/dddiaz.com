@@ -13,5 +13,8 @@ cd post/my-post/
 
 hugo server -w # Build and run site.
 
+Note to see your site while on github codespaces:
+Open the terminal and click the ports tab, and add 1313.
+
 🏄 Happy Blogging.
 
