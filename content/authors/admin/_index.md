@@ -19,7 +19,7 @@ organizations:
   url: "https://www.illumina.com/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include Python, K8s, ML and Genomics.
+bio: My interests include Genomics, Python, and Cloud Infrastructure.
 
 interests:
 - Python
@@ -60,9 +60,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/dddiaz/
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/dddiaz1
+#- icon: twitter
+#  icon_pack: fab
+#  link: https://twitter.com/dddiaz1
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -81,8 +81,8 @@ email: ""
 
 I am a Computer Science(B.S.) and Political Science(B.A.) graduate from the University of California, Irvine. 
 
-I love to code - I specialize in Python applications, Cloud Infrastructure, and Genomics. 
+I love to code - I specialize in Genomics, Python applications, and Cloud Infrastructure. 
 
-I am currently expanding my skill set in Bioinformatics with my new role as a Sr. Bioinformatics Software Engineer.
+I am currently expanding my skill set in Bioinformatics with my new role in Product Development as a Sr. Bioinformatics Software Engineer.
 
 When I am not coding you might find me sailing, traveling, cycling, or volunteering with a Diabetes non-profit.  
