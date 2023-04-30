@@ -13,5 +13,5 @@ cd post/my-post/
 
 hugo server -w # Build and run site.
 
-🏄‍♂️ Happy Blogging.
+🏄 Happy Blogging.
 
