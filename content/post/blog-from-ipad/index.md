@@ -78,7 +78,7 @@ I had one main dependency I needed to worry about, which is Hugo, the static sit
 }
 ```
 
-You will notice, I am pulling from a local docker file, this is because the default microsoft dev image, which is great by the way, unfortunately has the latest version of hugo. I need my version pinned..
+You will notice, I am pulling from a local docker file, this is because the default microsoft dev image, which is great by the way, unfortunately has the latest version of hugo. I need my version pinned.
 The docker image is a hack to remove the version of hugo installed, then use dev container features (https://code.visualstudio.com/blogs/2022/09/15/dev-container-features) to reinstall the hugo cli on my preferred version.
 
 ```dockerfile
