@@ -19,7 +19,12 @@ well as the cloudfront cache clear.
 This repo was originally forked from the Academic repo. It is purposely kept as a fork to hopefully make it easier to 
 incorporate future updates to the theme.
 
-# How to checkout
+# How to use (the easy way):
+Use Github codespaces.
+It will automaticalyl run a container with all the needed deps installed.
+Simply follow the first run instructions on the shell, and you are all set.
+
+# How to use (the hard way):
 #### Note this proj uses git submodules for the academic theme: helpful doc [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 ```bash
 git clone https://github.com/dddiaz/frontend.dddiaz.com
@@ -47,7 +52,8 @@ My submodule is on commit: d0552aefc03a9ea8efd22ea8ab54842fb32ccd02
 CD into submodule dir
 then do a git checkout
 
-# First Time Setup:
+# Misc Notes:
+## First Time Setup:
 - Update web/config/_default/params.toml to control top level config.
 - content/home/ to turn off and on widgets
     - customize position with weight
@@ -57,7 +63,7 @@ then do a git checkout
 - Copy themes/academic/data/themes/minimal.toml to data/themes/my_theme.toml
 - Tell Academic to use your new theme by setting theme = "my_theme" in config/_default/params.toml
 
-# To create a new blog post
+## To create a new blog post
 ```bash
 # From root of project
 hugo new  --kind post post/my-post
@@ -65,14 +71,14 @@ cd post/my-post/
 ```
 Note: if you create a page manually, make sure md page is called index.md
 
-# To create a new jupyter notebook blog post
+## To create a new jupyter notebook blog post
 ```bash
  jupyter nbconvert notebook.ipynb --to markdown --NbConvertApp.output_files_dir=.  
 # copy files over to blog post folder
 # append notebook.md to blog post
 ```
 
-# To Run Locally:
+## To Run Locally:
 ```bash
 brew install hugo
 hugo server -w

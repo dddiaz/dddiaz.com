@@ -2,3 +2,16 @@
 
 🔍 Remember the Command Palette (Cmd/Ctrl + Shift + P or F1).
 
+👨‍💻 Dev Note When Running in devcontainer/github codespace:
+
+hugo version # check version
+git submodule init
+git submodule update
+
+hugo new  --kind post post/my-post # Create a new post
+cd post/my-post/
+
+hugo server -w # Build and run site.
+
+🏄‍♂️ Happy Blogging.
+
