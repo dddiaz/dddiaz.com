@@ -24,6 +24,17 @@ Use Github codespaces.
 It will automaticalyl run a container with all the needed deps installed.
 Simply follow the first run instructions on the shell, and you are all set.
 
+```text
+hugo version # check version
+git submodule init
+git submodule update
+
+hugo new  --kind post post/my-post # Create a new post
+cd post/my-post/
+
+hugo server -w # Build and run site.
+```
+
 # How to use (the hard way):
 #### Note this proj uses git submodules for the academic theme: helpful doc [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 ```bash
