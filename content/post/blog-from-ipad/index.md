@@ -30,7 +30,7 @@ projects: ["dddiaz.com"]
 
 # UPDATE: Hi HN!
 Thanks for checking out my post. Feel free to find me on BlueSky: https://bsky.app/profile/dddiaz.com or on LinkedIn: https://www.linkedin.com/in/dddiaz/ .  
-Also feel free to check out a post I am particularly proud of: https://dddiaz.com/post/my-t1d-variants/
+Also feel free to check out another post I am particularly proud of: https://dddiaz.com/post/my-t1d-variants/
 
 # Hi There
 
