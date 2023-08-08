@@ -61,8 +61,7 @@ If I have any unknowns that you know the source of, please feel free to let me k
 > Of the 20 terrible things that happened to me in my life, 19 were imagined - Unknown
 
 # Medicine
-> Doctors are men who prescribe medicines of which they know little, 
-> to cure diseases of which they know less, in human beings of whom they know nothing. — Voltaire
+> The difference between medicine and poison is dosage. - Unknown
 
 # Society
 > There's a reason you separate military and the police. 
