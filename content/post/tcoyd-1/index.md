@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-This is my first year Attending [TCOYD](https://tcoyd.org), a conference specifically for people with Type 1 Diabetes! Covering everything from research updates, funny skits, to opportunities to meet people just like me, it was an awesome experience. To top it all off, it was also in San Diego. Hurricane Hilary almost crashed our party, but it all turned out fine! I wanted to go over some of the best tidbits I learned while I was there.
+This is my first year attending [TCOYD](https://tcoyd.org), a conference specifically for people with Type 1 Diabetes! Covering everything from research updates, funny skits, to opportunities to meet people just like me, it was an awesome experience. To top it all off, it was also in San Diego. Hurricane Hilary almost crashed our party, but it all turned out fine! I wanted to go over some of the best tidbits I learned while I was there.
 
 DISCLAIMER: I am not a doctor, if you have questions about your health, talk to your doctor! Duh!
 
