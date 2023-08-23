@@ -2,8 +2,8 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Top 5 takeaways from TCOYD"
-subtitle: "TCOYD is a conference specifically for Type 1 Diabetics in San Diego."
-summary: "TCOYD is a conference for specifically for Type 1 Diabetics in San Diego, and in this post I wanted to go over the top 5 takeaways I got from the conference."
+subtitle: "TCOYD is a conference specifically for Type 1 Diabetics."
+summary: "TCOYD is a conference specifically for Type 1 Diabetics. In this post I wanted to go over the top 5 takeaways I got from the conference."
 authors: []
 tags: []
 categories: []
