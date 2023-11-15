@@ -106,3 +106,5 @@ Open Source Links:
 Loop: https://github.com/LoopKit/Loop (The App that runs on my watch on phone to control my pump)
 
 NightScout: https://github.com/nightscout (An open source tool to generate reports on glucose data to help management)
+
+Keep an eye out for any of the Type 1 Symptoms I mentioned above!
