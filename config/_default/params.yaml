@@ -20,7 +20,7 @@ marketing:
     org_name: ''
     description: 'Daniel Diaz is a Sr. Bioinformatics Engineer specializing in Genomics.'
   analytics:
-    google_analytics: ''
+    google_analytics: 'UA-99682958-1'
     baidu_tongji: ''
     google_tag_manager: 'G-NHQL5ZP442'
     microsoft_clarity: ''
