@@ -61,7 +61,7 @@ And there is! I decided that what I could do instead is just have a cron job tha
 Then from there, I could just output the text of that file in my terminal prompt! Now that is super fast! 
 
 # What does it look like
-![iterm image](./featured.png)
+![iterm image](featured.png)
 On the right hand side, you will see the right prompt. 
 > BG: "Glucose Number" "Trend" "Timestamp of Reading"
 

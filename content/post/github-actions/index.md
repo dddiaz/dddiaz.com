@@ -52,7 +52,7 @@ So in the following lines, I am going to describe what I needed to do, and my ov
 Everything relating to github actions can actually be created in the github gui. In fact they have a super fancy editor
 for creating the action with intellisense.
 
-![png](./pic1.png)
+![png](pic1.png)
 
 They start you off with a template, which is easy to use as a jumping off point. From there, I knew the first hurdle
 would be my aws creds, as they are needed as part of my deployment. 
@@ -72,7 +72,7 @@ library for me to use, that makes this process seamless.
 Now you might be wondering about the aws secrets, github has that handled too. There is a secrets portion of your repo
 where you can upload all your relevant secrets.
 
-![png](./secrets.png)
+![png](secrets.png)
 
 Now that aws has set up my creds and set up the aws cli, I need to build my actuall hugo website. Turns out there
 is an action I can import here too.
@@ -106,7 +106,7 @@ And that's it! Before you know it, you are doing one click deployments!
 
 You can even create a badge to display on your main readme.  
  
-![png](./badge.png)
+![png](badge.png)
 
 Whoa whoa whoa, this seem pretty easy, but what about that backend api you mentioned earlier.
 Ahh, glad you mentioned that. 

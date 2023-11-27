@@ -26,6 +26,8 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+# editable: false
 ---
 
 I have had Type 1 Diabetes for over 25 years and today on World Diabetes Day I want to celebrate the most impactful open source project I have ever used. Before I can talk about that though, I have to set the stage for a moment.
