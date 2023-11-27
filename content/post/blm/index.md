@@ -85,5 +85,5 @@ Note: as of this writing, current protests have resulted in:
 - San Diego PD has banned the use of the Cardiod Restraint. 
 - Several Confederate Statues have been removed.  
 
-![BLM](./blm1.jpg)
+![BLM](blm1.jpg)
 

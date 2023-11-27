@@ -369,7 +369,7 @@ plt.show()
 
 
 
-![png](./notebook_29_1.png)
+![png](notebook_29_1.png)
 
 
 ## Ok let's pause.
@@ -431,7 +431,7 @@ plt.show()
 ```
 
 
-![png](./notebook_35_0.png)
+![png](notebook_35_0.png)
 
 
 ## Results
