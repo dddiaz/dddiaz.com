@@ -65,7 +65,7 @@ The image above from UCSF, while a little blurry, does a great job of explaining
 To combat increasing levels of glucose in the blood whenever I eat, I am tasked with the insane objective of being my pancreas.
 Considering the pancreas has evolved over thousands of years to do this one thing, and I have been trying to do its job for about 25 years, it can sometimes feel like I need some more experience 🤣.
 I rely on [technology](https://dddiaz.com/post/loop/) to help me manage my disease (deliver insulin and monitor blood sugar) 
-and I have some previous posts describing what goes into [that](https://dddiaz.com/post/ndam2021/).
+and I have some previous [posts](https://dddiaz.com/post/ndam2021/)describing what goes into that.
 
 ## The beginning of why
 Considering Type 1 Diabetes is a disease that effects [1.45 million americans](https://beyondtype1.org/type-1-diabetes-statistics/#:~:text=United%20States,Americans%20have%20type%201%20diabetes.)
