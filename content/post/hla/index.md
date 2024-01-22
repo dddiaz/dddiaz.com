@@ -47,7 +47,7 @@ As someone with Type 1 Diabetes, I need insulin to survive, so having my only fo
 
 But why do I need insulin to survive in the first place? The answer is easy, it's because I have Type 1 Diabetes.
 __But then why do I have Type 1 Diabetes?__ Well, now the rabbit hole begins, and we shall sally into our next adventure. We will leave the conclusion of the above story to another time, 
-but I will give you with a slight spoiler, I find a way to carry on and live to write this very article!
+but I will give you a slight spoiler, I find a way to carry on and live to write this very article!
 
 ## Type 1 Basics
 ![t1d.png](t1d.png)
@@ -69,7 +69,7 @@ and I have some previous posts describing what goes into [that](https://dddiaz.c
 
 ## The beginning of why
 Considering Type 1 Diabetes is a disease that effects [1.45 million americans](https://beyondtype1.org/type-1-diabetes-statistics/#:~:text=United%20States,Americans%20have%20type%201%20diabetes.)
-, you would think we have firm grasp of what causes it. As described on the cdc [website](https://www.cdc.gov/diabetes/basics/what-is-type-1-diabetes.html#:~:text=Type%201%20diabetes%20is%20thought,years%20before%20any%20symptoms%20appear.)
+, you would think we have a firm grasp of what causes it. As described on the cdc [website](https://www.cdc.gov/diabetes/basics/what-is-type-1-diabetes.html#:~:text=Type%201%20diabetes%20is%20thought,years%20before%20any%20symptoms%20appear.)
 we know the body accidentally starts attacking itself (aka the pancreas where insulin is produced), but beyond that we aren't entirely sure what triggers it.
 We do know that some people have genes that are associated with type 1 diabetes, but this is not a guarantee of getting the disease.
 An environmental trigger may play a part, maybe some sort of virus in conjunction with a genetic predisposition. 
@@ -83,7 +83,7 @@ Figuring out where to start was quite difficult for me. My background is not bio
 So like any good computer scientist, I decided to start with Google (I have a feeling this sentence might instantly date me, maybe in the future people will say they start with ChatGPT). 
 I had found a paper describing some simple SNVs or single letter variants in the genome (an A instead of a G in a certain position for example). 
 
-To take a step back, remember that you can think of your genome as a recipe book for what makes you, you. Inside each of your cels your dna has the instructions to make everything from your big toe to your wavy hair.
+To take a step back, remember that you can think of your genome as a recipe book for what makes you, you. Inside each of your cells your dna has the instructions to make everything from your big toe to your wavy hair.
 Figuring what this recipe book actually says requires the help of some really cool technology called a genome sequencer.
 After we do that sequencing we get a gigantic file of As Gs Ts and Cs which represent the 4 letters that compose everyone's DNA. 
 Your specific combination of As Gs Ts and Cs is what makes you unique.
@@ -251,7 +251,7 @@ I would need all 3 genes to have the particular haplotypes (haplotype in this ca
 As described in the paper, ["The strongest associations between T1D and the HLA region are seen with haplotypes and genotypes formed by the DRB1-DQA1-DQB1 loci"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3233362/#:~:text=The%20strongest%20associations%20between%20T1D%20and%20the%20HLA%20region%20are%20seen%20with%20haplotypes%20and%20genotypes%20formed%20by%20the%20DRB1-DQA1-DQB1%20loci).
 While it is clear I have two genes in the haplotype, I do not have the thrid.
 This may be confusing to the reader, as I explained earlier I have type 1 diabetes, but do not seem to have the strongest genetic risk factor.
-The paper goes on to say ["HLA remains, by far, the strongest predictor of T1D risk, consistent with the idea that the human genome is prone to develop T1D when mutations in genes controlling tolerance override the normal polygenic prevention of autoimmunity. However, the complexity of the genetics of T1D is greater than might have been predicted by the early reports."](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3233362/#:~:text=the%20complexity%20of%20the%20genetics%20of%20T1D%20is%20greater%20than%20might%20have%20been%20predicted%20by%20the%20early%20reports)
+The paper goes on to say ["the complexity of the genetics of T1D is greater than might have been predicted by the early reports."](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3233362/#:~:text=the%20complexity%20of%20the%20genetics%20of%20T1D%20is%20greater%20than%20might%20have%20been%20predicted%20by%20the%20early%20reports)
 
 This resonates with me, as it is clear I have Type 1 Diabetes, but I do not have the set of 3 autoimmune genes that confer the strongest association.
 What this means at a high level is that I either have genes not described in this analysis (very possible), there are other genes out there that are connected to t1d that are not yet undertood (also likely), or I got my Type 1 Diabetes from another mechanism not yet understood (also possible).
