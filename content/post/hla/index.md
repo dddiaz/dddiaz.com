@@ -179,6 +179,7 @@ As you can see, these are very powerful machines (some have almost 1 TiB of onbo
 
 Once we have the instance, we load my genome onto it. 
 My genome is stored as a BAM file, and this represents all the As Gs Ts and Cs that make me, well me.
+To load the genome onto the server, we copy this BAM file over.
 
 From there we run this somewhat magical Dragen Command:
 ```bash
