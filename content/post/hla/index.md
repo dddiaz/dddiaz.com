@@ -45,8 +45,8 @@ You can imagine this insulin pump, but with a gigantic error on the screen.
 
 As someone with Type 1 Diabetes, I need insulin to survive, so having my only form of access to insulin basically fall over board could be described as "suboptimal".
 
-But why do I need insulin to survive in the first place? The easy answer is easy, it's because I have type 1 Diabetes.
-__But then why do I have type 1 diabetes?__ Well, now the rabbit hole begins, and we shall sally into our next adventure. We will leave the conclusion of the above story to another time, 
+But why do I need insulin to survive in the first place? The answer is easy, it's because I have Type 1 Diabetes.
+__But then why do I have Type 1 Diabetes?__ Well, now the rabbit hole begins, and we shall sally into our next adventure. We will leave the conclusion of the above story to another time, 
 but I will give you with a slight spoiler, I find a way to carry on and live to write this very article!
 
 ## Type 1 Basics
@@ -63,7 +63,7 @@ The image above from UCSF, while a little blurry, does a great job of explaining
 4. Glucose levels increase
 
 To combat increasing levels of glucose in the blood whenever I eat, I am tasked with the insane objective of being my pancreas.
-Considering the pancreas has evolved over thousands of years to do this one thing, and I have trying to do its job for about 25 years, it can sometimes feel like I need some more experience 🤣.
+Considering the pancreas has evolved over thousands of years to do this one thing, and I have been trying to do its job for about 25 years, it can sometimes feel like I need some more experience 🤣.
 I rely on [technology](https://dddiaz.com/post/loop/) to help me manage my disease (deliver insulin and monitor blood sugar) 
 and I have some previous posts describing what goes into [that](https://dddiaz.com/post/ndam2021/).
 
@@ -84,7 +84,7 @@ So like any good computer scientist, I decided to start with Google (I have a fe
 I had found a paper describing some simple SNVs or single letter variants in the genome (an A instead of a G in a certain position for example). 
 
 To take a step back, remember that you can think of your genome as a recipe book for what makes you, you. Inside each of your cels your dna has the instructions to make everything from your big toe to your wavy hair.
-Figuring what this recipe book actually says requires the help of some really technology called genome sequencers.
+Figuring what this recipe book actually says requires the help of some really cool technology called a genome sequencer.
 After we do that sequencing we get a gigantic file of As Gs Ts and Cs which represent the 4 letters that compose everyone's DNA. 
 Your specific combination of As Gs Ts and Cs is what makes you unique.
 
@@ -106,8 +106,8 @@ After some non-specific meandering (aka clicking on links till I found something
 The above image comes from the paper titled [Concordance for Islet Autoimmunity among Monozygotic Twins](https://www.nejm.org/doi/10.1056/NEJMc0805398?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)
 and what it says is that if one identical twin had diabetes, there was a higher chance that the other twin would also get it, especially if the first twin got diabetes at a younger age.
 
-Confusing note, so while the twin study establishes that there is a genetic component to type 1 diabetes, many people diagnosed with type 1 diabetes (>90%) have no 1st degree relative with type 1 diabetes ([paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2844823/#:~:text=do%20not%20have%20a%20first-degree%20relative%20with%20diabetes)).
-When I was diagnosed, no one in my family had type 1 diabetes, although recently that changed when my cousin was diagnosed with type 1.
+Confusing note, so while the twin study establishes that there is a genetic component to Type 1 Diabetes, many people diagnosed with type 1 diabetes (>90%) have no 1st degree relative with type 1 diabetes ([paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2844823/#:~:text=do%20not%20have%20a%20first-degree%20relative%20with%20diabetes)).
+When I was diagnosed, no one in my family had Type 1 Diabetes, although recently that changed when my cousin was diagnosed with Type 1.
 
 So there is possibly more at play, regardless, we know your genes play some part.
 
@@ -145,8 +145,8 @@ This [paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3233362/#:~:text=To%20
 and goes into more biological detail on the intricacies of HLA.
 
 In particular, it calls out the HLA Alleles we should look for.
-- The DR-DQ haplotypes conferring the highest risk are DRB1*03:01-DQA1*05:01-DQB1*02:01 (abbreviated “DR3”) and DRB1*04:01/02/04/05/08-DQA1*03:01-DQB1*03:02/04 (or DQB1*02; abbreviated “DR4”). 
-- Some haplotypes confer strong protection from disease, such as DRB1*15:01-DQA1*01:02-DQB1*06:02 (abbreviated “DR2”; OR = 0.03; 95% CI, 0.01–0.07).
+- The DR-DQ haplotypes conferring the highest risk are ```DRB1*03:01-DQA1*05:01-DQB1*02:01``` (abbreviated “DR3”) and ```DRB1*04:01/02/04/05/08-DQA1*03:01-DQB1*03:02/04``` (or ```DQB1*02```; abbreviated “DR4”). 
+- Some haplotypes confer strong protection from disease, such as ```DRB1*15:01-DQA1*01:02-DQB1*06:02``` (abbreviated “DR2”; OR = 0.03; 95% CI, 0.01–0.07).
 
 The way the HLA Genes are labeled is kind of wonky, luckily we can use the paper above to understand the labeling a bit more. 
 They [explain](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3233362/#:~:text=The%20emergence%20of%20DNA-based%20genotyping%20led%20to%20the%20creation%20of%20a%20nomenclature), 
@@ -155,6 +155,7 @@ followed by an asterisk, followed by a numerical designation for the allele (eg,
 In the previous example, the “04” refers to the serologic group of the DRB1 allele, and the “05” refers to the individual allele within the DRB1*04 group."
 
 That makes it slightly more clear, but once we have my own genes in hand, I hope it will start to make more sense.
+
 I will do some hand waving here, and just say that after reading the paper, its clear we need a way to inspect what HLA Class 2 Genes (encoding DQ and DR) I have, and for that we will need Dragen!
 
 # Dragen to the rescue 🐉
@@ -172,9 +173,9 @@ As I mentioned earlier, Dragen is a piece of software, but one caveat to mention
 In practice, this is like having a graphics card in your computer that only does genomics. 
 It makes everything super fast.
 
-So to begin, we need to spin up a special ec2 instance called an F1.
+So to begin, we need to spin up a special ec2 instance called an F1. And if you are not familiar with ec2, its just a fancy way of saying a computer in amazons cloud.
 ![f1.png](f1.png)
-As you can see, these are very powerful machines, and it needs to be that powerful to analyze the massive amount of data that is our genome.
+As you can see, these are very powerful machines (some have almost 1 TiB of onboard ram!), and it needs to be that powerful to analyze the massive amount of data that is our genome.
 
 Once we have the instance, we load my genome onto it. 
 My genome is stored as a BAM file, and this represents all the As Gs Ts and Cs that make me, well me.
@@ -219,7 +220,7 @@ OK so let's analyze the data, comparing with what the [paper](https://www.ncbi.n
 
 ![hla-table.png](hla-table.png)
 
-According to the paper, "The DR-DQ haplotypes conferring the highest risk are DRB1*03:01-DQA1*05:01-DQB1*02:01 (abbreviated “DR3”) and DRB1*04:01/02/04/05/08-DQA1*03:01-DQB1*03:02/04 (or DQB1*02; abbreviated “DR4”). 
+According to the paper, "The DR-DQ haplotypes conferring the highest risk are ```DRB1*03:01-DQA1*05:01-DQB1*02:01``` (abbreviated “DR3”) and ```DRB1*04:01/02/04/05/08-DQA1*03:01-DQB1*03:02/04``` (or ```DQB1*02```; abbreviated “DR4”). 
 The risk is much higher for the heterozygote formed by these two haplotypes (OR = 16.59; 95% CI, 13.7–20.1) than for either of the homozygotes (DR3/DR3, OR = 6.32; 95% CI, 5.12–7.80; DR4/DR4, OR = 5.68; 95% CI, 3.91)."
 
 In other words the highest risk is if you have some form of the DR3 genes from one parent and DR4 genes from another parent.
@@ -228,7 +229,7 @@ Let's see what I have:
 
 On Initial Inspection, it's clear that I have two gene matches. 
 For context each gene in the table is repeated twice, once for the gene you get from mom, and once for the gene you get from dad.
-So based on the first table of my HLA Class II Genes Encoding DQ, I have one copy of the Gene DQA1*03:01 and one copy of the gene DQB1*03:02. 
+So based on the first table of my HLA Class II Genes Encoding DQ, I have one copy of the Gene ```DQA1*03:01``` and one copy of the gene ```DQB1*03:02```. 
 And they seem to have come from different parents.
 I don't seem to have any matches for the DRB Gene.
 Now if I input that into the table, where I replace non-matching genes with a dash I get this.
@@ -252,11 +253,12 @@ While it is clear I have two genes in the haplotype, I do not have the thrid.
 This may be confusing to the reader, as I explained earlier I have type 1 diabetes, but do not seem to have the strongest genetic risk factor.
 The paper goes on to say ["HLA remains, by far, the strongest predictor of T1D risk, consistent with the idea that the human genome is prone to develop T1D when mutations in genes controlling tolerance override the normal polygenic prevention of autoimmunity. However, the complexity of the genetics of T1D is greater than might have been predicted by the early reports."](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3233362/#:~:text=the%20complexity%20of%20the%20genetics%20of%20T1D%20is%20greater%20than%20might%20have%20been%20predicted%20by%20the%20early%20reports)
 
-This resonates with me, as it is clear I have type 1 Diabetes, but I do not have the set of 3 autoimmune genes that confer the strongest association.
-What this means at a high level is that I either have genes not described in this analysis (very possible), there are other genes out there that are connected to t1d that are not yet undertood (also likely), or I got my type 1 diabetes from another mechanism not yet understood (also possible).
+This resonates with me, as it is clear I have Type 1 Diabetes, but I do not have the set of 3 autoimmune genes that confer the strongest association.
+What this means at a high level is that I either have genes not described in this analysis (very possible), there are other genes out there that are connected to t1d that are not yet undertood (also likely), or I got my Type 1 Diabetes from another mechanism not yet understood (also possible).
 
 To be perfectly honest, that is not exactly the result I expected, but that is okay! In a perfect world I would have looked at my HLA Variants and been able to say, oh I have this variant assocaited with disease.
 But at this exact moment, I can not do that, and again that is okay!
+
 This just means that more research is needed to understand this disease, more science is needed to under the genetics of immunology, and more people are needed to help. 💪
 
 # More to come ⛵️
