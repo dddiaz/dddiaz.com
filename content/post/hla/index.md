@@ -292,3 +292,12 @@ If you thought this post was interesting, you might like this post where I parti
 - [What is HLA](https://www.merckmanuals.com/professional/immunology-allergic-disorders/biology-of-the-immune-system/human-leukocyte-antigen-hla-system)   
 - [Advancing the science](https://dddiaz.com/post/clinical-trial-1/)  
 - [Previous T1D Variants Post](https://dddiaz.com/post/my-t1d-variants/)  
+
+# UPDATE July 19 2024
+There is a new immunotherapy [clinical trial](https://clinicaltrials.gov/study/NCT05683990) targeting a specific DR-DQ Haplotype (haplotype being a combination of genes), to delay the onset of Type 1 diabetes.
+The Haplotype is HLA DR3-DQ2. Confusingly DR3 and DQ2 are abbreviations. DR3 stands for DRB1 03:01 and DQ2 stands for DQA1 05:01 and DQB1 02:01. (As far as I can tell, the nomenclature is kind of confusing.) 
+My post above actually looked for DR3 and DR4, so slightly different set of genes.
+But if you inspect the table of variants, you can see I also dont seem to have the DR3, DQ2 Genes.
+Meaning I don't have the genes they are targeting in the clinical trial. 
+In the clinical trial you also need to be recently diagnosed, of which I am definately not, but this is a fascinating development regardless!
+
