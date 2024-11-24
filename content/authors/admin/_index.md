@@ -111,6 +111,5 @@ highlight_name: true
 
 I am a Computer Science(B.S.) and Political Science(B.A.) graduate from the University of California, Irvine.
 I love to solve impactful problems - I specialize in Genomics, Python applications, and Cloud Infrastructure.
-I am currently expanding my skill set in Bioinformatics with my new role in Product Development as a Sr. Bioinformatics Software Engineer.
+I am currently a Staff Bioinformatics Engineer in Product Development at Illumina.
 When I am not coding you might find me sailing, traveling, cycling, or volunteering with a Diabetes non-profit.  
-
