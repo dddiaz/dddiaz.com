@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Sr. Bioinformatics Software Engineer
+role: Staff Bioinformatics Engineer
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -104,6 +104,9 @@ social:
     - icon: linkedin
       icon_pack: fab
       link: https://www.linkedin.com/in/dddiaz/
+    - icon: twitter
+      icon_pack: fab
+      link: https://bsky.app/profile/dddiaz.com
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
@@ -111,5 +114,5 @@ highlight_name: true
 
 I am a Computer Science(B.S.) and Political Science(B.A.) graduate from the University of California, Irvine.
 I love to solve impactful problems - I specialize in Genomics, Python applications, and Cloud Infrastructure.
-I am currently a Staff Bioinformatics Engineer in Product Development at Illumina.
+I am currently a Staff Bioinformatics Engineer in Product Development at Illumina (Dragen).
 When I am not coding you might find me sailing, traveling, cycling, or volunteering with a Diabetes non-profit.  
