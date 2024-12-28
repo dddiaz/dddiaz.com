@@ -106,7 +106,7 @@ It is extremely complex, but I am hoping one day the strides we make in genomics
 
 I recently tweeted about an interesting article analyzing the connection between HLA variants and Auto-Immune diseases below.
 
-{{< tweet 1516983927403008000 >}}
+Update: Twitter Link Removed, find me on BlueSky -> https://bsky.app/profile/dddiaz.com
 
 # Why write this article? 👨‍💻
 I am extremely fortunate to have the unique opportunity to exercise my software engineering skill set while making 

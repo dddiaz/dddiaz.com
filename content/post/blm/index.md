@@ -7,8 +7,8 @@ summary: ""
 authors: []
 tags: ["Politics"]
 categories: []
-date: 2020-06-07T21:51:19-07:0
-lastmod: 2020-06-07T21:51:19-07:00
+date: 2020-06-07T21:51:19Z
+lastmod: 2020-06-07T21:51:19Z
 featured: false
 draft: false
 

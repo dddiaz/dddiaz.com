@@ -176,4 +176,4 @@ I have everything from converting glucose numbers to sound, to doing machine lea
 
 #### P.P.S
 Check me out on Twitter! I sometimes post about Type 1 Diabetes stuff on there!
-{{< tweet 1455257282451812355 >}}
+Update: Twitter Link Removed, find me on BlueSky -> https://bsky.app/profile/dddiaz.com

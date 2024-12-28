@@ -58,4 +58,4 @@ checking out this random project!
 
 #### BTW
 Check me out on Twitter! I sometimes post about Type 1 Diabetes stuff on there!
-{{< tweet 1336552877570084864 >}}
+Update: Twitter Link Removed, find me on BlueSky -> https://bsky.app/profile/dddiaz.com

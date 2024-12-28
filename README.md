@@ -11,8 +11,8 @@ Deployed to s3/cloudfront with Github Actions :)
 [https://api.dddiaz.com/birthday](https://api.dddiaz.com/birthday) *Note: API must be accessed with https*  
 
 ## Pinned Version Info
-GO: go version go1.21.4 darwin/arm64
-Hugo: hugo v0.120.4-f11bca5fec2ebb3a02727fb2a5cfb08da96fd9df+extended darwin/arm64 BuildDate=2023-11-08T11:18:07Z VendorInfo=brew
+GO: go version go1.23.3 darwin/arm64
+Hugo: hugo v0.140.1+extended+withdeploy darwin/arm64 BuildDate=2024-12-23T16:26:35Z VendorInfo=brew
 Academic Theme: stored in go.mod and go.sum
 
 #### Background
@@ -89,13 +89,18 @@ Note I am using Hugo version v0.70.0
 
 # How to make changes to prod
 Easy -> git commit and Github Actions handles the rest :)
+
+# Theme version info
+- go.mod
+- module.yaml
     
 # TODO:
 - set up default blog post template
 - way to make bg icon smaller? scale down?
 
 #### Common Issues
-TBD
+1) Error: error copying static files: open /Users/danieldiaz/src/dddiaz.com/public/webfonts/fa-solid-900.ttf: permission denied
+- clear public dir, for some reason fonts are being written as readonly
 
 # SITE MIGRATION TODO:
 - update or hide policy/ terms pages - Done
