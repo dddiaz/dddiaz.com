@@ -101,6 +101,8 @@ Easy -> git commit and Github Actions handles the rest :)
 #### Common Issues
 1) Error: error copying static files: open /Users/danieldiaz/src/dddiaz.com/public/webfonts/fa-solid-900.ttf: permission denied
 - clear public dir, for some reason fonts are being written as readonly
+2) DevContainer Fails to come up on mac
+- run: docker pull --platform linux/amd64 mcr.microsoft.com/devcontainers/universal:2-linux manually and make sure rosetta is setup.
 
 # SITE MIGRATION TODO:
 - update or hide policy/ terms pages - Done

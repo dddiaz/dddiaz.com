@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/universal:2-linux
+FROM --platform=linux/amd64 mcr.microsoft.com/devcontainers/universal:2-linux
 
 # The base universal image installs the latest version of Hugo
 # This causes an issue when I want to use my pinned version as a Dev Container Feature.
