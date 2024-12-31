@@ -111,7 +111,13 @@ T1D in this population, and suggests the mechanism may be based more on inflamma
 
 # 5: Eclipses are cool!
 Especially when it's a total solar eclipse, and you are watching it with friends in Austin!
-{{< video src="eclipse.mp4" controls="yes" autoplay="true" loop="true" >}}
+This photo does not do it justice, but it felt like staring into a black hole.
+![eclipse](eclipse.jpeg)
+
+
+# Till next time
+Thanks for reading. Let me know what you learned this year when you bump into me, I would love to hear it!
+
 
 # Quote 
 > "With public sentiment, nothing can fail, without it, nothing can succeed." - Abraham Lincoln
