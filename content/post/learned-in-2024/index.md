@@ -105,14 +105,15 @@ Some of those interesting papers/videos included:
 [My Bsky Post](https://bsky.app/profile/dddiaz.com/post/3ldhfxf2bfk2c)
 
 - 10 percent of people with #T1D do not have the DR3/DR4 haplotype, this paper investigates the genetic drivers for 
-T1D in this population, and suggests the mechanism may be based more on inflammation and b-cell disfunction, rather than T-cell activation:
+T1D in this population, and suggests the mechanism may be based more on inflammation and b-cell dysfunction, rather than T-cell activation:
 [Paper](https://diabetesjournals.org/care/article/doi/10.2337/dc24-1251/157547/Genetic-Discovery-and-Risk-Prediction-for-Type-1),
 [My Bsky Post](https://bsky.app/profile/dddiaz.com/post/3ldevktg5qk25)
 
 # 5: Eclipses are cool!
 Especially when it's a total solar eclipse, and you are watching it with friends in Austin!
-This photo does not do it justice, but it felt like staring into a black hole.
-![eclipse](eclipse.jpeg)
+To be honest, I kinda assumed this, but the reality far exceeded my expectations!
+This video does not do it justice, but it felt like staring into a black hole.
+{{< video src="eclipse-movie.mp4" controls="yes" autoplay="true" loop="true" >}}
 
 
 # Till next time
