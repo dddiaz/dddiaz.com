@@ -113,6 +113,7 @@ T1D in this population, and suggests the mechanism may be based more on inflamma
 Especially when it's a total solar eclipse, and you are watching it with friends in Austin!
 To be honest, I kinda assumed this, but the reality far exceeded my expectations!
 This video does not do it justice, but it felt like staring into a black hole.
+Note: video doesn't work in safari for some reason, chrome, ios work fine.
 {{< video src="eclipse-movie.mp4" controls="yes" autoplay="true" loop="true" >}}
 
 
