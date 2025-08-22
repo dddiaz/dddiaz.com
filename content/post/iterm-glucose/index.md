@@ -7,11 +7,15 @@ draft: false
 featured: false
 
 tags: 
-- "iTerm"
-- "Diabetes"
-- "Nightscout"
-- "Oh-My-Zsh"
-- "We Are Not Waiting"
+- "iterm"
+- "diabetes"
+- "type-1-diabetes"
+- "nightscout"
+- "oh-my-zsh"
+- "we-are-not-waiting"
+- "dexcom"
+- "cgm"
+- "terminal"
 
 
 # Featured image

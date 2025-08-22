@@ -5,7 +5,7 @@ title: "Favorite Quotes"
 subtitle: "15 quotes that resonate with me about everything from Leadership to Invention."
 summary: "15 quotes that resonate with me about everything from Leadership to Invention."
 authors: []
-tags: []
+tags: ["quotes", "philosophy", "leadership", "inspiration", "life-lessons"]
 categories: []
 date: 2023-07-22T13:34:48-07:00
 lastmod: 2023-07-22T13:34:48-07:00

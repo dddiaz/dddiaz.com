@@ -5,7 +5,7 @@ title: "Loop"
 subtitle: ""
 summary: ""
 authors: []
-tags: []
+tags: ["diabetes", "type-1-diabetes", "open-source", "ios", "loop", "insulin-pump", "github-actions", "apple-watch", "technology"]
 categories: []
 date: 2023-11-14T19:18:04Z
 lastmod: 2023-11-14T19:18:04Z

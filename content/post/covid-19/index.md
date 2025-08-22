@@ -7,10 +7,15 @@ draft: false
 featured: false
 
 tags: 
-- "Genome"
-- "Bioinformatics" 
-- "Python"
-- "Jupyter Notebook"
+- "covid-19"
+- "coronavirus"
+- "genome-analysis"
+- "bioinformatics" 
+- "python"
+- "jupyter-notebook"
+- "data-science"
+- "mutations"
+- "genomics"
 
 categories: ["python"]
 

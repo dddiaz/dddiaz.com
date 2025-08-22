@@ -5,7 +5,7 @@ title: "What I Imagine the world will be like in 2040"
 subtitle: ""
 summary: ""
 authors: []
-tags: ["thought-experiment"]
+tags: ["thought-experiment", "future-predictions", "genomics", "space", "technology", "society", "biology"]
 categories: []
 date: 2021-01-01T17:25:55-08:00
 lastmod: 2021-01-01T17:25:55-08:00

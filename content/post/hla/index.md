@@ -5,7 +5,7 @@ title: "Exploring my own genome."
 subtitle: "A diabetics tale."
 summary: "Using Dragen to explore my auto-immune variants, and explore the question of WHY someone gets diabetes."
 authors: []
-tags: ["Genomics", "Bioinformatics", "Diabetes"]
+tags: ["genomics", "bioinformatics", "diabetes", "type-1-diabetes", "hla", "autoimmune", "dragen", "illumina", "aws", "personal-genomics"]
 categories: []
 date: 2023-12-10T17:55:11-08:00
 lastmod: 2023-12-10T17:55:11-08:00

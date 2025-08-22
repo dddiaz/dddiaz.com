@@ -5,7 +5,7 @@ title: "5 Things I Learned in 2024"
 subtitle: ""
 summary: "5 Things I Learned in 2024"
 authors: []
-tags: []
+tags: ["year-in-review", "personal-growth", "emotional-intelligence", "diabetes-research", "eclipse", "wing-foiling"]
 categories: []
 date: 2024-12-28T21:23:12-08:00
 lastmod: 2024-12-28T21:23:12-08:00

@@ -5,7 +5,7 @@ date: 2018-12-01
 lastmod: 2018-12-01
 draft: false
 
-tags: ["how-it-works", "Diabetes", "Python"]
+tags: ["how-it-works", "diabetes", "type-1-diabetes", "python", "nightscout", "dexcom", "cgm", "javascript"]
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

@@ -5,7 +5,7 @@ title: "Github Actions"
 subtitle: "Using Github Actions to deploy this site."
 summary: "How I use Github Actions to deploy this Hugo static site to AWS S3 and Cloudfront."
 authors: [admin]
-tags: ['hugo', 'aws', 's3', 'cloudfront', 'static']
+tags: ['github-actions', 'hugo', 'aws', 's3', 'cloudfront', 'static-site', 'ci-cd', 'deployment']
 categories: []
 date: 2020-05-20T19:57:02-07:00
 lastmod: 2020-05-20T19:57:02-07:00
