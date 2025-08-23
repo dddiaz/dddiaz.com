@@ -1,6 +1,6 @@
 module my_website
 
-go 1.23.3
+go 1.25
 
 require (
 	github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5 v5.9.7
