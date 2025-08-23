@@ -1,0 +1,12 @@
+<!-- Override theme-color to match dark theme -->
+<script>
+// Remove the default blue theme-color meta tag
+document.addEventListener('DOMContentLoaded', function() {
+  const existingThemeColor = document.querySelector('meta[name="theme-color"]:not([media])');
+  if (existingThemeColor) {
+    existingThemeColor.remove();
+  }
+});
+</script>
+<meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
