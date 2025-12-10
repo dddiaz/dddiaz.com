@@ -45,10 +45,9 @@ cd post/my-post/
 ```
 
 # How to use locally (the harder way):
-#### Note this proj uses Hugo Modules, based on Go Modules to manage the theme
 Install Deps
 ```shell
-brew install git golang hugo node
+brew install git hugo
 ```
 
 ```bash
@@ -57,11 +56,12 @@ git clone https://github.com/dddiaz/dddiaz.com
 
 Run Site
 ```shell
-# Note this will also install the go submodules
-hugo sever -D
+hugo server -D
 ```
 
 # Misc Notes:
+- Theme modules are vendored locally under `themes/blox-*`, so Hugo is the only build dependency.
+
 ## First Time Setup:
 - Update config tomls and content/_index.md for main website
 
@@ -116,4 +116,3 @@ Easy -> git commit and Github Actions handles the rest :)
 - submit site to search engines
 - remove cloudfront cache clear
 - check removing submodule doesnt cause build issue
-
