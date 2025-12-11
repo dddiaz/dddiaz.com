@@ -2,7 +2,7 @@ This is super confusing.
 
 But to get the glucose widget to work I had to do the following:
 - override the features.html partial with my custom html for the glucose widget
-- add js to layouts/partials/hooks/body-end
+- add JS to layouts/_partials/hooks/body-end
 
 Useful Links / Notes:
 https://nickballou.com/blog/custom-wowchemy/
