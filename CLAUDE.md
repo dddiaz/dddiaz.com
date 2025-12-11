@@ -3,17 +3,20 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-Personal blog/website built with Hugo static site generator using the HugoBlox theme (formerly Wowchemy Academic). Deployed via GitHub Actions to AWS S3/CloudFront, serving dddiaz.com, www.dddiaz.com, and blog.dddiaz.com.
+This is a personal blog/website built with Hugo static site generator using the HugoBlox (formerly Wowchemy Academic) theme. The site is deployed via GitHub Actions to AWS S3/CloudFront and serves content at dddiaz.com.
 
 ## Development Commands
 
 ### Local Development
 ```bash
-# Start server with drafts (also installs Hugo modules)
+# Start local development server with drafts
 hugo server -D
 
 # Start server without drafts
 hugo server -w
+
+# Build for production
+hugo --gc --minify
 
 # Check Hugo version
 hugo version
@@ -21,63 +24,71 @@ hugo version
 
 ### Content Creation
 ```bash
-# Create new blog post (creates directory with index.md)
+# Create a new blog post
 hugo new --kind post post/my-post-name
 cd content/post/my-post-name/
 
-# IMPORTANT: All posts must have index.md in their own directory
-# Posts require featured.png or featured.jpg image
+# Note: All posts must have an index.md file in their directory
 ```
 
-### Build and Deploy
-```bash
-# Production build (used by CI/CD)
-hugo --gc --minify
-
-# GitHub Actions handles deployment automatically on commits to master
-# Workflow ignores: CLAUDE.md, README.md, .gitignore, LICENSE.md, .github/**
-```
+### Build System
+- **Build Tool**: Hugo (static site generator)
+- **Theme Management**: Local theme files (no remote dependencies)
+- **Deployment**: GitHub Actions → AWS S3 + CloudFront
+- **CDN Cache**: Automatically cleared on deployment
 
 ## Architecture
 
-### Hugo Module System
-- Theme managed via Go Modules (not git submodules)
-- Dependencies in `go.mod` and `config/_default/module.yaml`
-- Modules imported: blox-bootstrap/v5, blox-plugin-netlify, blox-plugin-reveal, blox-seo
-- Update modules: `hugo mod tidy` or `hugo mod get -u`
+### Directory Structure
+- `content/` - All site content (Markdown files)
+  - `post/` - Blog posts (each in subdirectory with index.md)
+  - `authors/admin/` - Author profile
+- `config/_default/` - Hugo configuration files
+  - `hugo.yaml` - Main Hugo config (includes output formats for headers/redirects)
+  - `params.yaml` - Theme parameters
+  - `menus.yaml` - Navigation structure
+  - `module.yaml` - Local theme imports
+- `themes/` - Local HugoBlox theme modules (5 modules)
+- `static/` - Static assets (images, JS, etc.)
+- `layouts/` - Custom HTML template overrides (glucose widget, theme-color)
+- `public/` - Generated site output (build artifact)
 
-### Configuration Files
-- `config/_default/hugo.yaml` - Core Hugo config
-- `config/_default/params.yaml` - Theme settings, SEO, analytics (GA + GTM)
-- `config/_default/menus.yaml` - Navigation
-- `config/_default/module.yaml` - Hugo module imports
-- `netlify.toml` - Legacy Netlify config (not actively used for deployment)
+### Local Theme System
+- Theme files located in `themes/` directory as separate modules:
+  - `themes/blox-bootstrap/` - Main theme (layouts, assets, styling)
+  - `themes/blox-core/` - Core helper functions
+  - `themes/blox-seo/` - SEO, analytics, structured data
+  - `themes/blox-plugin-netlify/` - Security headers (_headers, _redirects)
+  - `themes/blox-plugin-reveal/` - Reveal.js presentation support
+- Modules imported via `config/_default/module.yaml` using local paths
+- No Go modules or remote dependencies required
+- Custom site overrides in `layouts/` directory take precedence over theme layouts
+- Theme updates must be done manually by updating files in `themes/`
 
-### Content Structure
-- `content/post/` - Blog posts, each in subdirectory with `index.md`
-- `content/authors/admin/` - Author profile
-- `content/_index.md` - Homepage content
-- Blog post frontmatter: YAML with title, date, tags, featured image settings
-- Jupyter notebooks supported (see HugoBlox docs)
+### Content Management
+- Posts written in Markdown with YAML frontmatter
+- Each post in separate directory with `index.md`
+- Images stored alongside post content
+- Supports Jupyter notebooks (converted to Markdown)
 
-### Theme Customization
-- Custom HTML overrides: `layouts/partials/` (e.g., hooks/head-end, hooks/body-end)
-- Custom blocks: `layouts/partials/blocks/`
-- NEVER modify theme files directly - always use layout overrides
+### Deployment
+- GitHub Actions workflow triggers on commits
+- Builds site with `hugo --gc --minify`
+- Deploys to AWS S3 bucket
+- Invalidates CloudFront cache
+- Production URL: dddiaz.com, www.dddiaz.com, blog.dddiaz.com
 
-### Deployment Pipeline
-GitHub Actions workflow (`.github/workflows/main.yml`):
-1. Triggers on commits to master (with path exclusions)
-2. Uses Hugo 0.140.1 extended
-3. Runs `hugo --gc --minify`
-4. Syncs `public/` to S3 bucket dddiaz.com
-5. Invalidates CloudFront cache (distribution E15F5SGXIT0KSW)
+## Configuration Notes
+- Hugo version: 0.152.2+ extended (pinned in README and CI/CD)
+- Theme: HugoBlox (local copy, consolidated from 5 modules)
+- No Go dependencies required (theme is fully local)
+- Analytics: Google Analytics + Google Tag Manager configured
+- SEO optimized for personal/professional site
+- Security headers configured via blox-plugin-netlify module
 
-### Environment Setup
-- **Local**: macOS, Go 1.25, Hugo 0.140.1+extended
-- **GitHub Codespaces**: Configured via `.devcontainer/` with Hugo 0.140.1 extended
-- Server runs on port 1313 (expose this port in Codespaces)
-
-## Common Issues
-- **Permission errors on public/ fonts**: Clear `public/` directory (fonts written as readonly)
-- **DevContainer fails on Mac**: Pull `mcr.microsoft.com/devcontainers/universal:2-linux` with `--platform linux/amd64`, ensure Rosetta is configured
+## Development Tips
+- Use GitHub Codespaces for easy development environment
+- All posts require `featured.png` or `featured.jpg` image
+- Theme customization via `layouts/` overrides, not direct theme modification
+- Theme files in `themes/` can be edited directly for deeper customizations
+- Build performance: ~11 seconds (5x faster than Hugo Modules)

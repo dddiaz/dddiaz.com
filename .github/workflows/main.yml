@@ -24,10 +24,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -36,13 +36,11 @@ jobs:
     - name: Hugo Setup
       uses: peaceiris/actions-hugo@v2
       with:
-        # The Hugo version to download (if necessary) and use. Example: 0.58.2
-        hugo-version: 0.140.1
-        # Download (if necessary) and use Hugo extended version. Example: true
+        hugo-version: 0.152.2
         extended: true
 
     - name: Hugo Build
-      run: hugo --gc --minify
+      run: hugo --gc --minify --panicOnWarning
 
     - name: Copy frontend files to S3 with the AWS CLI
       run: |

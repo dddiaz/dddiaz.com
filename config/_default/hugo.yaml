@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Daniel Diaz's Website # Website name
-baseURL: '/' # Website URL
+baseURL: 'https://www.dddiaz.com/' # Website URL
 
 ############################
 ## LANGUAGE
