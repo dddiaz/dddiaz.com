@@ -33,7 +33,7 @@ cd content/post/my-post-name/
 
 ### Build System
 - **Build Tool**: Hugo (static site generator)
-- **Theme Management**: Hugo Modules (Go-based dependency management)
+- **Theme Management**: Local theme files (no remote dependencies)
 - **Deployment**: GitHub Actions → AWS S3 + CloudFront
 - **CDN Cache**: Automatically cleared on deployment
 
@@ -44,18 +44,26 @@ cd content/post/my-post-name/
   - `post/` - Blog posts (each in subdirectory with index.md)
   - `authors/admin/` - Author profile
 - `config/_default/` - Hugo configuration files
-  - `hugo.yaml` - Main Hugo config
+  - `hugo.yaml` - Main Hugo config (includes output formats for headers/redirects)
   - `params.yaml` - Theme parameters
   - `menus.yaml` - Navigation structure
+  - `module.yaml` - Local theme imports
+- `themes/` - Local HugoBlox theme modules (5 modules)
 - `static/` - Static assets (images, JS, etc.)
-- `layouts/` - Custom HTML template overrides
+- `layouts/` - Custom HTML template overrides (glucose widget, theme-color)
 - `public/` - Generated site output (build artifact)
 
-### Theme System
-- Uses HugoBlox theme via Hugo Modules
-- Theme dependencies defined in `go.mod`
-- Custom overrides in `layouts/` directory
-- Theme updates managed through Go module system
+### Local Theme System
+- Theme files located in `themes/` directory as separate modules:
+  - `themes/blox-bootstrap/` - Main theme (layouts, assets, styling)
+  - `themes/blox-core/` - Core helper functions
+  - `themes/blox-seo/` - SEO, analytics, structured data
+  - `themes/blox-plugin-netlify/` - Security headers (_headers, _redirects)
+  - `themes/blox-plugin-reveal/` - Reveal.js presentation support
+- Modules imported via `config/_default/module.yaml` using local paths
+- No Go modules or remote dependencies required
+- Custom site overrides in `layouts/` directory take precedence over theme layouts
+- Theme updates must be done manually by updating files in `themes/`
 
 ### Content Management
 - Posts written in Markdown with YAML frontmatter
@@ -71,14 +79,16 @@ cd content/post/my-post-name/
 - Production URL: dddiaz.com, www.dddiaz.com, blog.dddiaz.com
 
 ## Configuration Notes
-- Go version: 1.23.3
-- Hugo version: 0.140.1+ (pinned in README)
-- Theme: HugoBlox (Academic fork)
+- Hugo version: 0.152.2+ extended (pinned in README and CI/CD)
+- Theme: HugoBlox (local copy, consolidated from 5 modules)
+- No Go dependencies required (theme is fully local)
 - Analytics: Google Analytics + Google Tag Manager configured
 - SEO optimized for personal/professional site
+- Security headers configured via blox-plugin-netlify module
 
 ## Development Tips
 - Use GitHub Codespaces for easy development environment
 - All posts require `featured.png` or `featured.jpg` image
 - Theme customization via `layouts/` overrides, not direct theme modification
-- Hugo modules handle theme dependencies - run `hugo mod tidy` if needed
+- Theme files in `themes/` can be edited directly for deeper customizations
+- Build performance: ~11 seconds (5x faster than Hugo Modules)
