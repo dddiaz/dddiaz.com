@@ -118,3 +118,79 @@ jobs:
     - name: Clear Cloudfront Cache
       run: |
         aws cloudfront create-invalidation --distribution-id E15F5SGXIT0KSW --paths '/*'
+
+    - name: Post-Deployment Integration Tests
+      run: |
+        echo "🌐 Running post-deployment tests on live site..."
+        echo "⏳ Waiting 30s for CloudFront invalidation to propagate..."
+        sleep 30
+
+        SITE_URL="https://www.dddiaz.com"
+
+        # Test 1: Verify homepage loads
+        echo "🏠 Testing homepage..."
+        HTTP_STATUS=$(curl -s -o /tmp/homepage.html -w "%{http_code}" "$SITE_URL/")
+        if [ "$HTTP_STATUS" != "200" ]; then
+          echo "❌ FAIL: Homepage returned HTTP $HTTP_STATUS (expected 200)"
+          exit 1
+        fi
+        echo "✅ Homepage loads successfully (HTTP 200)"
+
+        # Test 2: Verify glucose widget HTML is present
+        echo "🩸 Checking glucose widget on live site..."
+        if ! grep -q 'id=glucose' /tmp/homepage.html; then
+          echo "❌ FAIL: Glucose widget section not found in deployed HTML"
+          exit 1
+        fi
+        if ! grep -q 'id=glucose-text' /tmp/homepage.html; then
+          echo "❌ FAIL: Glucose text element not found in deployed HTML"
+          exit 1
+        fi
+        echo "✅ Glucose widget HTML present on live site"
+
+        # Test 3: Verify bg.js script is loaded
+        echo "📜 Checking bg.js script inclusion on live site..."
+        if ! grep -q '<script src=/js/bg.js></script>' /tmp/homepage.html; then
+          echo "❌ FAIL: bg.js script tag not found in deployed HTML"
+          exit 1
+        fi
+        echo "✅ bg.js script tag present on live site"
+
+        # Test 4: Verify bg.js file is accessible
+        echo "📦 Testing bg.js file accessibility..."
+        BG_JS_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/js/bg.js")
+        if [ "$BG_JS_STATUS" != "200" ]; then
+          echo "❌ FAIL: bg.js returned HTTP $BG_JS_STATUS (expected 200)"
+          exit 1
+        fi
+        echo "✅ bg.js file accessible (HTTP 200)"
+
+        # Test 5: Verify sitemap is accessible
+        echo "🗺️  Testing sitemap.xml..."
+        SITEMAP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/sitemap.xml")
+        if [ "$SITEMAP_STATUS" != "200" ]; then
+          echo "❌ FAIL: sitemap.xml returned HTTP $SITEMAP_STATUS (expected 200)"
+          exit 1
+        fi
+        echo "✅ Sitemap accessible (HTTP 200)"
+
+        # Test 6: Verify robots.txt is accessible
+        echo "🤖 Testing robots.txt..."
+        ROBOTS_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/robots.txt")
+        if [ "$ROBOTS_STATUS" != "200" ]; then
+          echo "❌ FAIL: robots.txt returned HTTP $ROBOTS_STATUS (expected 200)"
+          exit 1
+        fi
+        echo "✅ robots.txt accessible (HTTP 200)"
+
+        # Test 7: Verify SEO metadata on live site
+        echo "🔍 Checking SEO metadata on live site..."
+        if ! grep -q 'application/ld+json' /tmp/homepage.html; then
+          echo "❌ FAIL: JSON-LD structured data not found in deployed HTML"
+          exit 1
+        fi
+        echo "✅ SEO metadata present on live site"
+
+        echo ""
+        echo "✅ All post-deployment tests passed!"
+        echo "🎉 Site is live and fully functional at $SITE_URL"
