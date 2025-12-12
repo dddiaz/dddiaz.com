@@ -64,4 +64,4 @@ sitemap:
 minify:
   _merge: deep
 
-# Integration tests run on every build to validate critical functionality
+# Integration tests run pre and post-deployment to validate critical functionality
