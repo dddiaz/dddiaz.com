@@ -42,6 +42,75 @@ jobs:
     - name: Hugo Build
       run: hugo --gc --minify --panicOnWarning
 
+    - name: Run Integration Tests
+      run: |
+        echo "🧪 Running integration tests..."
+
+        # Test 1: Verify critical files exist
+        echo "📄 Checking critical files..."
+        test -f public/index.html || { echo "❌ FAIL: index.html not found"; exit 1; }
+        test -f public/sitemap.xml || { echo "❌ FAIL: sitemap.xml not found"; exit 1; }
+        test -f public/robots.txt || { echo "❌ FAIL: robots.txt not found"; exit 1; }
+        test -f public/_headers || { echo "❌ FAIL: _headers not found"; exit 1; }
+        test -f public/_redirects || { echo "❌ FAIL: _redirects not found"; exit 1; }
+        test -f public/js/bg.js || { echo "❌ FAIL: bg.js not found"; exit 1; }
+        echo "✅ All critical files present"
+
+        # Test 2: Verify glucose widget HTML is present
+        echo "🩸 Checking glucose widget..."
+        if ! grep -q 'id=glucose' public/index.html; then
+          echo "❌ FAIL: Glucose widget section not found in HTML"
+          exit 1
+        fi
+        if ! grep -q 'id=glucose-text' public/index.html; then
+          echo "❌ FAIL: Glucose text element not found in HTML"
+          exit 1
+        fi
+        if ! grep -q 'Blood Glucose Stats' public/index.html; then
+          echo "❌ FAIL: Glucose widget heading not found in HTML"
+          exit 1
+        fi
+        echo "✅ Glucose widget HTML present"
+
+        # Test 3: Verify bg.js script is loaded
+        echo "📜 Checking bg.js script inclusion..."
+        if ! grep -q '<script src=/js/bg.js></script>' public/index.html; then
+          echo "❌ FAIL: bg.js script tag not found in HTML"
+          echo "This means the glucose widget won't load!"
+          exit 1
+        fi
+        echo "✅ bg.js script tag present"
+
+        # Test 4: Verify security headers are configured
+        echo "🔒 Checking security headers..."
+        if ! grep -q 'X-XSS-Protection' public/_headers; then
+          echo "❌ FAIL: XSS Protection header not found"
+          exit 1
+        fi
+        if ! grep -q 'Strict-Transport-Security' public/_headers; then
+          echo "❌ FAIL: HSTS header not found"
+          exit 1
+        fi
+        echo "✅ Security headers configured"
+
+        # Test 5: Verify SEO metadata
+        echo "🔍 Checking SEO metadata..."
+        if ! grep -q 'application/ld+json' public/index.html; then
+          echo "❌ FAIL: JSON-LD structured data not found"
+          exit 1
+        fi
+        echo "✅ SEO metadata present"
+
+        # Test 6: Count total pages built
+        TOTAL_PAGES=$(find public -name "*.html" | wc -l)
+        echo "📊 Built $TOTAL_PAGES HTML pages"
+        if [ "$TOTAL_PAGES" -lt 50 ]; then
+          echo "⚠️  WARNING: Expected more pages (got $TOTAL_PAGES)"
+        fi
+
+        echo ""
+        echo "✅ All integration tests passed!"
+
     - name: Copy frontend files to S3 with the AWS CLI
       run: |
         aws s3 sync public s3://dddiaz.com --delete
