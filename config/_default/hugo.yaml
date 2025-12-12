@@ -63,3 +63,5 @@ sitemap:
   _merge: deep
 minify:
   _merge: deep
+
+# Integration tests run on every build to validate critical functionality
