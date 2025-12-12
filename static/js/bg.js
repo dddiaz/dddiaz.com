@@ -3,7 +3,7 @@
 
 class GlucoseWidget {
     constructor() {
-        this.apiUrl = "https://diaz-bg.herokuapp.com/api/v1/entries.json";
+        this.apiUrl = "https://api.dddiaz.com/glucose/summary";
         this.ranges = {
             veryLow: 54,
             low: 80,
@@ -26,7 +26,7 @@ class GlucoseWidget {
 
     start() {
         console.log('Glucose widget starting...');
-        
+
         // Show initial empty state
         setTimeout(() => {
             const donut = document.querySelector('.donut');
@@ -43,10 +43,9 @@ class GlucoseWidget {
         try {
             const response = await fetch(this.apiUrl);
             const data = await response.json();
-            
-            if (data && data.length > 0) {
-                const entry = data[0];
-                this.displayGlucoseData(entry);
+
+            if (data && data.statusText) {
+                this.displayGlucoseData(data);
             }
         } catch (error) {
             console.error('Error loading glucose data:', error);
@@ -54,123 +53,97 @@ class GlucoseWidget {
         }
     }
 
-    displayGlucoseData(entry) {
-        const bg = entry.sgv;
-        const trend = entry.trend;
-        const direction = entry.direction;
-        const timestamp = new Date(entry.date);
+    displayGlucoseData(data) {
+        const statusText = data.statusText;
+        const direction = data.direction;
+        const trendArrow = data.trendArrow;
+        const directionText = data.directionText;
+        const timestamp = new Date(data.date);
+        const stale = data.stale;
 
-        console.log('Displaying glucose data:', { bg, trend, direction });
+        console.log('Displaying glucose data:', { statusText, direction, stale });
 
-        // Update text display
-        this.updateTextDisplay(bg, trend, direction, timestamp);
-        
-        // Update donut visualization
-        this.updateDonutVisualization(bg);
-        
+        // Update text display (now uses pre-computed values from API)
+        this.updateTextDisplay(statusText, direction, trendArrow, directionText, timestamp, stale);
+
+        // Update donut visualization (infer from status text)
+        this.updateDonutVisualization(statusText);
+
         // Setup intersection observer for in-view behavior
-        this.setupInViewHandler(bg);
+        this.setupInViewHandler(statusText);
     }
 
-    updateDonutVisualization(bg) {
+    updateDonutVisualization(statusText) {
         const donut = document.querySelector('.donut');
-        console.log('Updating donut for BG:', bg, 'Element found:', !!donut);
-        
+        console.log('Updating donut for status:', statusText, 'Element found:', !!donut);
+
         if (!donut) return;
 
         // Remove all classes except 'donut'
         donut.className = 'donut';
 
-        // Add appropriate class based on glucose level
-        let newClass = '';
-        if (bg < this.ranges.veryLow) {
-            newClass = 'critical-low';
-        } else if (bg < this.ranges.low) {
-            newClass = 'one-quarter-filled';
-        } else if (bg <= this.ranges.high) {
-            newClass = 'half-filled';
-        } else if (bg <= this.ranges.veryHigh) {
-            newClass = 'three-quarter-filled';
-        } else {
-            newClass = 'critical-high';
-        }
+        // Map status text to visualization class
+        let newClass = this.getDonutClassFromStatus(statusText);
 
         donut.classList.add(newClass);
         console.log('Applied class:', newClass, 'Final className:', donut.className);
     }
 
-    updateTextDisplay(bg, trend, direction, timestamp) {
+    getDonutClassFromStatus(statusText) {
+        // Map API status text to donut CSS classes
+        const statusLower = statusText.toLowerCase();
+
+        if (statusLower.includes('critically low')) {
+            return 'critical-low';
+        } else if (statusLower.includes('below target')) {
+            return 'one-quarter-filled';
+        } else if (statusLower.includes('in target')) {
+            return 'half-filled';
+        } else if (statusLower.includes('above target')) {
+            return 'three-quarter-filled';
+        } else if (statusLower.includes('critically high')) {
+            return 'critical-high';
+        } else {
+            // Fallback for unknown status
+            return 'almost-empty';
+        }
+    }
+
+    updateTextDisplay(statusText, direction, trendArrow, directionText, timestamp, stale) {
         const textElement = document.getElementById('glucose-text');
         if (!textElement) return;
 
-        const statusText = this.getGlucoseStatusText(bg);
-        const trendText = this.getTrendText(trend, direction);
+        const trendText = this.getTrendText(direction, directionText);
         const timeText = this.getTimeText(timestamp);
-        const trendArrow = this.getTrendArrow(direction);
+        const staleIndicator = stale ? '<span class="glucose-stale-badge">CACHED</span>' : '';
 
         textElement.innerHTML = `
             <div class="glucose-reading">
                 <span class="glucose-trend-arrow">${trendArrow}</span>
             </div>
-            <div class="glucose-status">${statusText}${trendText}</div>
+            <div class="glucose-status">${statusText}${trendText} ${staleIndicator}</div>
             <div class="glucose-timestamp">${timeText}</div>
         `;
     }
 
-    getGlucoseStatusText(bg) {
-        if (bg < this.ranges.veryLow) {
-            return "Blood glucose is critically low";
-        } else if (bg < this.ranges.low) {
-            return "Blood glucose is below target range";
-        } else if (bg <= this.ranges.high) {
-            return "Blood glucose is in target range";
-        } else if (bg <= this.ranges.veryHigh) {
-            return "Blood glucose is above target range";
-        } else {
-            return "Blood glucose is critically high";
+    getTrendText(direction, directionText) {
+        // Handle unknown/missing direction
+        if (!direction || direction === 'NONE' || !directionText) {
+            return "";
         }
-    }
 
-    getTrendText(trend, direction) {
-        if (!trend || !direction) return "";
-        
-        const directionText = this.getDirectionText(direction);
-        
-        if (direction === 'Flat') return " and is stable";
+        if (direction === 'Flat') {
+            return " and is stable";
+        }
+
         return ` and is ${directionText}`;
-    }
-
-    getDirectionText(direction) {
-        const directionMap = {
-            'Flat': 'stable',
-            'SingleUp': 'rising slowly',
-            'DoubleUp': 'rising rapidly',
-            'FortyFiveUp': 'rising',
-            'SingleDown': 'falling slowly',
-            'DoubleDown': 'falling rapidly',
-            'FortyFiveDown': 'falling'
-        };
-        return directionMap[direction] || 'changing';
-    }
-
-    getTrendArrow(direction) {
-        const arrowMap = {
-            'Flat': '→',
-            'SingleUp': '↗',
-            'DoubleUp': '⤴',
-            'FortyFiveUp': '↗',
-            'SingleDown': '↘',
-            'DoubleDown': '⤵',
-            'FortyFiveDown': '↘'
-        };
-        return arrowMap[direction] || '';
     }
 
     getTimeText(timestamp) {
         const now = new Date();
         const diffMs = now - timestamp;
         const diffMins = Math.floor(diffMs / (1000 * 60));
-        
+
         if (diffMins < 1) {
             return "Just now";
         } else if (diffMins < 60) {
@@ -181,7 +154,7 @@ class GlucoseWidget {
         }
     }
 
-    setupInViewHandler(currentBg) {
+    setupInViewHandler(statusText) {
         const donut = document.querySelector('.donut');
         if (!donut) return;
 
@@ -190,8 +163,8 @@ class GlucoseWidget {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     // Widget is visible, show current glucose state
-                    if (currentBg) {
-                        this.updateDonutVisualization(currentBg);
+                    if (statusText) {
+                        this.updateDonutVisualization(statusText);
                     }
                 } else {
                     // Widget is not visible, show minimal state
@@ -206,14 +179,14 @@ class GlucoseWidget {
     showErrorState() {
         const textElement = document.getElementById('glucose-text');
         const donut = document.querySelector('.donut');
-        
+
         if (textElement) {
             textElement.innerHTML = `
                 <div class="glucose-status glucose-error">Unable to load glucose data</div>
                 <div class="glucose-timestamp">Please check connection</div>
             `;
         }
-        
+
         if (donut) {
             donut.className = 'donut almost-empty';
         }

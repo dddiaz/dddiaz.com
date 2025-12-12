@@ -84,16 +84,14 @@
     margin-bottom: 8px;
   }
 
-  .glucose-value {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--primary-color, #1565c0);
-  }
-
   .glucose-trend-arrow {
     font-size: 1.8rem;
     font-weight: 600;
     color: var(--secondary-color, #666);
+  }
+
+  .glucose-trend-arrow:empty {
+    display: none;
   }
 
   .glucose-status {
@@ -109,13 +107,22 @@
     font-style: italic;
   }
 
+  .glucose-stale-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-left: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #856404;
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 12px;
+    vertical-align: middle;
+  }
+
   .glucose-loading {
     color: var(--muted-color, #888);
     font-style: italic;
-  }
-
-  .glucose-error .glucose-value {
-    color: var(--error-color, #dc3545);
   }
 
   .glucose-error ~ .glucose-status {
@@ -128,11 +135,7 @@
       margin: 10px auto;
       max-width: 200px;
     }
-    
-    .glucose-value {
-      font-size: 1.8rem;
-    }
-    
+
     .glucose-trend-arrow {
       font-size: 1.4rem;
     }
@@ -143,21 +146,23 @@
     .circle-border {
       stroke: #444;
     }
-    
+
     .circle-back {
       stroke: #333;
     }
-    
-    .glucose-value {
-      color: var(--primary-color-dark, #64b5f6);
-    }
-    
+
     .glucose-status {
       color: var(--text-color-dark, #e0e0e0);
     }
-    
+
     .glucose-timestamp {
       color: var(--muted-color-dark, #aaa);
+    }
+
+    .glucose-stale-badge {
+      color: #ffc107;
+      background-color: #3e2723;
+      border-color: #ff6f00;
     }
   }
 
@@ -255,7 +260,7 @@
     <div class="h3" id="glucose-text"></div>
 
     <div class="h5">
-      <p>A person without Type 1 Diabetes has an average blood glucose reading of 120. The graphic shows whether I am above, below, or at average. Leveraging an open source project called Nightscout I am able to scrape the data from the continous glucose monitor that I wear on my body.</p>
+      <p>A person without Type 1 Diabetes has an average blood glucose reading of 120. The graphic shows whether I am above, below, or at average. Using my Lambda endpoint integrated with Dexcom Share API, I display privacy-preserving status information from the continuous glucose monitor that I wear on my body.</p>
     </div>
   </div>
 </div>
