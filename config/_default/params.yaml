@@ -20,9 +20,9 @@ marketing:
     org_name: ''
     description: 'Daniel Diaz is a Staff Bioinformatics Engineer specializing in Genomics.'
   analytics:
-    google_analytics: ''
+    google_analytics: 'G-NHQL5ZP442'
     baidu_tongji: ''
-    google_tag_manager: 'G-NHQL5ZP442'
+    google_tag_manager: ''
     microsoft_clarity: ''
   verification:
     google: ''

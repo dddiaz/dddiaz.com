@@ -78,6 +78,13 @@ cd content/post/my-post-name/
 - Invalidates CloudFront cache
 - Production URL: dddiaz.com, www.dddiaz.com, blog.dddiaz.com
 
+### Deployment Workflow (for Claude Code)
+When making changes that need to be deployed:
+1. **Commit changes**: Use standard git commit workflow
+2. **Push to repo**: Push commits to GitHub (triggers automatic deployment)
+3. **Monitor deployment**: Use `gh workflow list` and `gh run view` to check GitHub Actions status
+4. **No manual build needed**: CI/CD handles `hugo --gc --minify` and deployment automatically
+
 ## Configuration Notes
 - Hugo version: 0.152.2+ extended (pinned in README and CI/CD)
 - Theme: HugoBlox (local copy, consolidated from 5 modules)
