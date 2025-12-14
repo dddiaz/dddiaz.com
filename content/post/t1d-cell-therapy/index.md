@@ -157,7 +157,21 @@ There are still big unknowns:
 # 🔬 Why This Is Cool
 
 As someone who works in genomics, seeing CRISPR move from lab benches to an actual human trial is very cool.
-Even cooler, this technology isn't just for T1D, it could be extended to any autoimmune disease.
+
+Even cooler, this technology isn't just for T1D. It could impact:
+
+**For hypoimmune cells (Strategy 1):**
+- Any organ transplantation (kidney, liver, heart) - eliminate need for lifelong immunosuppression
+- Other autoimmune diseases requiring cell replacement (multiple sclerosis, Parkinson's)
+
+**For CAR-Tregs (Strategy 2):**
+- Multiple sclerosis (suppress immune attack on myelin)
+- Rheumatoid arthritis (suppress joint inflammation)
+- Lupus (control autoantibody production)
+- Crohn's disease and ulcerative colitis (suppress gut inflammation)
+
+The principles are the same: either hide cells from the immune system, or reset the immune response. If it works for T1D, it could work for dozens of autoimmune diseases affecting millions of people.
+
 I definitely will keep a close eye on this space and you should too.
 
 # 🚀 What's Next, 100 Years From Now
