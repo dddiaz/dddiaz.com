@@ -57,13 +57,11 @@ T Cells are your body's immune system cells that recognize a cell as "foreign". 
 
 The key insight: remove the ID badges entirely. No HLA molecules = nothing for T cells to recognize.
 
-Researchers:
-- **Knocked out HLA Class I and Class II** genes 
-- **Overexpressed CD47** - The "don't eat me" signal for macrophages and natural killer (NK) cells.
+Using CRISPR gene editing, researchers engineered beta cells with two key modifications:
+- **Knocked out HLA Class I and Class II** genes - removing the "ID badges" T cells look for
+- **Overexpressed CD47** - a "don't eat me" signal for macrophages and natural killer (NK) cells
 
-In stem cell-derived beta cells that they engineered.
-
-The result is cells that are essentially invisible to the immune system.
+The result: cells that are essentially invisible to the immune system.
 
 ## 🧑‍🔬 Clinical Proof
 
@@ -79,7 +77,8 @@ Results at 12 weeks:
 - **Glucose-responsive insulin secretion** - the cells responded to blood sugar levels
 - **No serious adverse events**
 
-This worked in a human. Not a mouse. Not a theoretical paper. A real person!
+One caveat, these were donor cells that were genetically modified, not lab grown cells. That limits how many people could be eligible for a treatment like this (the good news is they are already working on beta cells derived from a person's own stem cells.)
+Regardless, this worked in a human. Not a mouse. Not a theoretical paper. A real person!
 
 ![clinical-trial-transplant](clinical-trial-transplant.png)
 
@@ -140,13 +139,18 @@ And these aren't competing strategies - they could work together:
 
 There are still big unknowns:
 
+**For Strategy 1 (HLA knockout cells):**
 - **Durability**: 12 weeks is great, but what about 12 years?
-- **Scalability**: Can we manufacture billions of these cells for millions of people with T1D?
-- **Safety**: What if edited cells mutate over time? T-Regs can turn into Effector T Cells, that is bad.
+- **Donor dependency**: These were donor pancreas cells, not lab-grown. You still need deceased donors and blood type matching (the patient received blood type O-matched cells).
+- **Safety**: What if edited cells mutate over time?
+
+**For Strategy 2 (CAR-Tregs):**
+- **Still in mice**: This hasn't been tested in humans yet
+- **Treg stability**: T-Regs can turn into Effector T Cells, that is bad.
 
 # 📖 What I Learned
 
-- **CRISPR is working in humans**. Multiple precise edits (HLA knockout + CD47 overexpression) created functional cells that survived without immunosuppression. (Note: the FDA just [approved](https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease) a CRIPSR therapy for sickle cell disease.)
+- **CRISPR is working in humans**. Multiple precise edits (HLA knockout + CD47 overexpression) created functional cells that survived without immunosuppression. (Note: the FDA just [approved](https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease) a CRISPR therapy for sickle cell disease.)
 - **Multiple strategies in play**. Multiple options for curing type 1 diabetes are being actively explored, researched, and tested!
 - **We're closer than ever**. This isn't theoretical. It's happening. The human trial was this year!
 
