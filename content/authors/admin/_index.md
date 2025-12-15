@@ -104,8 +104,8 @@ social:
     - icon: linkedin
       icon_pack: fab
       link: https://www.linkedin.com/in/dddiaz/
-    - icon: twitter
-      icon_pack: fab
+    - icon: at
+      icon_pack: fas
       link: https://bsky.app/profile/dddiaz.com
 
 # Highlight the author in author lists? (true/false)

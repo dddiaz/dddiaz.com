@@ -140,31 +140,25 @@ sections:
       title: Contact
       subtitle: "Let's work together to accomplish something great!"
       text: |-
-        <div>
-          <img src="/img/contact.jpg">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <img src="/img/contact.jpg" alt="Daniel Diaz" style="border-radius: 12px; max-width: 600px; width: 100%; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
         </div>
       # Contact (add or remove contact options as necessary)
       # email: test@example.org
       # phone: 888 888 88 88
       # appointment_url: 'https://calendly.com'
-      address:
-        street: 
-        city: 'San Diego'
-        region: CA
-        postcode: '92122'
-        country: United States
-        country_code: US
+      directions: Based in San Diego, California
       # Choose a map provider in `params.yaml` to show a map from these coordinates
-      coordinates:
-        latitude: '32.870338'
-        longitude: '-117.200440'  
+      # coordinates:
+      #   latitude: '32.870338'
+      #   longitude: '-117.200440'  
       contact_links:
         - icon: linkedin
           icon_pack: fab
           name: "Connect With Me"
           link: "https://www.linkedin.com/in/dddiaz/"
-        - icon: twitter
-          icon_pack: fab
+        - icon: at
+          icon_pack: fas
           name: "BlueSky Me"
           link: "https://bsky.app/profile/dddiaz.com"
         - icon: github
