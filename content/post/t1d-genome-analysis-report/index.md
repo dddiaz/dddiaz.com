@@ -102,19 +102,18 @@ The tool checks each of these variants in my VCF. My first analysis did not look
 
 ### HLA Missing Piece
 
-In my original [2022 HLA post](/post/hla/), I had DQ8 but I appeared to be missing the DR4 gene that usually pairs with it.
+In my original [2023 HLA post](/post/hla/), I had DQ8 but I appeared to be missing the DR4 gene that usually pairs with it.
 
   | Gene | Old Analysis | New Analysis |
   |------|--------------|--------------|
-  | DRB1 | DR13 + DR13  | DR4 + DR13   |
+  | DRB1 | DR13 + DR13  | DR4* + DR13  |
   | DQB1 | DQ8 + DQ6    | DQ8 + DQ6    |
 
-
-With the new version of DRAGEN, it seems I do have DR4! The previous version of the software possibly couldn't distinguish between the similar-looking alleles. DRAGEN 4.4's improved algorithm resolved the ambiguity, and produced a more sensible result!
+With the new version of DRAGEN, it seems I do have DR4 (Specifically DRB1 *04:07)! The Dragen 4.2 EM Algorithm showed uncertainty across multiple DR4 subtypes, but 4.4 resolved this definitively. Now with the resolved ambiguity, I can see a more sensible result!
 
 #### But not so fast!
 
-While having DR4-DQ8 usually means higher risk, my specific DR4 subtype isn't in the literature. 
+While having DR4-DQ8 usually means higher risk, my specific DR4 (DRB1 *04:07) subtype isn't in the literature. 
 
 So that is why the report says my HLA Risk is Unknown!
 
@@ -216,4 +215,4 @@ Or just check out the **[Demo Report](/demos/t1d-report.html)** to see what the 
 
 # 🤖 Use of AI
 This post was written by a human, and edited with AI.
-The Type 1 Diabetes Genomics Analysis Repoort was developed with the help of Claude Opus 4.5.
+The Type 1 Diabetes Genomics Analysis Report was developed with the help of Claude Opus 4.5.
