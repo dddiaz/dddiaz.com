@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1D Genome Analysis Report - DEMO-SAMPLE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 20px; }
+        .card { margin-bottom: 20px; }
+        .badge { padding: 0.5em 0.75em; }
+        .table th { position: sticky; top: 0; background: white; }
+        .disclaimer { background-color: #fff3cd; padding: 15px; border-radius: 5px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="mb-4">
+            <h1>Type 1 Diabetes Genome Analysis Report</h1>
+            <p class="text-muted">
+                Sample: DEMO-SAMPLE |
+                Generated: 2026-01-11 14:45:44 |
+                Analysis Version: 1.0
+            </p>
+        </header>
+
+        
+    <div class="card mb-4 border-primary">
+        <div class="card-header bg-primary text-white">
+            <h2>Executive Summary</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h5>HLA-Based Risk</h5>
+                    <div style="font-size: 1.8em; color: #dc3545; font-weight: bold;">
+                        Very High
+                    </div>
+                    <div class="mt-2">
+            <span style="font-size: 1.5em; font-weight: bold;">16.6×</span>
+            <span class="text-muted">higher risk than general population</span>
+            <br><small class="text-muted">(Odds Ratio from published research)</small>
+        </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>HLA Markers</h5>
+                    <div class="mb-2">
+                        <strong class="text-danger">Risk:</strong> <span class="badge bg-danger me-1">DR3-DQ2 / DR4-DQ8</span>
+                    </div>
+                    <div>
+                        <strong class="text-success">Protective:</strong> <span class="text-muted">None detected</span>
+                    </div>
+                    <small class="text-muted d-block mt-2">
+                        Risk markers increase T1D likelihood; protective markers decrease it.
+                    </small>
+                </div>
+                <div class="col-md-4">
+                    <h5>Non-HLA Variants</h5>
+                    
+    <div class="text-center">
+        <div style="font-size: 2.5em; font-weight: bold; color: #dc3545;">
+            7 <span style="font-size: 0.5em; color: #6c757d;">of 9</span>
+        </div>
+        <p class="mb-1">known T1D risk variants</p>
+        <small class="text-muted">More risk variants = higher genetic contribution</small>
+    </div>
+    
+                </div>
+            </div>
+            
+            
+    <details class="mt-3">
+        <summary><strong>Technical Details</strong> <small class="text-muted">(for researchers)</small></summary>
+        <div class="mt-2 p-3 bg-light rounded">
+            <h6>Non-HLA Genetic Risk Score (GRS)</h6>
+            <ul class="mb-2">
+                <li>Variants analyzed: 9</li>
+                <li>Carrying risk allele: 7</li>
+                <li><strong>Non-HLA GRS: 2.704</strong>
+                    <span class="text-warning">(Above average)</span>
+                </li>
+            </ul>
+            <p class="small text-muted mb-0">
+                GRS calculated per Sharp et al. 2019: sum of (dosage × ln(OR)) for each variant.
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank">PMID:30655379</a>
+            </p>
+        </div>
+    </details>
+    
+        </div>
+    </div>
+    
+
+        <ul class="nav nav-tabs mb-4" id="reportTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#hla">HLA Analysis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#priority">Priority Variants</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#gwas">GWAS Variants</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="hla">
+                
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h5 class="mb-2">Your HLA Type</h5>
+                    <p class="lead mb-0">DR3-DQ2<br>DR4-DQ8 (*04:01)</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>HLA Markers</h6>
+                    <div class="mb-1">
+                        <strong class="text-danger">Risk:</strong> <span class="badge bg-danger me-1">DR3-DQ2 / DR4-DQ8</span>
+                    </div>
+                    <div>
+                        <strong class="text-success">Protective:</strong> <span class="text-muted">None</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>HLA-Based T1D Risk Assessment</h3>
+            <small class="text-muted">Source: Erlich et al. (2008) Diabetes 57(4):1084-1092</small>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Genotype</h4>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr><th>Gene</th><th>Alleles</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>HLA-A</td><td>A*02:01 / A*24:02</td></tr>
+<tr><td>HLA-B</td><td>B*08:01 / B*44:02</td></tr>
+<tr><td>HLA-C</td><td>C*07:01 / C*05:01</td></tr>
+<tr><td>HLA-DQA1</td><td>DQA1*05:01 / DQA1*03:01</td></tr>
+<tr><td>HLA-DQB1</td><td>DQB1*02:01 / DQB1*03:02</td></tr>
+<tr><td>HLA-DRB1</td><td>DRB1*03:01 / DRB1*04:01</td></tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h4>Risk Assessment</h4>
+                    <p>
+                        <span class="badge" style="background-color: #dc3545; font-size: 1.2em;">
+                            Very High
+                        </span>
+                    </p>
+                    <p><strong>Odds Ratio:</strong> 16.59</p>
+                    <p><strong>Source:</strong> <small>Erlich 2008 (DR3/DR4 heterozygote genotype)</small></p>
+                    <p><strong>Interpretation:</strong> DR3/DR4 heterozygote - highest genetic risk for T1D</p>
+
+                    <h5>Risk Factors</h5>
+                    <ul>
+                        <li>DR3/DR4 Heterozygote: Yes</li>
+                        <li>Has DR3: Yes</li>
+                        <li>Has DR4: Yes (*04:01)</li>
+                        <li>Has DQ2: Yes</li>
+                        <li>Has DQ8: Yes</li>
+                        <li>Protective Alleles: None</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4>Identified Haplotypes</h4>
+            <ul><li>DR3-DQ2</li>
+<li>DR4-DQ8 (*04:01)</li>
+</ul>
+            <p class="text-muted small mb-0">
+                Haplotypes pair your <strong>DRB1</strong> + <strong>DQB1</strong> alleles based on known linkage patterns.
+                <span class="badge bg-warning text-dark">ATYPICAL</span> = uncommon pairing, may lack published risk data.
+            </p>
+
+            <h4>Important Notes</h4><ul class='text-warning'><li>This is the highest-risk HLA genotype for T1D</li>
+<li>DR3/DR4 heterozygotes have ~16x increased risk compared to general population</li>
+<li>Both DQ2 (DQB1*02:01) and DQ8 (DQB1*03:02) are present</li>
+</ul>
+        </div>
+    </div>
+    
+                
+                
+    <div class="card mb-4">
+        <div class="card-header bg-light d-flex justify-content-between align-items-center"
+             style="cursor: pointer;"
+             data-bs-toggle="collapse"
+             data-bs-target="#decoderCollapse"
+             aria-expanded="false">
+            <div>
+                <h5 class="mb-0">HLA Nomenclature Guide</h5>
+                <small class="text-muted">Understanding the allele codes</small>
+            </div>
+            <span class="text-muted">▼ Click to expand</span>
+        </div>
+        <div class="collapse" id="decoderCollapse">
+        <div class="card-body">
+            <!-- Explain the naming system first -->
+            <div class="alert alert-info mb-4">
+                <h6 class="alert-heading mb-2">How to read HLA codes</h6>
+                <p class="mb-2">Example: <code>DRB1*04:01</code></p>
+                <ul class="mb-0">
+                    <li><strong>DRB1</strong> = the gene name (on chromosome 6)</li>
+                    <li><strong>*04</strong> = the allele group (this is "DR4")</li>
+                    <li><strong>:01</strong> = the specific protein variant within DR4</li>
+                </ul>
+                <p class="mt-2 mb-0"><em>Think of it like software versions: DR4 is the major version, :01/:02/:05 are minor variants that behave similarly.</em></p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>DRB1 Alleles (DR types)</h6>
+                    <table class="table table-sm">
+                        <thead><tr><th>Name</th><th>What it means</th><th>T1D Risk</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>DR3</strong></td>
+                                <td>Any DRB1*03:xx allele<br><small class="text-muted">e.g., *03:01</small></td>
+                                <td><span class="badge bg-danger">High Risk</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>DR4</strong></td>
+                                <td>Any DRB1*04:xx allele<br><small class="text-muted">e.g., *04:01, *04:02, *04:05</small></td>
+                                <td><span class="badge bg-danger">High Risk</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>DR13</strong></td>
+                                <td>Any DRB1*13:xx allele<br><small class="text-muted">e.g., *13:01, *13:02</small></td>
+                                <td><span class="badge bg-secondary">Neutral</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>DR15</strong></td>
+                                <td>Any DRB1*15:xx allele<br><small class="text-muted">e.g., *15:01</small></td>
+                                <td><span class="badge bg-success">Protective</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h6>DQB1 Alleles (DQ types)</h6>
+                    <table class="table table-sm">
+                        <thead><tr><th>Name</th><th>What it means</th><th>T1D Risk</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>DQ2</strong></td>
+                                <td>DQB1*02:01<br><small class="text-muted">presents gluten & insulin peptides</small></td>
+                                <td><span class="badge bg-danger">High Risk</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>DQ8</strong></td>
+                                <td>DQB1*03:02<br><small class="text-muted">presents insulin peptides to T cells</small></td>
+                                <td><span class="badge bg-danger">High Risk</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>DQ6</strong></td>
+                                <td>Any DQB1*06:xx allele<br><small class="text-muted">e.g., *06:02, *06:04</small></td>
+                                <td><span class="badge bg-success">Protective</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Explain the synergistic risk -->
+            <div class="alert alert-danger mt-3 mb-0">
+                <h6 class="alert-heading">Why DR3/DR4 combination is highest risk</h6>
+                <p class="mb-2">Having <strong>both</strong> DR3-DQ2 and DR4-DQ8 (one from each parent) creates ~16x risk - more than either alone. Why?</p>
+                <ul class="mb-0">
+                    <li><strong>DQ2</strong> and <strong>DQ8</strong> each present different insulin peptides to immune cells</li>
+                    <li>Together, they activate a broader range of autoreactive T cells</li>
+                    <li>This "double attack" on beta cells is more destructive than either alone</li>
+                </ul>
+            </div>
+        </div>
+        </div><!-- end collapse -->
+    </div>
+    
+            </div>
+            <div class="tab-pane fade" id="priority">
+                
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Priority Variants</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr><th>Chr</th><th>Position</th><th>Ref</th><th>Alt</th><th>Gene</th><th>rsID</th><th>Effect</th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Your genotype at this position. 0/0 = no variant, 0/1 = one copy, 1/1 = two copies. * indicates inferred from reference." style="cursor:help; border-bottom:1px dotted #666;">Genotype</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Number of risk alleles you carry: 0 (none), 1 (one copy), or 2 (two copies)." style="cursor:help; border-bottom:1px dotted #666;">Dosage</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Odds Ratio from published T1D GWAS studies. Values &gt;1 mean increased risk; &lt;1 mean protective. Click 'Source' for citation." style="cursor:help; border-bottom:1px dotted #666;">OR</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Genetic Risk Score contribution = number of risk alleles × ln(OR). Higher values = more risk." style="cursor:help; border-bottom:1px dotted #666;">GRS</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Effect allele frequency in Latino/Admixed American population (gnomAD v4.1). This is the frequency of the T1D-associated allele. Note: gnomAD reports ALT allele freq; we convert to effect allele freq when effect allele = REF." style="cursor:help; border-bottom:1px dotted #666;">Effect AF (AMR)</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Clinical significance for GENERAL health effects (not T1D-specific). Most T1D risk variants are 'benign' for other diseases but still affect T1D through immune pathways." style="cursor:help; border-bottom:1px dotted #666;">ClinVar</span></th><th>Priority</th><th>Source</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>chr1</td><td>114377568</td><td>G</td><td>A</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Protein tyrosine phosphatase - regulates T cell receptor signaling. Risk variant causes gain-of-function, reducing T cell activation threshold." style="cursor:help; border-bottom:1px dotted #666;">PTPN22</span></td><td>rs2476601</td><td>R620W</td><td>0/1</td><td>1</td><td>1.96x</td><td><span class="text-danger">+0.670</span></td><td><span class="text-muted">10.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr11</td><td>2182224</td><td>T</td><td>A</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Insulin gene - additional T1D-associated variant in INS locus, affects insulin expression regulation." style="cursor:help; border-bottom:1px dotted #666;">INS</span></td><td>rs689</td><td>VNTR</td><td>0/1</td><td>1</td><td>1.81x</td><td><span class="text-danger">+0.590</span></td><td><span class="text-muted">28.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr10</td><td>6074707</td><td>A</td><td>T</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="IL-2 receptor alpha - protective variant affecting IL2RA expression and Treg function." style="cursor:help; border-bottom:1px dotted #666;">IL2RA</span></td><td>rs11594656</td><td>Regulatory</td><td>0/1</td><td>1</td><td>1.50x</td><td><span class="text-danger">+0.410</span></td><td><span class="text-muted">65.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr2</td><td>204738919</td><td>G</td><td>A</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Cytotoxic T-lymphocyte antigen 4 - inhibitory checkpoint receptor. Variants reduce CTLA4 expression, enhancing T cell activation." style="cursor:help; border-bottom:1px dotted #666;">CTLA4</span></td><td>rs3087243</td><td>3'UTR</td><td>0/0</td><td>2</td><td>1.20x</td><td><span class="text-danger">+0.360</span></td><td><span class="text-muted">54.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr12</td><td>111884608</td><td>T</td><td>C</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Adaptor protein (LNK) - regulates cytokine signaling and hematopoiesis. Risk variant increases inflammatory responses." style="cursor:help; border-bottom:1px dotted #666;">SH2B3</span></td><td>rs3184504</td><td>W262R</td><td>0/1</td><td>1</td><td>1.30x</td><td><span class="text-danger">+0.260</span></td><td><span class="text-muted">50.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr12</td><td>56482028</td><td>T</td><td>G</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="ErbB3 receptor - growth factor signaling in pancreatic beta cells. May affect beta cell survival/regeneration." style="cursor:help; border-bottom:1px dotted #666;">ERBB3</span></td><td>rs2292239</td><td>Intronic</td><td>0/1</td><td>1</td><td>1.25x</td><td><span class="text-danger">+0.220</span></td><td><span class="text-muted">65.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr16</td><td>11179873</td><td>A</td><td>G</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="C-type lectin - regulates autophagy and mitophagy. Affects thymic selection and beta cell function." style="cursor:help; border-bottom:1px dotted #666;">CLEC16A</span></td><td>rs12708716</td><td>Intronic</td><td>0/1</td><td>1</td><td>1.20x</td><td><span class="text-danger">+0.180</span></td><td><span class="text-muted">35.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+            
+            
+    <div class="alert alert-light border mt-3" role="alert">
+        <strong>About this data:</strong>
+        <ul class="mb-0 mt-2">
+            <li><strong>Odds Ratios (OR)</strong> come from peer-reviewed genome-wide association studies (GWAS). Click "Source" to see the original publication.</li>
+            <li><strong>Effect AF</strong> shows how common the effect (risk/protective) allele is in the general population. We convert gnomAD's ALT allele frequency to effect allele frequency when they differ.</li>
+            <li><strong>ClinVar</strong> shows clinical significance for <em>general</em> health effects. Most T1D variants are "benign" for other conditions but still affect T1D risk through immune system pathways.</li>
+        </ul>
+    </div>
+    
+            
+    <details class="mt-3">
+        <summary><strong>Column Definitions & GRS Methodology</strong> <small class="text-muted">(click to expand)</small></summary>
+        <div class="mt-2 p-3 bg-light rounded">
+            <h6>Column Definitions</h6>
+            <ul class="mb-3">
+                <li><strong>Gene</strong>: Hover over gene name to see its function in T1D pathogenesis</li>
+                <li><strong>Effect</strong>: Variant consequence - amino acid change (e.g., R620W = Arginine→Tryptophan at position 620) or genomic location (Intronic, 3'UTR, Regulatory, VNTR)</li>
+                <li><strong>OR</strong>: Odds Ratio from GWAS. OR &gt;1 = increased risk, OR &lt;1 = protective</li>
+                <li><strong>Genotype</strong>: Your genotype (0/0 = ref/ref, 0/1 = het, 1/1 = hom alt). <em>0/0* indicates inferred homozygous reference (position not in VCF variant calls)</em></li>
+                <li><strong>Dosage</strong>: Number of risk alleles carried (0, 1, or 2)</li>
+                <li><strong>GRS</strong>: Genetic Risk Score contribution for this variant</li>
+                <li><strong>Effect AF (AMR)</strong>: Effect allele frequency in Latino/Admixed American population from gnomAD v4.1 (via DRAGEN Nirvana). Note: gnomAD reports ALT allele frequency, so when the GWAS effect allele is the REF allele, we display (1 - ALT freq) to show the true frequency of the risk allele.</li>
+                <li><strong>ClinVar</strong>: Clinical significance from ClinVar database (benign, pathogenic, uncertain significance)</li>
+            </ul>
+            <h6>GRS Calculation (Sharp et al. 2019)</h6>
+            <p class="mb-2">The Genetic Risk Score is calculated using the validated T1D GRS2 methodology:</p>
+            <div class="alert alert-info py-2 mb-2">
+                <code>GRS contribution = Dosage × ln(OR)</code>
+            </div>
+            <ul class="mb-2">
+                <li><strong>Dosage</strong>: Number of risk alleles (0, 1, or 2)</li>
+                <li><strong>ln(OR)</strong>: Natural log of the odds ratio (β coefficient)</li>
+                <li><strong>Total GRS</strong>: Sum of all individual GRS contributions</li>
+            </ul>
+            <p class="mb-0 text-muted"><small>Reference: Sharp SA, et al. (2019) Diabetes Care 42:200-207. <a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank">PMID:30655379</a></small></p>
+        </div>
+    </details>
+    
+        </div>
+    </div>
+    
+            </div>
+            <div class="tab-pane fade" id="gwas">
+                
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Known T1D GWAS Variants</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr><th>Chr</th><th>Position</th><th>Ref</th><th>Alt</th><th>Gene</th><th>rsID</th><th>Effect</th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Your genotype at this position. 0/0 = no variant, 0/1 = one copy, 1/1 = two copies. * indicates inferred from reference." style="cursor:help; border-bottom:1px dotted #666;">Genotype</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Number of risk alleles you carry: 0 (none), 1 (one copy), or 2 (two copies)." style="cursor:help; border-bottom:1px dotted #666;">Dosage</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Odds Ratio from published T1D GWAS studies. Values &gt;1 mean increased risk; &lt;1 mean protective. Click 'Source' for citation." style="cursor:help; border-bottom:1px dotted #666;">OR</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Genetic Risk Score contribution = number of risk alleles × ln(OR). Higher values = more risk." style="cursor:help; border-bottom:1px dotted #666;">GRS</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Effect allele frequency in Latino/Admixed American population (gnomAD v4.1). This is the frequency of the T1D-associated allele. Note: gnomAD reports ALT allele freq; we convert to effect allele freq when effect allele = REF." style="cursor:help; border-bottom:1px dotted #666;">Effect AF (AMR)</span></th><th><span data-bs-toggle="tooltip" data-bs-placement="top" title="Clinical significance for GENERAL health effects (not T1D-specific). Most T1D risk variants are 'benign' for other diseases but still affect T1D through immune pathways." style="cursor:help; border-bottom:1px dotted #666;">ClinVar</span></th><th>Priority</th><th>Source</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>chr1</td><td>114377568</td><td>G</td><td>A</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Protein tyrosine phosphatase - regulates T cell receptor signaling. Risk variant causes gain-of-function, reducing T cell activation threshold." style="cursor:help; border-bottom:1px dotted #666;">PTPN22</span></td><td>rs2476601</td><td>R620W</td><td>0/1</td><td>1</td><td>1.96x</td><td><span class="text-danger">+0.670</span></td><td><span class="text-muted">10.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr11</td><td>2182224</td><td>T</td><td>A</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Insulin gene - additional T1D-associated variant in INS locus, affects insulin expression regulation." style="cursor:help; border-bottom:1px dotted #666;">INS</span></td><td>rs689</td><td>VNTR</td><td>0/1</td><td>1</td><td>1.81x</td><td><span class="text-danger">+0.590</span></td><td><span class="text-muted">28.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr10</td><td>6074707</td><td>A</td><td>T</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="IL-2 receptor alpha - protective variant affecting IL2RA expression and Treg function." style="cursor:help; border-bottom:1px dotted #666;">IL2RA</span></td><td>rs11594656</td><td>Regulatory</td><td>0/1</td><td>1</td><td>1.50x</td><td><span class="text-danger">+0.410</span></td><td><span class="text-muted">65.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr2</td><td>204738919</td><td>G</td><td>A</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Cytotoxic T-lymphocyte antigen 4 - inhibitory checkpoint receptor. Variants reduce CTLA4 expression, enhancing T cell activation." style="cursor:help; border-bottom:1px dotted #666;">CTLA4</span></td><td>rs3087243</td><td>3'UTR</td><td>0/0</td><td>2</td><td>1.20x</td><td><span class="text-danger">+0.360</span></td><td><span class="text-muted">54.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr2</td><td>163124051</td><td>C</td><td>T</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Interferon-induced helicase - viral RNA sensor. Risk variant may alter antiviral responses triggering autoimmunity." style="cursor:help; border-bottom:1px dotted #666;">IFIH1</span></td><td>rs1990760</td><td>A946T</td><td>0/0</td><td>0</td><td>1.20x</td><td>0.000</td><td><span class="text-muted">41.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-success ">No Risk Allele</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr12</td><td>111884608</td><td>T</td><td>C</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Adaptor protein (LNK) - regulates cytokine signaling and hematopoiesis. Risk variant increases inflammatory responses." style="cursor:help; border-bottom:1px dotted #666;">SH2B3</span></td><td>rs3184504</td><td>W262R</td><td>0/1</td><td>1</td><td>1.30x</td><td><span class="text-danger">+0.260</span></td><td><span class="text-muted">50.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr19</td><td>10469975</td><td>G</td><td>C</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="Tyrosine kinase 2 - JAK family member in IFN/IL signaling. Variant affects cytokine-mediated immune responses." style="cursor:help; border-bottom:1px dotted #666;">TYK2</span></td><td>rs34536443</td><td>P1104A</td><td>0/0</td><td>0</td><td>1.30x</td><td>0.000</td><td><span class="text-info">4.00%</span></td><td><span class="badge bg-success">likely_benign</span></td><td><span class="badge bg-success ">No Risk Allele</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr12</td><td>56482028</td><td>T</td><td>G</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="ErbB3 receptor - growth factor signaling in pancreatic beta cells. May affect beta cell survival/regeneration." style="cursor:help; border-bottom:1px dotted #666;">ERBB3</span></td><td>rs2292239</td><td>Intronic</td><td>0/1</td><td>1</td><td>1.25x</td><td><span class="text-danger">+0.220</span></td><td><span class="text-muted">65.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+<tr><td>chr16</td><td>11179873</td><td>A</td><td>G</td><td><span data-bs-toggle="tooltip" data-bs-placement="top" title="C-type lectin - regulates autophagy and mitophagy. Affects thymic selection and beta cell function." style="cursor:help; border-bottom:1px dotted #666;">CLEC16A</span></td><td>rs12708716</td><td>Intronic</td><td>0/1</td><td>1</td><td>1.20x</td><td><span class="text-danger">+0.180</span></td><td><span class="text-muted">35.0%</span></td><td><span class="badge bg-success">benign</span></td><td><span class="badge bg-danger ">High Priority</span></td><td><a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank" title="View on PubMed">PMID:30655379</a></td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+            
+            
+    <div class="alert alert-light border mt-3" role="alert">
+        <strong>About this data:</strong>
+        <ul class="mb-0 mt-2">
+            <li><strong>Odds Ratios (OR)</strong> come from peer-reviewed genome-wide association studies (GWAS). Click "Source" to see the original publication.</li>
+            <li><strong>Effect AF</strong> shows how common the effect (risk/protective) allele is in the general population. We convert gnomAD's ALT allele frequency to effect allele frequency when they differ.</li>
+            <li><strong>ClinVar</strong> shows clinical significance for <em>general</em> health effects. Most T1D variants are "benign" for other conditions but still affect T1D risk through immune system pathways.</li>
+        </ul>
+    </div>
+    
+            
+    <details class="mt-3">
+        <summary><strong>Column Definitions & GRS Methodology</strong> <small class="text-muted">(click to expand)</small></summary>
+        <div class="mt-2 p-3 bg-light rounded">
+            <h6>Column Definitions</h6>
+            <ul class="mb-3">
+                <li><strong>Gene</strong>: Hover over gene name to see its function in T1D pathogenesis</li>
+                <li><strong>Effect</strong>: Variant consequence - amino acid change (e.g., R620W = Arginine→Tryptophan at position 620) or genomic location (Intronic, 3'UTR, Regulatory, VNTR)</li>
+                <li><strong>OR</strong>: Odds Ratio from GWAS. OR &gt;1 = increased risk, OR &lt;1 = protective</li>
+                <li><strong>Genotype</strong>: Your genotype (0/0 = ref/ref, 0/1 = het, 1/1 = hom alt). <em>0/0* indicates inferred homozygous reference (position not in VCF variant calls)</em></li>
+                <li><strong>Dosage</strong>: Number of risk alleles carried (0, 1, or 2)</li>
+                <li><strong>GRS</strong>: Genetic Risk Score contribution for this variant</li>
+                <li><strong>Effect AF (AMR)</strong>: Effect allele frequency in Latino/Admixed American population from gnomAD v4.1 (via DRAGEN Nirvana). Note: gnomAD reports ALT allele frequency, so when the GWAS effect allele is the REF allele, we display (1 - ALT freq) to show the true frequency of the risk allele.</li>
+                <li><strong>ClinVar</strong>: Clinical significance from ClinVar database (benign, pathogenic, uncertain significance)</li>
+            </ul>
+            <h6>GRS Calculation (Sharp et al. 2019)</h6>
+            <p class="mb-2">The Genetic Risk Score is calculated using the validated T1D GRS2 methodology:</p>
+            <div class="alert alert-info py-2 mb-2">
+                <code>GRS contribution = Dosage × ln(OR)</code>
+            </div>
+            <ul class="mb-2">
+                <li><strong>Dosage</strong>: Number of risk alleles (0, 1, or 2)</li>
+                <li><strong>ln(OR)</strong>: Natural log of the odds ratio (β coefficient)</li>
+                <li><strong>Total GRS</strong>: Sum of all individual GRS contributions</li>
+            </ul>
+            <p class="mb-0 text-muted"><small>Reference: Sharp SA, et al. (2019) Diabetes Care 42:200-207. <a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank">PMID:30655379</a></small></p>
+        </div>
+    </details>
+    
+        </div>
+    </div>
+    
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>Data Sources &amp; References</h3>
+            </div>
+            <div class="card-body">
+                <h5>HLA Risk Assessment</h5>
+                <ul>
+                    <li>Erlich H, et al. (2008) HLA DR-DQ Haplotypes and Genotypes and Type 1 Diabetes Risk: Analysis of the Type 1 Diabetes Genetics Consortium Families. <em>Diabetes</em> 57(4):1084-1092.
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/18252895/" target="_blank">PMID:18252895</a></li>
+                </ul>
+                <h5>GWAS Variants</h5>
+                <ul>
+                    <li>Sharp SA, et al. (2019) Development and Standardization of an Improved Type 1 Diabetes Genetic Risk Score for Use in Newborn Screening and Incident Diagnosis. <em>Diabetes Care</em> 42:200-207.
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/30655379/" target="_blank">PMID:30655379</a></li>
+                    <li>Robertson CC, et al. (2021) Fine-mapping, trans-ancestral and genomic analyses identify causal variants, cells, genes and drug targets for type 1 diabetes. <em>Nature Genetics</em> 53:962-971.
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/34127860/" target="_blank">PMID:34127860</a></li>
+                </ul>
+                <p class="text-muted mb-0"><small>Individual variant citations are linked in the "Source" column of the variant tables above.</small></p>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <h5>Important Disclaimer</h5>
+            <p>
+                This report is for <strong>research and educational purposes only</strong>.
+                It is not intended to provide medical advice, diagnosis, or treatment recommendations.
+                Genetic risk assessment is complex and should be interpreted by qualified healthcare
+                professionals in the context of clinical history and other factors.
+            </p>
+            <p>
+                The odds ratios and risk categories presented are based on population-level studies
+                and may not accurately predict individual disease risk. Many individuals with
+                high-risk HLA genotypes never develop Type 1 Diabetes, and some with low-risk
+                genotypes do develop the disease.
+            </p>
+        </div>
+
+        <footer class="mt-4 text-muted">
+            <p>
+                Generated using T1D Genome Analysis Pipeline |
+                <a href="https://github.com/dddiaz/type-1-diabetes-genome-analysis">GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize Bootstrap tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+</html>
+    

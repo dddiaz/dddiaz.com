@@ -41,7 +41,7 @@ For that reason, I have been looking forward to re-analyzing my own genome, and 
 
 This post will go over my attempt at re-analysis, the open source repository I published to generate the type 1 diabetes genomics report, and what I think could be next.
 
-**[View the Demo Report](https://htmlpreview.github.io/?https://github.com/dddiaz/type-1-diabetes-genome-analysis/blob/main/docs/demo/demo_report.html)** | **[GitHub Repository](https://github.com/dddiaz/type-1-diabetes-genome-analysis)**
+**[View the Demo Report](demo_report.html)** | **[GitHub Repository](https://github.com/dddiaz/type-1-diabetes-genome-analysis)**
 
 > Note: This is a follow-up to my [2023 post](/post/hla/) where I first explored my genome looking for T1D variants. This time I looked at more than just HLA, and built something that produces a comprehensive report.
 
@@ -204,7 +204,7 @@ uv pip install -r requirements.txt
 python scripts/run_analysis.py --dragen-dir /path/to/your/dragen/output
 ```
 
-Or just check out the **[Demo Report](https://htmlpreview.github.io/?https://github.com/dddiaz/type-1-diabetes-genome-analysis/blob/main/docs/demo/demo_report.html)** to see what the output looks like.
+Or just check out the **[Demo Report](demo_report.html)** to see what the output looks like.
 
 ---
 
