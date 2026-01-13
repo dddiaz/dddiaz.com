@@ -109,7 +109,26 @@ In my original [2023 HLA post](/post/hla/), I had DQ8 but I appeared to be missi
   | DRB1 | DR13 + DR13  | DR4* + DR13  |
   | DQB1 | DQ8 + DQ6    | DQ8 + DQ6    |
 
-With the new version of DRAGEN, it seems I do have DR4 (Specifically DRB1 *04:07)! The Dragen 4.2 EM Algorithm showed uncertainty across multiple DR4 subtypes, but 4.4 resolved this definitively. Now with the resolved ambiguity, I can see a more sensible result!
+With the new version of DRAGEN, it seems I do have DR4 (Specifically DRB1 *04:07)! 
+The Dragen 4.2 EM Algorithm showed uncertainty across multiple DR4 subtypes, but 4.4 resolved this definitively. 
+Now with the resolved ambiguity, I can see a more sensible result!
+
+Quick note on the nomenclature, because I always think its super confusing:
+```txt
+DRB1 (gene)
+ └── DR4 (serological group = all DRB1*04:XX alleles)
+      ├── DRB1*04:01
+      ├── DRB1*04:02
+      ├── DRB1*04:03
+      ├── DRB1*04:04
+      ├── DRB1*04:07  ← mine
+      └── ... many more
+ └── DR13 (serological group = all DRB1*13:XX alleles)
+      ├── DRB1*13:01
+      ├── DRB1*13:02  ← mine
+      └── ...
+# DRB1 is the gene, DR4 or DR13 represent the serological group, and the number represents the allele.
+```
 
 #### But not so fast!
 
@@ -138,7 +157,7 @@ On the positive side, I carry DQB1*06:04 (DQ6), which is associated with protect
 
 ---
 
-# 📖 Understanding the Report
+# 📖 Open Source Type 1 Diabetes Genomics Report
 
 The report includes several features to make the data easy to understand (for myself, and anyone else who ever runs the report):
 
