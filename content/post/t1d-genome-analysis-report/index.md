@@ -19,7 +19,7 @@ projects: []
 ---
 
 # ⚡ TL;DR
-Dragen 4.4 gave me a more accurate HLA call, and my new [Type 1 Diabetes Genomics Report](/demos/t1d-report.html) makes it super easy to understand my HLA / Variants Risk.
+DRAGEN 4.4 gave me a more accurate HLA call, and my new [Type 1 Diabetes Genomics Report](/demos/t1d-report.html) makes it super easy to understand my HLA / Variants Risk.
 
 # 🎯 The Goal
 
@@ -111,9 +111,9 @@ In my original [2023 HLA post](/post/hla/), I had DQ8 but I appeared to be missi
 
 With the new version of DRAGEN, it seems I do have DR4 (Specifically DRB1 *04:07)! 
 The Dragen 4.2 EM Algorithm showed uncertainty across multiple DR4 subtypes, but 4.4 resolved this definitively. 
-Now with the resolved ambiguity, I can see a more sensible result!
+Now with the ambiguity resolved, I can see a more sensible result!
 
-Quick note on the nomenclature, because I always think its super confusing:
+Quick note on the nomenclature, because I always think it's super confusing:
 ```txt
 DRB1 (gene)
  └── DR4 (serological group = all DRB1*04:XX alleles)
@@ -132,7 +132,7 @@ DRB1 (gene)
 
 #### But not so fast!
 
-While having DR4-DQ8 usually means higher risk, my specific DR4 (DRB1 *04:07) subtype isn't in the literature. 
+While having DR4-DQ8 usually means higher risk, my specific DR4 (DRB1*04:07) subtype isn't in the literature. 
 
 So that is why the report says my HLA Risk is Unknown!
 
