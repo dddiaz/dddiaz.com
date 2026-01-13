@@ -19,7 +19,7 @@ projects: []
 ---
 
 # ⚡ TL;DR
-Dragen 4.4 gave me a more accurate HLA call, and my new Type 1 Diabetes Genomics Report makes it super easy to undestand my HLA / Variants Risk.
+Dragen 4.4 gave me a more accurate HLA call, and my new [Type 1 Diabetes Genomics Report](demo_report.html) makes it super easy to understand my HLA / Variants Risk.
 
 # 🎯 The Goal
 
