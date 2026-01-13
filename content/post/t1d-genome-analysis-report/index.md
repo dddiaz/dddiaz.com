@@ -51,7 +51,7 @@ This post will go over my attempt at re-analysis, the open source repository I p
 
 When I first analyzed my genome a few years ago, I used an older version of DRAGEN. DRAGEN 4.4 brought some significant improvements, and I also enabled more features on this re-analysis:
 
-> Note: I help work on Dragen, so I am extremely biased on how awesome it is :)
+> Note: I help work on Dragen, so I am extremely biased on how awesome it is. Opinions here are my own.
 
 1. **Better Variant Calling** - Continued improvements to the variant caller
 2. **Nirvana** - This re-analysis enabled Nirvana, which adds "translational research-grade annotation of genomic variants"
