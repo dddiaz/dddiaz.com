@@ -200,8 +200,10 @@ This report does not constitute medical advice. If you're concerned about T1D ri
 # 🚀 What's Next
 
 Some ideas for the future:
-- Pull in more variants for analysis
-- Future versions of DRAGEN variant calling will probably get even better, rerun when it is useful.
+- Pull in more variants for analysis, this report starts with the 25 most well known variants.
+- Re-run with future DRAGEN versions as the caller continues to improve.
+- Follow the literature on my specific HLA subtype
+- Analyze family members' genomes if they ever get sequenced
 
 ---
 
