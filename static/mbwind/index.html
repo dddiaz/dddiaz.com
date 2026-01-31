@@ -12,22 +12,6 @@
   --nogo: #ef4444;
   --accent: #0ea5e9;
   --accent-dim: #0284c7;
-  --bg: #ffffff;
-  --bg-card: #f8fafc;
-  --text: #1e293b;
-  --text-muted: #64748b;
-  --border: #e2e8f0;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f172a;
-    --bg-card: #1e293b;
-    --text: #e2e8f0;
-    --text-muted: #94a3b8;
-    --border: #334155;
-  }
-}
-:root[data-theme="dark"] {
   --bg: #0f172a;
   --bg-card: #1e293b;
   --text: #e2e8f0;
@@ -139,16 +123,6 @@ body {
 .wind-stat .unit { font-size: .8rem; color: var(--text-muted); }
 footer { text-align: center; padding: 2rem 0 1rem; font-size: .8rem; color: var(--text-muted); }
 footer a { color: var(--accent); text-decoration: none; }
-.theme-btn {
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: .3rem .5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-  color: var(--text-muted);
-}
 .back-link {
   font-size: .85rem;
   color: var(--text-muted);
@@ -161,9 +135,8 @@ footer a { color: var(--accent); text-decoration: none; }
 <div class="container" style="max-width:720px; padding-top:1.5rem;">
 
   <!-- Header -->
-  <div class="d-flex align-items-center justify-content-between mb-2">
+  <div class="mb-2">
     <a href="https://www.dddiaz.com" class="back-link">&larr; dddiaz.com</a>
-    <button class="theme-btn" id="theme-toggle" title="Toggle theme">&#9790;</button>
   </div>
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h1 style="font-size:1.4rem; font-weight:800; margin:0;">Mission Bay Wind</h1>
@@ -381,23 +354,6 @@ async function fetchData() {
 
 fetchData();
 
-// Theme toggle
-const themeBtn = document.getElementById('theme-toggle');
-function getSystemTheme() {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  themeBtn.innerHTML = theme === 'dark' ? '&#9788;' : '&#9790;';
-}
-const saved = localStorage.getItem('mbwind-theme');
-if (saved) applyTheme(saved);
-themeBtn.addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('data-theme') || getSystemTheme();
-  const next = current === 'dark' ? 'light' : 'dark';
-  applyTheme(next);
-  localStorage.setItem('mbwind-theme', next);
-});
 </script>
 </body>
 </html>
