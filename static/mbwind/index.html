@@ -251,7 +251,7 @@ details.info-section .info-body th {
       </svg>
     </div>
 
-    <p style="text-align:center; font-size:.8rem; color:var(--text-muted); margin:0 0 1rem;">Score based on current conditions</p>
+    <p style="text-align:center; font-size:.8rem; color:var(--text-muted); margin:0 0 1rem;" id="score-note">Score based on current conditions</p>
 
     <!-- Hourly Timeline -->
     <div class="card">
@@ -473,6 +473,9 @@ function render(d) {
   document.getElementById('tide').textContent = d.tide;
   document.getElementById('best-window').textContent = d.best_window;
   document.getElementById('tip').textContent = d.tip;
+
+  document.getElementById('score-note').textContent =
+    tomorrow === 'true' ? 'Forecast for tomorrow at 1pm' : 'Score based on current conditions';
 
   renderBreakdown(d.breakdown);
   renderHourly(d.hourly_scores);
