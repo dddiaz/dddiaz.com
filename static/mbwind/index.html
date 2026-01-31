@@ -129,6 +129,59 @@ footer a { color: var(--accent); text-decoration: none; }
   text-decoration: none;
 }
 .back-link:hover { color: var(--accent); }
+details.info-section {
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-card);
+}
+details.info-section summary {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  font-size: .85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--text-muted);
+  list-style: none;
+}
+details.info-section summary::-webkit-details-marker { display: none; }
+details.info-section summary::after {
+  content: '+';
+  float: right;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+details.info-section[open] summary::after { content: '−'; }
+details.info-section .info-body {
+  padding: 0 1.25rem 1.25rem;
+  font-size: .85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+details.info-section .info-body h4 {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 1rem 0 .4rem;
+}
+details.info-section .info-body h4:first-child { margin-top: 0; }
+details.info-section .info-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .5rem 0;
+  font-size: .8rem;
+}
+details.info-section .info-body th,
+details.info-section .info-body td {
+  padding: .3rem .5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+details.info-section .info-body th {
+  color: var(--text);
+  font-weight: 600;
+}
 .hourly { display: flex; gap: 2px; align-items: flex-end; height: 80px; }
 .hourly-bar {
   flex: 1;
@@ -265,6 +318,44 @@ footer a { color: var(--accent); text-decoration: none; }
       <h3>Score Breakdown</h3>
       <div id="breakdown"></div>
     </div>
+    <!-- Info -->
+    <details class="info-section">
+      <summary>How This Works</summary>
+      <div class="info-body">
+        <h4>Confidence Score (0–100)</h4>
+        <p>The score combines five weighted factors into a single number. A marine layer penalty can reduce it further.</p>
+        <table>
+          <tr><th>Factor</th><th>Max Points</th><th>What It Measures</th></tr>
+          <tr><td>Wind Speed</td><td>30</td><td>Ideal range depends on sport — Laser: 8–12 kts, Wingfoil: 15–22 kts</td></tr>
+          <tr><td>Direction</td><td>20</td><td>W/WNW (240–310°) is the ideal thermal direction for Mission Bay</td></tr>
+          <tr><td>Thermal</td><td>20</td><td>Inland–coastal temperature difference that drives afternoon sea breeze</td></tr>
+          <tr><td>Gust Factor</td><td>15</td><td>Ratio of gusts to sustained wind — lower is more consistent</td></tr>
+          <tr><td>Time of Day</td><td>15</td><td>Peak thermal hours are 11am–3pm</td></tr>
+          <tr><td>Marine Layer</td><td>−15</td><td>Penalty when coastal fog/clouds suppress thermal development</td></tr>
+        </table>
+
+        <h4>Recommendations</h4>
+        <table>
+          <tr><th>Label</th><th>Score</th></tr>
+          <tr><td style="color:var(--go); font-weight:600;">GO</td><td>65–100</td></tr>
+          <tr><td style="color:var(--maybe); font-weight:600;">MAYBE</td><td>40–64</td></tr>
+          <tr><td style="color:var(--nogo); font-weight:600;">NO-GO</td><td>0–39</td></tr>
+        </table>
+
+        <h4>Best Window</h4>
+        <p>The 3-hour block between 9am–6pm with the highest average confidence score.</p>
+
+        <h4>Thermal Gradient</h4>
+        <p>As inland areas heat up relative to the coast, air rises and draws in cooler ocean air — creating the sea breeze that Mission Bay sailors rely on. A larger delta means a stronger thermal engine.</p>
+
+        <h4>Data Sources</h4>
+        <ul style="padding-left:1.2rem; margin:.5rem 0;">
+          <li><strong>Wind &amp; temperature forecast</strong> — <a href="https://open-meteo.com" target="_blank" style="color:var(--accent);">Open-Meteo API</a></li>
+          <li><strong>Tides &amp; observed wind</strong> — <a href="https://tidesandcurrents.noaa.gov" target="_blank" style="color:var(--accent);">NOAA CO-OPS</a></li>
+          <li><strong>Marine forecast</strong> — <a href="https://www.weather.gov" target="_blank" style="color:var(--accent);">NWS San Diego</a></li>
+        </ul>
+      </div>
+    </details>
   </div>
 
   <footer>
