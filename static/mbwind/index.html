@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission Bay Wind</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+:root {
+  --go: #22c55e;
+  --maybe: #f59e0b;
+  --nogo: #ef4444;
+  --accent: #0ea5e9;
+  --accent-dim: #0284c7;
+  --bg: #ffffff;
+  --bg-card: #f8fafc;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --bg-card: #1e293b;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: #334155;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+}
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--text-muted);
+  margin: 0 0 .75rem 0;
+}
+.badge-rec {
+  display: inline-block;
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .9rem;
+  color: #fff;
+}
+.pill-group {
+  display: inline-flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.pill-group button {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  padding: .4rem 1rem;
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+.pill-group button.active {
+  background: var(--accent);
+  color: #fff;
+}
+.gauge-wrap { text-align: center; margin: 1rem 0; }
+.gauge-wrap svg { max-width: 200px; }
+.gauge-score {
+  font-size: 2.5rem;
+  font-weight: 800;
+  fill: var(--text);
+}
+.gauge-label {
+  font-size: .9rem;
+  fill: var(--text-muted);
+}
+.compass-wrap { text-align: center; }
+.compass-wrap svg { max-width: 100px; }
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+  font-size: .85rem;
+}
+.breakdown-row .label { width: 110px; color: var(--text-muted); flex-shrink: 0; }
+.breakdown-row .bar-bg {
+  flex: 1;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 .5rem;
+}
+.breakdown-row .bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--accent);
+  transition: width .6s ease;
+}
+.breakdown-row .val { width: 40px; text-align: right; font-weight: 600; }
+.tip-box {
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg-card));
+  border-left: 3px solid var(--accent);
+  padding: .75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: .9rem;
+}
+.spinner-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+.wind-stat { text-align: center; }
+.wind-stat .val { font-size: 1.5rem; font-weight: 700; }
+.wind-stat .unit { font-size: .8rem; color: var(--text-muted); }
+footer { text-align: center; padding: 2rem 0 1rem; font-size: .8rem; color: var(--text-muted); }
+footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container" style="max-width:720px; padding-top:1.5rem;">
+
+  <!-- Header -->
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h1 style="font-size:1.4rem; font-weight:800; margin:0;">Mission Bay Wind</h1>
+    <span id="rec-badge" class="badge-rec" style="visibility:hidden;">—</span>
+  </div>
+
+  <!-- Controls -->
+  <div class="d-flex gap-3 flex-wrap mb-3">
+    <div class="pill-group" id="sport-toggle">
+      <button class="active" data-val="laser">Laser</button>
+      <button data-val="wingfoil">Wingfoil</button>
+    </div>
+    <div class="pill-group" id="day-toggle">
+      <button class="active" data-val="false">Today</button>
+      <button data-val="true">Tomorrow</button>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="loading" class="spinner-overlay">
+    <div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Loading…</span></div>
+  </div>
+
+  <div id="content" style="display:none;">
+    <!-- Gauge -->
+    <div class="gauge-wrap">
+      <svg viewBox="0 0 200 130">
+        <path d="M20 120 A80 80 0 0 1 180 120" fill="none" stroke="var(--border)" stroke-width="12" stroke-linecap="round"/>
+        <path id="gauge-arc" d="M20 120 A80 80 0 0 1 180 120" fill="none" stroke="var(--accent)" stroke-width="12" stroke-linecap="round" stroke-dasharray="0 999"/>
+        <text x="100" y="100" text-anchor="middle" class="gauge-score" id="gauge-score">0</text>
+        <text x="100" y="120" text-anchor="middle" class="gauge-label" id="gauge-label">loading</text>
+      </svg>
+    </div>
+
+    <!-- Wind + Compass -->
+    <div class="row g-3">
+      <div class="col-sm-7">
+        <div class="card">
+          <h3>Wind</h3>
+          <div class="d-flex justify-content-around">
+            <div class="wind-stat"><div class="val" id="w-speed">—</div><div class="unit">kts speed</div></div>
+            <div class="wind-stat"><div class="val" id="w-gust">—</div><div class="unit">kts gusts</div></div>
+            <div class="wind-stat"><div class="val" id="w-dir">—</div><div class="unit">direction</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="card">
+          <h3>Direction</h3>
+          <div class="compass-wrap">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+              <text x="50" y="16" text-anchor="middle" font-size="9" fill="var(--text-muted)">N</text>
+              <text x="88" y="53" text-anchor="middle" font-size="9" fill="var(--text-muted)">E</text>
+              <text x="50" y="93" text-anchor="middle" font-size="9" fill="var(--text-muted)">S</text>
+              <text x="12" y="53" text-anchor="middle" font-size="9" fill="var(--text-muted)">W</text>
+              <g id="compass-arrow" transform="rotate(0 50 50)">
+                <line x1="50" y1="50" x2="50" y2="18" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+                <polygon points="50,15 46,25 54,25" fill="var(--accent)"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thermal -->
+    <div class="card">
+      <h3>Thermal</h3>
+      <div class="d-flex justify-content-around">
+        <div class="wind-stat"><div class="val" id="t-strength">—</div><div class="unit">strength</div></div>
+        <div class="wind-stat"><div class="val" id="t-coastal">—</div><div class="unit">coastal °F</div></div>
+        <div class="wind-stat"><div class="val" id="t-inland">—</div><div class="unit">inland °F</div></div>
+        <div class="wind-stat"><div class="val" id="t-delta">—</div><div class="unit">delta °F</div></div>
+      </div>
+    </div>
+
+    <!-- Tide + Best Window -->
+    <div class="row g-3">
+      <div class="col-6">
+        <div class="card">
+          <h3>Tide</h3>
+          <div style="font-size:1.1rem; font-weight:600;" id="tide">—</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <h3>Best Window</h3>
+          <div style="font-size:1.1rem; font-weight:600;" id="best-window">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="tip-box mb-3" id="tip">—</div>
+
+    <!-- Breakdown -->
+    <div class="card">
+      <h3>Score Breakdown</h3>
+      <div id="breakdown"></div>
+    </div>
+  </div>
+
+  <footer>
+    Powered by <a href="https://github.com/dddiaz/mbwind" target="_blank">mbwind</a>
+  </footer>
+</div>
+
+<script>
+const API = 'https://api.dddiaz.com/wind';
+let sport = 'laser', tomorrow = 'false';
+
+function recColor(rec) {
+  return rec === 'GO' ? 'var(--go)' : rec === 'MAYBE' ? 'var(--maybe)' : 'var(--nogo)';
+}
+
+function setupToggle(id, cb) {
+  const el = document.getElementById(id);
+  el.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      el.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      cb(btn.dataset.val);
+    });
+  });
+}
+
+setupToggle('sport-toggle', v => { sport = v; fetchData(); });
+setupToggle('day-toggle', v => { tomorrow = v; fetchData(); });
+
+// Gauge arc math: semicircle from (20,120) to (180,120), r=80
+const ARC_LEN = Math.PI * 80; // ~251.3
+
+function setGauge(score, rec) {
+  const frac = score / 100;
+  document.getElementById('gauge-arc').setAttribute('stroke-dasharray', `${frac * ARC_LEN} ${ARC_LEN}`);
+  document.getElementById('gauge-arc').setAttribute('stroke', recColor(rec));
+  document.getElementById('gauge-score').textContent = Math.round(score);
+  document.getElementById('gauge-label').textContent = rec;
+}
+
+const breakdownMeta = [
+  { key: 'wind_speed', label: 'Wind Speed', max: 30 },
+  { key: 'direction', label: 'Direction', max: 20 },
+  { key: 'thermal', label: 'Thermal', max: 20 },
+  { key: 'gust_factor', label: 'Gust Factor', max: 15 },
+  { key: 'time_of_day', label: 'Time of Day', max: 15 },
+];
+
+function renderBreakdown(bd) {
+  const el = document.getElementById('breakdown');
+  el.innerHTML = breakdownMeta.map(m => {
+    const v = bd[m.key] || 0;
+    const pct = (v / m.max) * 100;
+    return `<div class="breakdown-row">
+      <span class="label">${m.label}</span>
+      <div class="bar-bg"><div class="bar-fill" style="width:${pct}%"></div></div>
+      <span class="val">${v}/${m.max}</span>
+    </div>`;
+  }).join('');
+  // penalty
+  if (bd.marine_layer_penalty) {
+    el.innerHTML += `<div class="breakdown-row">
+      <span class="label">Marine Layer</span>
+      <div class="bar-bg"><div class="bar-fill" style="width:${Math.min(100, Math.abs(bd.marine_layer_penalty)/15*100)}%; background:var(--nogo);"></div></div>
+      <span class="val" style="color:var(--nogo);">${bd.marine_layer_penalty}</span>
+    </div>`;
+  }
+}
+
+function render(d) {
+  // badge
+  const badge = document.getElementById('rec-badge');
+  badge.textContent = d.recommendation;
+  badge.style.background = recColor(d.recommendation);
+  badge.style.visibility = 'visible';
+
+  setGauge(d.score, d.recommendation);
+
+  // wind
+  document.getElementById('w-speed').textContent = d.wind.speed_kts;
+  document.getElementById('w-gust').textContent = d.wind.gusts_kts;
+  document.getElementById('w-dir').textContent = d.wind.direction;
+
+  // compass — wind direction means wind comes FROM that direction, arrow points the direction wind blows FROM
+  document.getElementById('compass-arrow').setAttribute('transform', `rotate(${d.wind.direction_degrees} 50 50)`);
+
+  // thermal
+  document.getElementById('t-strength').textContent = d.thermal.strength;
+  document.getElementById('t-coastal').textContent = Math.round(d.thermal.coastal_f);
+  document.getElementById('t-inland').textContent = Math.round(d.thermal.inland_f);
+  document.getElementById('t-delta').textContent = Math.round(d.thermal.delta_f);
+
+  document.getElementById('tide').textContent = d.tide;
+  document.getElementById('best-window').textContent = d.best_window;
+  document.getElementById('tip').textContent = d.tip;
+
+  renderBreakdown(d.breakdown);
+
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+}
+
+async function fetchData() {
+  document.getElementById('loading').style.display = 'flex';
+  document.getElementById('content').style.display = 'none';
+  try {
+    const res = await fetch(`${API}?sport=${sport}&tomorrow=${tomorrow}`);
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    document.getElementById('loading').innerHTML = `<span style="color:var(--nogo);">Failed to load data. Try again later.</span>`;
+  }
+}
+
+fetchData();
+</script>
+</body>
+</html>
