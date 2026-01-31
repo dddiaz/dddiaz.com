@@ -13,6 +13,9 @@ main:
   - name: 'Glucose Stats'
     url: '#glucose'
     weight: 40
+  - name: Projects
+    url: '#projects'
+    weight: 45
   - name: Accomplishments
     url: '#accomplishments'
     weight: 50

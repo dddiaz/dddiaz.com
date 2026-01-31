@@ -81,6 +81,16 @@ sections:
 #        gradient_end: '#1976d2'
 #        gradient_start: '#004ba0'
 #        text_color_light: true
+  - block: portfolio
+    id: projects
+    content:
+      title: Projects
+      filters:
+        folders:
+          - project
+    design:
+      view: compact
+      columns: '2'
   - block: accomplishments
     id: accomplishments
     content:
