@@ -10,6 +10,7 @@ Deployed to s3/cloudfront with Github Actions :)
 [blog.dddiaz.com](https://blog.dddiaz.com)  
 [https://api.dddiaz.com/birthday](https://api.dddiaz.com/birthday) *Note: API must be accessed with https*
 [https://api.dddiaz.com/swagger](https://api.dddiaz.com/swagger) - Swagger UI
+[https://dddiaz.com/mbwind/](https://dddiaz.com/mbwind/) - Mission Bay Wind
 
 ## Pinned Version Info
 GO: go version go1.23.3 darwin/arm64
