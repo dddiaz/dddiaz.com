@@ -129,6 +129,25 @@ footer a { color: var(--accent); text-decoration: none; }
   text-decoration: none;
 }
 .back-link:hover { color: var(--accent); }
+.hourly { display: flex; gap: 2px; align-items: flex-end; height: 80px; }
+.hourly-bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.hourly-bar .bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  min-height: 2px;
+  transition: height .4s ease;
+}
+.hourly-bar .hour-label {
+  font-size: .6rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
 </style>
 </head>
 <body>
@@ -169,6 +188,12 @@ footer a { color: var(--accent); text-decoration: none; }
         <text x="100" y="100" text-anchor="middle" class="gauge-score" id="gauge-score">0</text>
         <text x="100" y="120" text-anchor="middle" class="gauge-label" id="gauge-label">loading</text>
       </svg>
+    </div>
+
+    <!-- Hourly Timeline -->
+    <div class="card">
+      <h3>Today's Outlook</h3>
+      <div class="hourly" id="hourly"></div>
     </div>
 
     <!-- Wind + Compass -->
@@ -307,6 +332,19 @@ function renderBreakdown(bd) {
   }
 }
 
+function renderHourly(scores) {
+  const el = document.getElementById('hourly');
+  if (!scores || !scores.length) { el.innerHTML = ''; return; }
+  el.innerHTML = scores.map(s => {
+    const color = s.recommendation === 'GO' ? 'var(--go)' : s.recommendation === 'MAYBE' ? 'var(--maybe)' : 'var(--nogo)';
+    const h = Math.max(4, (s.score / 100) * 60);
+    return `<div class="hourly-bar">
+      <div class="bar" style="height:${h}px; background:${color};" title="${s.hour}: ${s.score} ${s.recommendation}"></div>
+      <span class="hour-label">${s.hour}</span>
+    </div>`;
+  }).join('');
+}
+
 function render(d) {
   // badge
   const badge = document.getElementById('rec-badge');
@@ -335,6 +373,7 @@ function render(d) {
   document.getElementById('tip').textContent = d.tip;
 
   renderBreakdown(d.breakdown);
+  renderHourly(d.hourly_scores);
 
   document.getElementById('loading').style.display = 'none';
   document.getElementById('content').style.display = 'block';
