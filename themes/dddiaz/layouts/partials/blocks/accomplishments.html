@@ -1,0 +1,26 @@
+{{- $block := .block -}}
+
+<div class="section-heading">
+  {{ with $block.content.title }}<h2>{{ . | safeHTML }}</h2>{{ end }}
+  {{ with $block.content.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+</div>
+
+<div class="accomplishments-grid">
+  {{ range $block.content.items }}
+    <div class="accomplishment-card">
+      <div class="accomplishment-title">
+        {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+        {{ .title }}
+        {{ if .url }}</a>{{ end }}
+      </div>
+      <div class="accomplishment-org">
+        {{ with .organization_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+        {{ .organization }}
+        {{ if .organization_url }}</a>{{ end }}
+      </div>
+      {{ with .certificate_url }}
+        <a href="{{ . }}" target="_blank" rel="noopener" class="accomplishment-cert-link">View certificate</a>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>

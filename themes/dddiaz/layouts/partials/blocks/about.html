@@ -1,0 +1,56 @@
+{{- $block := .block -}}
+{{- $author := $block.content.username | default "admin" -}}
+{{- $person_page_path := printf "/authors/%s" $author -}}
+{{- $person_page := site.GetPage $person_page_path -}}
+{{- $person := $person_page.Params -}}
+{{- $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" -}}
+{{- $heroImage := resources.Get "media/header-bg-compressed.jpg" -}}
+
+{{/* Top zone: hero background with identity */}}
+<div class="about-hero" {{ with $heroImage }}style="background-image: url('{{ .RelPermalink }}')"{{ end }}>
+  <div class="about-hero-overlay"></div>
+  <div class="about-hero-inner container">
+    <div class="about-hero-identity">
+      {{- if $avatar -}}
+        {{- $avatar_image := $avatar.Fill "270x270 Center" -}}
+        <img class="about-hero-avatar" width="{{ $avatar_image.Width }}" height="{{ $avatar_image.Height }}"
+             src="{{ $avatar_image.RelPermalink }}" alt="{{ $person_page.Title }}">
+      {{- end -}}
+
+      <div class="about-hero-info">
+        <h1 class="about-hero-name">{{ $person_page.Title }}</h1>
+        {{ with $person.role }}<p class="about-hero-role">{{ . }}</p>{{ end }}
+        {{ range $person.organizations }}
+          <p class="about-hero-org">
+            {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+            {{ .name }}
+            {{ if .url }}</a>{{ end }}
+          </p>
+        {{ end }}
+
+        <ul class="social-icons" aria-label="Social links">
+          {{ range $person.social }}
+            {{- $link := .link -}}
+            {{- $target := "" -}}
+            {{- $scheme := (urls.Parse $link).Scheme -}}
+            {{- if not $scheme -}}
+              {{- $link = .link | relLangURL -}}
+            {{- else if in (slice "http" "https") $scheme -}}
+              {{- $target = ` target="_blank" rel="noopener"` -}}
+            {{- end -}}
+            <li>
+              <a href="{{ $link | safeURL }}"{{ $target | safeHTMLAttr }} aria-label="{{ .icon }}">
+                {{- partial (printf "icons/%s.svg" .icon) -}}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+
+    {{ with $person_page.Content }}
+      <div class="about-hero-bio">{{ . }}</div>
+    {{ end }}
+
+  </div>
+</div>

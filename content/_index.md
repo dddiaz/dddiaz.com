@@ -95,9 +95,8 @@ sections:
     id: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
-      subtitle:  and Certifications
-      # Date format: https://docs.hugoblox.com/customization/#date-format
+      title: 'Education & Certifications'
+      subtitle:
       date_format: Jan 2006
       # Accomplishments.
       #   Add/remove as many `item` blocks below as you like.
@@ -105,6 +104,20 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
+        - organization: "University of California, Irvine"
+          organization_url: "https://uci.edu/"
+          title: "BS in Computer Science"
+          url: ""
+          date_start: "2015-06-01"
+          date_end: ""
+          description: ""
+        - organization: "University of California, Irvine"
+          organization_url: "https://uci.edu/"
+          title: "BA in Political Science"
+          url: ""
+          date_start: "2014-06-01"
+          date_end: ""
+          description: ""
         - organization: "University of California, San Diego Extension"
           organization_url: "https://extension.ucsd.edu/"
           title: "Machine Learning Methods"
@@ -149,10 +162,7 @@ sections:
     content:
       title: Contact
       subtitle: "Let's work together to accomplish something great!"
-      text: |-
-        <div style="text-align: center; margin-bottom: 2rem;">
-          <img src="/img/contact.jpg" alt="Daniel Diaz" style="border-radius: 12px; max-width: 600px; width: 100%; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-        </div>
+      image: /img/contact.jpg
       # Contact (add or remove contact options as necessary)
       # email: test@example.org
       # phone: 888 888 88 88

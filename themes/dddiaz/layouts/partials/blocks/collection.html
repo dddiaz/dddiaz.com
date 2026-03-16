@@ -1,0 +1,103 @@
+{{- $block := .block -}}
+{{- $page := .page -}}
+{{- $view := $block.design.view | default "compact" -}}
+{{- $count := $block.content.count | default 0 -}}
+{{- $offset := $block.content.offset | default 0 -}}
+{{- $order := $block.content.order | default "desc" -}}
+{{- $featured_only := $block.content.filters.featured_only | default false -}}
+{{- $exclude_featured := $block.content.filters.exclude_featured | default false -}}
+
+{{/* Get pages from specified folders */}}
+{{- $pages := slice -}}
+{{- range $block.content.filters.folders -}}
+  {{- $section := site.GetPage (printf "/%s" .) -}}
+  {{- if $section -}}
+    {{- $pages = $pages | append $section.Pages -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Filter featured */}}
+{{- if $featured_only -}}
+  {{- $filtered := slice -}}
+  {{- range $pages -}}
+    {{- if .Params.featured -}}
+      {{- $filtered = $filtered | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $pages = $filtered -}}
+{{- end -}}
+
+{{- if $exclude_featured -}}
+  {{- $filtered := slice -}}
+  {{- range $pages -}}
+    {{- if not .Params.featured -}}
+      {{- $filtered = $filtered | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $pages = $filtered -}}
+{{- end -}}
+
+{{/* Sort */}}
+{{- if eq $order "asc" -}}
+  {{- $pages = $pages.ByDate -}}
+{{- else -}}
+  {{- $pages = $pages.ByDate.Reverse -}}
+{{- end -}}
+
+{{/* Offset and limit */}}
+{{- if gt $offset 0 -}}
+  {{- $pages = after $offset $pages -}}
+{{- end -}}
+{{- if gt $count 0 -}}
+  {{- $pages = first $count $pages -}}
+{{- end -}}
+
+<div class="section-heading">
+  {{ with $block.content.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+  {{ with $block.content.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+</div>
+
+{{ if eq $view "card" }}
+  {{/* Card view — for featured posts */}}
+  <div class="featured-posts">
+    {{ range $pages }}
+      {{- $image := .Resources.GetMatch "featured*" -}}
+      <div class="post-featured">
+        {{ if $image }}
+          {{- $resized := $image.Fit "1200x600" -}}
+          <a href="{{ .RelPermalink }}">
+            <img class="post-featured-image" src="{{ $resized.RelPermalink }}"
+                 width="{{ $resized.Width }}" height="{{ $resized.Height }}"
+                 alt="{{ .Title }}" loading="lazy">
+          </a>
+        {{ end }}
+        <div class="post-featured-content">
+          <h3 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="post-card-meta">{{ .Date.Format "Jan 2, 2006" }}</div>
+          {{ with .Params.summary }}<p class="post-card-summary">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ else }}
+  {{/* Compact view — default */}}
+  <div class="post-list-compact">
+    {{ range $pages }}
+      <div class="post-compact">
+        <div class="post-compact-body">
+          <h3 class="post-compact-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="post-compact-meta">{{ .Date.Format "Jan 2, 2006" }}{{ with .ReadingTime }} · {{ . }} min read{{ end }}</div>
+          {{ with .Params.summary }}<p class="post-compact-summary">{{ . | truncate 135 }}</p>{{ end }}
+        </div>
+        {{- $image := .Resources.GetMatch "featured*" -}}
+        {{- if $image -}}
+          {{- $thumb := $image.Fill "150x150 Center" -}}
+          <a href="{{ .RelPermalink }}" class="post-compact-thumb">
+            <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ .Title }}" loading="lazy">
+          </a>
+        {{- end -}}
+      </div>
+    {{ end }}
+  </div>
+  <a href="/post/" class="see-all-link">See all posts &rarr;</a>
+{{ end }}

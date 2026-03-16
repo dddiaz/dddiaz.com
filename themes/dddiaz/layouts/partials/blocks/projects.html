@@ -1,0 +1,35 @@
+{{- $block := .block -}}
+
+{{/* Get project pages */}}
+{{- $pages := slice -}}
+{{- range $block.content.filters.folders -}}
+  {{- $section := site.GetPage (printf "/%s" .) -}}
+  {{- if $section -}}
+    {{- $pages = $pages | append $section.Pages -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages = $pages.ByDate.Reverse -}}
+
+<div class="section-heading">
+  {{ with $block.content.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+</div>
+
+<div class="projects-grid">
+  {{ range $pages }}
+    {{- $link := .RelPermalink -}}
+    {{- with .Params.external_link -}}
+      {{- $link = . -}}
+    {{- end -}}
+    <div class="project-card">
+      <h3><a href="{{ $link }}">{{ .Title }}</a></h3>
+      {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+      {{ with .Params.tags }}
+        <div class="project-tags">
+          {{ range . }}
+            <a href="{{ "/tag/" | relLangURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>

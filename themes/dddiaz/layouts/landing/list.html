@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{- range .Params.sections -}}
+  {{- $block := . -}}
+  {{- $blockType := $block.block -}}
+
+  {{/* Map block type aliases */}}
+  {{- if eq $blockType "about.biography" -}}
+    {{- $blockType = "about" -}}
+  {{- else if eq $blockType "portfolio" -}}
+    {{- $blockType = "projects" -}}
+  {{- else if eq $blockType "tag_cloud" -}}
+    {{- $blockType = "tag-cloud" -}}
+  {{- end -}}
+
+  {{- $id := $block.id | default "" -}}
+
+  {{- if eq $blockType "hero" -}}
+    {{/* Hero is now merged into about — skip standalone hero */}}
+  {{- else if eq $blockType "about" -}}
+    {{/* About renders full-width with its own hero background */}}
+    <section {{ with $id }}id="{{ . }}"{{ end }} class="home-section home-section-flush">
+      {{- partial "blocks/about.html" (dict "block" $block "page" $) -}}
+    </section>
+  {{- else -}}
+    <section {{ with $id }}id="{{ . }}"{{ end }} class="home-section">
+      <div class="container">
+        {{- partial (printf "blocks/%s.html" $blockType) (dict "block" $block "page" $) -}}
+      </div>
+    </section>
+  {{- end -}}
+{{- end -}}
+{{ end }}

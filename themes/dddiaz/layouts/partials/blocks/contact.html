@@ -1,0 +1,40 @@
+{{- $block := .block -}}
+
+<div class="contact-layout">
+  {{ with $block.content.image }}
+    <div class="contact-photo">
+      <img src="{{ . }}" alt="Daniel Diaz" loading="lazy">
+    </div>
+  {{ end }}
+
+  <div class="contact-info-col">
+    {{ with $block.content.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+    {{ with $block.content.subtitle }}<p class="contact-subtitle">{{ . | markdownify }}</p>{{ end }}
+
+    {{ with $block.content.directions }}
+      <p class="contact-location">{{ . }}</p>
+    {{ end }}
+
+    {{ with $block.content.contact_links }}
+      <ul class="contact-links">
+        {{ range . }}
+          <li>
+            <a href="{{ .link }}" target="_blank" rel="noopener">
+              {{- $icon := .icon -}}
+              {{- if eq $icon "linkedin" -}}
+                {{ partial "icons/linkedin.svg" }}
+              {{- else if eq $icon "at" -}}
+                {{ partial "icons/bluesky.svg" }}
+              {{- else if eq $icon "github" -}}
+                {{ partial "icons/github.svg" }}
+              {{- else -}}
+                {{ partial "icons/contact.svg" }}
+              {{- end -}}
+              <span>{{ .name }}</span>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</div>

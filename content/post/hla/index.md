@@ -1,5 +1,4 @@
 ---
-# Documentation: https://hugoblox.com/docs/managing-content/
 
 title: "Exploring my own genome."
 subtitle: "A diabetics tale."

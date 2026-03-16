@@ -1,0 +1,53 @@
+{{- $description := "" -}}
+{{- if .Params.summary -}}
+  {{- $description = .Params.summary -}}
+{{- else if .Params.abstract -}}
+  {{- $description = .Params.abstract -}}
+{{- else if .IsHome -}}
+  {{- $description = site.Params.marketing.seo.description | default site.Title -}}
+{{- else -}}
+  {{- $description = .Summary | plainify | truncate 160 -}}
+{{- end -}}
+
+<meta name="description" content="{{ $description }}">
+
+{{/* Open Graph */}}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+
+{{- $image := "" -}}
+{{- $featured := .Resources.GetMatch "featured*" -}}
+{{- if $featured -}}
+  {{- $image = $featured.Permalink -}}
+{{- else -}}
+  {{/* Use site icon as fallback */}}
+  {{- $icon := resources.Get "media/icon.png" -}}
+  {{- if $icon -}}
+    {{- $image = $icon.Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with $image -}}
+  <meta property="og:image" content="{{ . }}">
+{{- end -}}
+
+{{- if .IsPage -}}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- with .Lastmod -}}
+    <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- end -}}
+{{- end -}}
+
+{{/* Twitter Card */}}
+<meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- with $image -}}
+  <meta name="twitter:image" content="{{ . }}">
+{{- end -}}
+
+{{/* Canonical URL */}}
+<link rel="canonical" href="{{ .Permalink }}">
