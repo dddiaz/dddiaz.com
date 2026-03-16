@@ -5,6 +5,7 @@
 {{- $person := $person_page.Params -}}
 {{- $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" -}}
 {{- $heroImage := resources.Get "media/header-bg-compressed.jpg" -}}
+{{- $heroImage = $heroImage.Fit "1920x1080 webp" -}}
 
 {{/* Top zone: hero background with identity */}}
 <div class="about-hero" {{ with $heroImage }}style="background-image: url('{{ .RelPermalink }}')"{{ end }}>
