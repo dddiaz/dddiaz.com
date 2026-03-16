@@ -1,0 +1,9 @@
+name = "dddiaz"
+license = "MIT"
+licenselink = ""
+description = "Custom minimal theme for dddiaz.com"
+tags = ["blog", "personal"]
+min_version = "0.120.0"
+
+[author]
+  name = "Daniel Diaz"

@@ -1,0 +1,50 @@
+{{ define "main" }}
+<div class="container" style="padding-top: var(--spacing-xl); padding-bottom: var(--spacing-xl);">
+  <div class="post-list-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div>{{ . }}</div>
+    {{ end }}
+  </div>
+
+  <div class="post-list-compact">
+    {{ $paginator := .Paginate .Pages }}
+    {{ range $paginator.Pages }}
+      <div class="post-compact">
+        <div class="post-compact-body">
+          <h3 class="post-compact-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="post-compact-meta">{{ .Date.Format "Jan 2, 2006" }}{{ with .ReadingTime }} · {{ . }} min read{{ end }}</div>
+          {{ with .Params.summary }}<p class="post-compact-summary">{{ . | truncate 135 }}</p>{{ end }}
+        </div>
+        {{- $image := .Resources.GetMatch "featured*" -}}
+        {{- if $image -}}
+          {{- $thumb := $image.Fill "150x150 Center" -}}
+          <a href="{{ .RelPermalink }}" class="post-compact-thumb">
+            <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ .Title }}" loading="lazy">
+          </a>
+        {{- end -}}
+      </div>
+    {{ end }}
+  </div>
+
+  {{/* Pagination */}}
+  {{ $paginator := .Paginator }}
+  {{ if gt $paginator.TotalPages 1 }}
+    <nav class="pagination" aria-label="Pagination">
+      {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}">&laquo; Prev</a>
+      {{ end }}
+      {{ range $paginator.Pagers }}
+        {{ if eq . $paginator }}
+          <span class="active">{{ .PageNumber }}</span>
+        {{ else }}
+          <a href="{{ .URL }}">{{ .PageNumber }}</a>
+        {{ end }}
+      {{ end }}
+      {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}">Next &raquo;</a>
+      {{ end }}
+    </nav>
+  {{ end }}
+</div>
+{{ end }}

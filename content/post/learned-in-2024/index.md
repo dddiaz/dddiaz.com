@@ -1,5 +1,4 @@
 ---
-# Documentation: https://docs.hugoblox.com/managing-content/
 
 title: "5 Things I Learned in 2024"
 subtitle: ""

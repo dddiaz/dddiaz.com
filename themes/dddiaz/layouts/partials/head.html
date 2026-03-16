@@ -1,0 +1,66 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{- $title := "" -}}
+{{- if .IsHome -}}
+  {{- $title = site.Title -}}
+{{- else -}}
+  {{- $title = printf "%s | %s" .Title site.Title -}}
+{{- end -}}
+<title>{{ $title }}</title>
+
+{{/* CSS via Hugo Pipes */}}
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+
+{{/* Preload hero image on homepage */}}
+{{- if .IsHome -}}
+  <link rel="preload" href="{{ (resources.Get "media/header-bg-compressed.jpg").RelPermalink }}" as="image">
+{{- end -}}
+
+{{/* RSS */}}
+{{ with .OutputFormats.Get "RSS" }}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
+{{ end }}
+
+{{/* Favicon */}}
+{{ $icon := resources.Get "media/icon.png" }}
+{{ with $icon }}
+<link rel="icon" type="image/png" href="{{ .RelPermalink }}">
+{{ end }}
+
+{{/* Theme color */}}
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#282a36" media="(prefers-color-scheme: dark)">
+
+{{/* Inline theme detection to prevent flash */}}
+<script>
+(function(){
+  var t = localStorage.getItem('theme');
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+
+{{/* SEO */}}
+{{- partial "seo/meta.html" . -}}
+{{- if .IsHome -}}
+  {{- partial "seo/jsonld-website.html" . -}}
+{{- else if eq .Type "post" -}}
+  {{- partial "seo/jsonld-article.html" . -}}
+{{- end -}}
+
+{{/* Analytics (production only) */}}
+{{- partial "seo/analytics.html" . -}}
+
+{{/* Syntax highlighting — both loaded, scoped by [data-theme] in CSS */}}
+{{ $chromaLight := resources.Get "css/chroma-light.css" }}
+{{ $chromaDark := resources.Get "css/chroma-dark.css" }}
+{{ if $chromaLight }}
+  {{ $chromaLight = $chromaLight | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $chromaLight.RelPermalink }}">
+{{ end }}
+{{ if $chromaDark }}
+  {{ $chromaDark = $chromaDark | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $chromaDark.RelPermalink }}">
+{{ end }}

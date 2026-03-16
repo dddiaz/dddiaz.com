@@ -1,0 +1,52 @@
+{{ define "main" }}
+<article class="container" style="padding-top: var(--spacing-xl); padding-bottom: var(--spacing-xl);">
+  <div class="article-header">
+    <h1>{{ .Title }}</h1>
+    <div class="article-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+      <span>{{ .ReadingTime }} min read</span>
+      {{ with .Params.authors }}
+        {{ range . }}
+          <span>{{ . }}</span>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  {{- $featured := .Resources.GetMatch "featured*" -}}
+  {{- if $featured -}}
+    {{- $resized := $featured.Fit "960x540" -}}
+    <img class="article-featured-image" src="{{ $resized.RelPermalink }}"
+         width="{{ $resized.Width }}" height="{{ $resized.Height }}"
+         alt="{{ .Title }}">
+  {{- end -}}
+
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.tags }}
+    <div class="article-tags">
+      {{ range . }}
+        <a href="{{ "/tag/" | relLangURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{/* Related posts */}}
+  {{ $related := .Site.RegularPages.Related . | first 3 }}
+  {{ with $related }}
+    <div style="margin-top: var(--spacing-xl);">
+      <h3>Related Posts</h3>
+      <div class="post-list-compact">
+        {{ range . }}
+          <div class="post-compact">
+            <span class="post-compact-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span class="post-compact-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</article>
+{{ end }}

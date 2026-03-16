@@ -1,0 +1,10 @@
+{{- $block := .block -}}
+{{- $heroImage := resources.Get "media/header-bg-compressed.jpg" -}}
+
+<section class="hero-section" {{ with $heroImage }}style="background-image: url('{{ .RelPermalink }}')"{{ end }}>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    {{ with $block.content.title }}<h1>{{ . | markdownify }}</h1>{{ end }}
+    {{ with $block.content.text }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+</section>

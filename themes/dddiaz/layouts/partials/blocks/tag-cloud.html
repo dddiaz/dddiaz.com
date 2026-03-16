@@ -1,0 +1,28 @@
+{{- $block := .block -}}
+
+<div class="section-heading">
+  {{ with $block.content.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+</div>
+
+{{ $tags := site.Taxonomies.tags }}
+{{ if $tags }}
+  {{/* Find max count for scaling */}}
+  {{- $maxCount := 1 -}}
+  {{- range $tags -}}
+    {{- if gt (len .Pages) $maxCount -}}
+      {{- $maxCount = len .Pages -}}
+    {{- end -}}
+  {{- end -}}
+
+  <div class="tag-cloud">
+    {{- range $name, $taxonomy := $tags -}}
+      {{- $count := len $taxonomy.Pages -}}
+      {{- $minSize := 0.8 -}}
+      {{- $maxSize := 2.2 -}}
+      {{/* Logarithmic scale */}}
+      {{- $scale := div (math.Log (add (float $count) 1.0)) (math.Log (add (float $maxCount) 1.0)) -}}
+      {{- $size := add $minSize (mul $scale (sub $maxSize $minSize)) -}}
+      <a href="{{ "/tag/" | relLangURL }}{{ $name | urlize }}/" style="font-size: {{ printf "%.2f" $size }}rem">{{ $name }}</a>
+    {{- end -}}
+  </div>
+{{ end }}

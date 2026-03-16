@@ -3,8 +3,4 @@
 ############################
 
 imports:
-  - path: blox-bootstrap
-  - path: blox-plugin-reveal
-  - path: blox-plugin-netlify
-  - path: blox-seo
-  - path: blox-core
+  - path: dddiaz
