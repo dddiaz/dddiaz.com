@@ -27,10 +27,12 @@ class GlucoseWidget {
     start() {
         console.log('Glucose widget starting...');
 
-        // Show initial empty state
+        // Show initial empty state, unless a reading already arrived
+        // (fast API responses beat this timer; piling almost-empty on top
+        // of a fill class makes the ring render the tiny placeholder arc)
         setTimeout(() => {
             const donut = document.querySelector('.donut');
-            if (donut) {
+            if (donut && donut.className === 'donut') {
                 donut.classList.add('almost-empty');
             }
         }, 500);
