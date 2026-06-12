@@ -31,7 +31,7 @@ bio: My interests include Genomics, Python, and Cloud Infrastructure.
 interests:
     - Bioinformatics / Genomics
     - Python
-    - Microsevices
+    - Microservices
     - CI/CD
     - Nextflow
     - Machine Learning

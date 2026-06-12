@@ -14,8 +14,57 @@
     <div class="about-hero-identity">
       {{- if $avatar -}}
         {{- $avatar_image := $avatar.Fill "270x270 Center" -}}
-        <img class="about-hero-avatar" width="{{ $avatar_image.Width }}" height="{{ $avatar_image.Height }}"
-             src="{{ $avatar_image.RelPermalink }}" alt="{{ $person_page.Title }}">
+        {{/* Live glucose ring around the avatar. bg.js resets the .donut element's
+             class list wholesale, so it must carry only donut classes; sizing is
+             scoped via the wrapper. glucose-section scopes the ring/gradient CSS. */}}
+        <div class="about-hero-avatar-wrap glucose-section"
+             aria-label="My live blood glucose. The ring fills and changes color with my current reading.">
+          <div class="donut" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 230" width="100%" height="100%">
+              <defs>
+                <linearGradient id="quotaDonut__gradient">
+                  <stop stop-color="#4caf50" offset="0%"></stop>
+                  <stop stop-color="#8bc34a" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient id="criticalLowGradient">
+                  <stop stop-color="#d32f2f" offset="0%"></stop>
+                  <stop stop-color="#f44336" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient id="lowGradient">
+                  <stop stop-color="#ff9800" offset="0%"></stop>
+                  <stop stop-color="#ffb74d" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient id="normalGradient">
+                  <stop stop-color="#4caf50" offset="0%"></stop>
+                  <stop stop-color="#66bb6a" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient id="highGradient">
+                  <stop stop-color="#ff9800" offset="0%"></stop>
+                  <stop stop-color="#ff7043" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient id="criticalHighGradient">
+                  <stop stop-color="#d32f2f" offset="0%"></stop>
+                  <stop stop-color="#e53935" offset="100%"></stop>
+                </linearGradient>
+              </defs>
+              <g transform="translate(115, 115)">
+                <circle r="100" class="circle-back" />
+                <circle r="100" class="circle-front" transform="rotate(135.1)" />
+              </g>
+            </svg>
+          </div>
+          <img class="about-hero-avatar" width="{{ $avatar_image.Width }}" height="{{ $avatar_image.Height }}"
+               src="{{ $avatar_image.RelPermalink }}" alt="{{ $person_page.Title }}">
+          <details class="glucose-info">
+            <summary aria-label="What does this ring mean?"><span>i</span></summary>
+            <div class="glucose-info-popover">
+              A person without Type 1 Diabetes has an average blood glucose reading of 120.
+              The ring shows whether I am above, below, or at average.
+              Using my AWS Lambda API integrated with my Glucose Monitor,
+              I display privacy-preserving status information.
+            </div>
+          </details>
+        </div>
       {{- end -}}
 
       <div class="about-hero-info">
@@ -49,8 +98,22 @@
       </div>
     </div>
 
-    {{ with $person_page.Content }}
-      <div class="about-hero-bio">{{ . }}</div>
+    {{ with $block.content.text }}
+      <div class="about-hero-bio">
+        {{ . | markdownify }}
+        {{/* Live blood glucose, inline as the closing line of the intro.
+             Keeps id=glucose, id=glucose-text and the sr-only heading so the
+             CI widget checks pass; bg.js targets .donut and #glucose-text. */}}
+        <h2 class="sr-only">Blood Glucose Stats</h2>
+        <p id="glucose" class="glucose-inline">
+          {{- $block.content.glucose_lead | default "The ring around my photo is my live blood glucose:" }}
+          <span id="glucose-text"></span>
+        </p>
+      </div>
+    {{ else }}
+      {{ with $person_page.Content }}
+        <div class="about-hero-bio">{{ . }}</div>
+      {{ end }}
     {{ end }}
 
   </div>

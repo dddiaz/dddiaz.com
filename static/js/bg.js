@@ -182,8 +182,7 @@ class GlucoseWidget {
 
         if (textElement) {
             textElement.innerHTML = `
-                <div class="glucose-status glucose-error">Unable to load glucose data</div>
-                <div class="glucose-timestamp">Please check connection</div>
+                <div class="glucose-status glucose-error">unavailable right now</div>
             `;
         }
 

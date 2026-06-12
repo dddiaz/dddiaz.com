@@ -935,6 +935,178 @@ main {
   }
 }
 
+/* Live glucose ring around the avatar; the reading flows inline in the intro text */
+.about-hero-avatar-wrap {
+  position: relative;
+  width: 232px;
+  height: 232px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-avatar-wrap .donut {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.about-hero-avatar-wrap .circle-back,
+.about-hero-avatar-wrap .circle-front {
+  stroke-width: 14px;
+}
+
+.about-hero-avatar-wrap .circle-back {
+  stroke: rgba(255, 255, 255, 0.18);
+}
+
+.about-hero-avatar-wrap .circle-border {
+  stroke: rgba(255, 255, 255, 0.3);
+}
+
+.about-hero-avatar-wrap .about-hero-avatar {
+  width: 180px;
+  height: 180px;
+  border: none;
+}
+
+/* Info badge at the ring's bottom-right, with a native <details> popover */
+.glucose-info {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2;
+}
+
+.glucose-info summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.glucose-info summary::-webkit-details-marker {
+  display: none;
+}
+
+.glucose-info summary:hover,
+.glucose-info[open] summary {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.glucose-info .glucose-info-popover {
+  position: absolute;
+  bottom: 38px;
+  left: 0; /* open up-right, toward the empty space beside the avatar */
+  width: 290px;
+  padding: var(--spacing-md);
+  background: rgba(15, 15, 15, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: left;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  /* Centered mini-overlay so the popover can't clip the viewport */
+  .glucose-info .glucose-info-popover {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 32px);
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-avatar-wrap {
+    width: 176px;
+    height: 176px;
+  }
+
+  .about-hero-avatar-wrap .about-hero-avatar {
+    width: 136px;
+    height: 136px;
+  }
+}
+
+/* bg.js injects div.glucose-reading / .glucose-status / .glucose-timestamp;
+   flatten them to inline so the reading reads as part of the intro sentence */
+.about-hero .glucose-inline .glucose-reading,
+.about-hero .glucose-inline .glucose-status,
+.about-hero .glucose-inline .glucose-timestamp {
+  display: inline;
+}
+
+.about-hero .glucose-inline .glucose-trend-arrow {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-hero .glucose-inline .glucose-status {
+  font-weight: 600;
+  color: #fff;
+}
+
+.about-hero .glucose-inline .glucose-timestamp {
+  font-size: 0.9em;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-hero .glucose-inline .glucose-timestamp::before {
+  content: "(";
+}
+
+.about-hero .glucose-inline .glucose-timestamp::after {
+  content: ")";
+}
+
+.about-hero .glucose-inline .glucose-stale-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-left: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffc107;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 193, 7, 0.5);
+  border-radius: 12px;
+  vertical-align: middle;
+}
+
+.about-hero .glucose-inline .glucose-error {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Placeholder while bg.js waits on the glucose API */
+.about-hero .glucose-inline #glucose-text:empty::after {
+  content: "loading\2026";
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  animation: glucose-pulse 1.5s ease-in-out infinite;
+}
+
 /* --- Projects --- */
 .projects-grid {
   display: grid;
