@@ -1,6 +1,11 @@
 // Blood Glucose Widget - Enhanced Version
 // By: Daniel Diaz 2025 (Updated)
 
+// Fire a GA4 event when gtag is present (production only); no-op otherwise.
+function track(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+}
+
 class GlucoseWidget {
     constructor() {
         this.apiUrl = "https://api.dddiaz.com/glucose/summary";
@@ -64,6 +69,7 @@ class GlucoseWidget {
         const stale = data.stale;
 
         console.log('Displaying glucose data:', { statusText, direction, stale });
+        track('glucose_loaded', { status: statusText, stale: !!stale });
 
         // Update text display (now uses pre-computed values from API)
         this.updateTextDisplay(statusText, direction, trendArrow, directionText, timestamp, stale);
@@ -179,6 +185,8 @@ class GlucoseWidget {
     }
 
     showErrorState() {
+        track('glucose_error', {});
+
         const textElement = document.getElementById('glucose-text');
         const donut = document.querySelector('.donut');
 

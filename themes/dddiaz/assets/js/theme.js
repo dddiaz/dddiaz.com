@@ -4,6 +4,11 @@
   const DARK = 'dark';
   const LIGHT = 'light';
 
+  // Fire a GA4 event when gtag is present (production only); no-op otherwise.
+  function track(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+
   function getPreferred() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) return stored;
@@ -34,7 +39,9 @@
     if (toggle) {
       toggle.addEventListener('click', function () {
         const current = document.documentElement.getAttribute('data-theme');
-        apply(current === DARK ? LIGHT : DARK);
+        const next = current === DARK ? LIGHT : DARK;
+        apply(next);
+        track('theme_toggle', { theme: next });
       });
     }
   });

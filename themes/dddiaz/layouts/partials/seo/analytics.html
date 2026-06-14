@@ -8,5 +8,8 @@
       gtag('js', new Date());
       gtag('config', '{{ . }}');
     </script>
+    {{/* Real-user Core Web Vitals → GA4 (self-hosted, deferred) */}}
+    {{ $vitals := slice (resources.Get "js/web-vitals.iife.js") (resources.Get "js/vitals.js") | resources.Concat "js/vitals-bundle.js" | minify | fingerprint }}
+    <script defer src="{{ $vitals.RelPermalink }}"></script>
   {{- end -}}
 {{- end -}}
